@@ -132,8 +132,9 @@ def build():
         </div>'''
 
     bts_cta = f'''<div class="cta-box">
-      <p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
-      {a(C.TC + "back-to-school-growing-drive/", "Get the Back to School Drive" + ARROW, "btn")}
+      <a class="cta-cover" href="{e(C.TC + "back-to-school-growing-drive/")}" target="_blank" rel="noopener"><img src="{img_src("bts")}" alt="Back to School Growing Google Drive" loading="lazy"></a>
+      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
+      {a(C.TC + "back-to-school-growing-drive/", "Get the Back to School Drive" + ARROW, "btn")}</div>
     </div>'''
 
     ff = C.FAN_FAVORITE

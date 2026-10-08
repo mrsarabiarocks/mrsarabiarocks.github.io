@@ -333,6 +333,15 @@ p { margin: 0; }
 .cta-box { display: grid; gap: 14px; justify-items: center; max-width: 680px; margin-top: 8px; padding: 20px 24px; background: var(--tint-sun); border: 3px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
 .cta-box p { font-size: 1.05rem; }
 .cta-box .btn { background: var(--sun); color: #2E2458; }
+.cta-box { grid-template-columns: 150px minmax(0, 1fr); align-items: center; justify-items: start; text-align: left; max-width: 760px; gap: 22px; }
+.cta-cover { display: block; transform: rotate(-3deg); }
+.cta-cover img { display: block; width: 100%; height: auto; border-radius: 10px; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.cta-copy { display: grid; gap: 14px; justify-items: start; min-width: 0; }
+@media (max-width: 640px) {
+  .cta-box { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+  .cta-cover { width: 140px; }
+  .cta-copy { justify-items: center; }
+}
 
 </style>
 
@@ -734,8 +743,9 @@ p { margin: 0; }
 
   <section class="wrap block search-zone" aria-labelledby="teacher-h" id="teacher">
     <div class="block-head"><h2 id="teacher-h" class="section-title">For You, the Teacher</h2><p class="block-sub">AI, tech, and planning tools to get your time back. Because you deserve your weekends!</p><div class="cta-box">
-      <p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
-      <a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="covers/bts.webp" alt="Back to School Growing Google Drive" loading="lazy"></a>
+      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
+      <a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div></div>
     <div class="grid"><article class="card card-violet" data-search="annotation unlocked build annotation packets for any text, any grade, in about 10 minutes with ai. ai annotation ">
   <div class="cover"><img src="covers/annotunlock.webp" alt="" loading="lazy"></div>
