@@ -467,6 +467,10 @@ p { margin: 0; }
   .reels-frame { padding: 36px 10px 12px; width: 100%; }
   .reels-label { font-size: .8rem; padding: 7px 14px; }
 }
+.reels-frame { width: min(100%, 790px); }
+.reels-frame .spot-reels { flex-wrap: nowrap; }
+.reels-frame .spot-reel { flex: 1 1 0; min-width: 0; }
+@media (max-width: 760px) { .reels-frame .spot-reels { flex-wrap: wrap; } .reels-frame .spot-reel { flex: 1 1 100%; } }
 
 </style>
 
