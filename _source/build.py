@@ -131,6 +131,11 @@ def build():
           </blockquote>
         </div>'''
 
+    cs = C.CLAUDE_SITE
+    claude_cta = f'''<div class="cta-box cta-claude">
+      <div class="cta-copy"><p class="eyebrow">{e(cs["eyebrow"])}</p><h3 class="cta-title">{e(cs["headline"])}</h3><p>{e(cs["body"])}</p>
+      {a(cs["url"], "Visit Claude for Teachers" + ARROW, "btn")}</div>
+    </div>'''
     bts_cta = f'''<div class="cta-box">
       <a class="cta-cover" href="{e(C.TC + "back-to-school-growing-drive/")}" target="_blank" rel="noopener"><img src="{img_src("bts")}" alt="Back to School Growing Google Drive" loading="lazy"></a>
       <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
@@ -235,7 +240,7 @@ def build():
   </section>
 
   <section class="wrap block search-zone" aria-labelledby="teacher-h" id="teacher">
-    {head("For You, the Teacher", "AI, tech, and planning tools to get your time back. Because you deserve your weekends!", "teacher-h", bts_cta)}
+    {head("For You, the Teacher", "AI, tech, and planning tools to get your time back. Because you deserve your weekends!", "teacher-h", claude_cta + bts_cta)}
     <div class="grid">{teacher}</div>
   </section>
 

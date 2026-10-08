@@ -330,3 +330,11 @@ p { margin: 0; }
   .cta-cover { width: 140px; }
   .cta-copy { justify-items: center; }
 }
+
+/* ---------- Claude for Teachers callout ---------- */
+.cta-claude { grid-template-columns: minmax(0, 1fr); background: var(--tint-violet); max-width: 760px; width: 100%; }
+.cta-claude .cta-copy { justify-items: center; text-align: center; }
+.cta-claude .btn { background: var(--violet); color: #FFFFFF; }
+.cta-title { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.6rem, 4vw, 2.1rem); line-height: 1.05; text-transform: uppercase; }
+.cta-box + .cta-box { margin-top: 18px; }
+.more .quick-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
