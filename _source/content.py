@@ -43,6 +43,10 @@ SPOTLIGHT = {
     "body": "This is my FAVORITE MONTH of the whole year. We turn off the lights, pass out the blacklight highlighters, and annotate Poe. Here's what it looks like in my room, plus everything you need to do it in yours!",
     "reel": ig("DeJ8tEED88J"),
     "reel_title": "Blacklight Poe annotating",
+    "reels": [
+        (ig("DeJ8tEED88J"), "Blacklight Poe annotating"),
+        (ig("DePGTNdgsdF"), "Spooky season in my classroom"),
+    ],
     "gallery": [
         ("spooky-poe1848", "Edgar Allan Poe, 1848"),
         ("spooky-dore19", "The Raven, Gustave Dore, 1884"),

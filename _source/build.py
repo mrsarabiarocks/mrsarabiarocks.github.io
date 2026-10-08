@@ -128,21 +128,22 @@ def build():
     sp_buttons = "".join(a(u, e(t) + ARROW, "btn btn-glow" if i == 0 else "btn btn-ghost") for i, (t, u) in enumerate(sp["buttons"]))
     spooky_cards = "".join(card(p, "night") for p in by("spooky"))
 
-    reel_link = f'''<a class="reel hide-on-search" href="{e(sp["reel"])}" target="_blank" rel="noopener">
+    def one_reel(url, title):
+        if MODE == "preview":
+            return f'''<a class="reel" href="{e(url)}" target="_blank" rel="noopener">
           <span class="reel-label">Peek inside my classroom</span>
           <span class="reel-play">{PLAY}</span>
-          <span class="reel-title">{e(sp["reel_title"])}</span>
+          <span class="reel-title">{e(title)}</span>
           <span class="reel-sub">Watch on Instagram</span>
         </a>'''
-    if MODE == "preview":
-        reel_block = reel_link
-    else:
-        reel_block = f'''<div class="reel reel-embed hide-on-search">
+        return f'''<div class="reel reel-embed">
           <span class="reel-label">Peek inside my classroom</span>
-          <blockquote class="instagram-media" data-instgrm-permalink="{e(sp["reel"])}?utm_source=ig_embed" data-instgrm-version="14">
-            <a href="{e(sp["reel"])}" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play">{PLAY}</span><span class="reel-title">{e(sp["reel_title"])}</span><span class="reel-sub">Watch on Instagram</span></a>
+          <blockquote class="instagram-media" data-instgrm-permalink="{e(url)}?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="{e(url)}" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play">{PLAY}</span><span class="reel-title">{e(title)}</span><span class="reel-sub">Watch on Instagram</span></a>
           </blockquote>
         </div>'''
+    reels = sp.get("reels") or [(sp["reel"], sp["reel_title"])]
+    reel_block = "".join(f'<div class="spot-reel">{one_reel(u, t)}</div>' for u, t in reels)
 
     cs = C.CLAUDE_SITE
     claude_cta = f'''<div class="cta-box cta-claude">
@@ -260,7 +261,7 @@ def build():
         <div class="btn-row btn-row-center">{sp_buttons}</div>
       </div>
       <div class="spot-feature hide-on-search">
-        <div class="spot-reel">{reel_block}</div>
+        <div class="spot-reels">{reel_block}</div>
         <div class="poe-gallery" aria-label="Poe portrait and illustrations">{gallery}</div>
       </div>
       <div class="grid grid-night">

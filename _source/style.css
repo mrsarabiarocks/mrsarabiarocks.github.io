@@ -428,3 +428,17 @@ p { margin: 0; }
   .best-copy > .peek { justify-self: center; }
   .btn-huge { width: 100%; }
 }
+
+/* ---------- Spotlight v3: reels first, Poe art as a quiet tiled strip ---------- */
+.spot-feature { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; justify-items: center; margin-bottom: 44px; }
+.spot-reels { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; width: 100%; }
+.spot-reels .spot-reel { width: min(100%, 360px); }
+.spot-feature .poe-gallery { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; width: min(100%, 620px); margin: 0; opacity: .7; }
+.spot-feature .poe-frame, .spot-feature .poe-frame:nth-child(2n), .spot-feature .poe-frame:nth-child(3) { width: auto; padding: 0; transform: none; box-shadow: none; border-radius: 6px; overflow: hidden; background: none; }
+.spot-feature .poe-frame:hover { transform: none; }
+.spot-feature .poe-frame img { aspect-ratio: 1 / 1; filter: grayscale(1) contrast(1.1); }
+.spot-feature .poe-credit { grid-column: 1 / -1; font-size: .72rem; }
+@media (max-width: 640px) {
+  .spot-feature .poe-frame:nth-child(n+4) { display: block; }
+  .spot-feature .poe-gallery { gap: 4px; }
+}
