@@ -131,6 +131,11 @@ def build():
           </blockquote>
         </div>'''
 
+    bts_cta = f'''<div class="cta-box">
+      <p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
+      {a(C.TC + "back-to-school-growing-drive/", "Get the Back to School Drive" + ARROW, "btn")}
+    </div>'''
+
     ff = C.FAN_FAVORITE
     shop_nav = "".join(f'<a class="chip chip-{tones[k]}" href="#{k}">{e(n)}</a>' for k, n in C.SHOP_GROUPS)
     shop = "".join(
@@ -229,7 +234,7 @@ def build():
   </section>
 
   <section class="wrap block search-zone" aria-labelledby="teacher-h" id="teacher">
-    {head("For You, the Teacher", "AI, tech, and planning tools to get your time back. Because you deserve your weekends!", "teacher-h")}
+    {head("For You, the Teacher", "AI, tech, and planning tools to get your time back. Because you deserve your weekends!", "teacher-h", bts_cta)}
     <div class="grid">{teacher}</div>
   </section>
 
