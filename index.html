@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Michaela Arabia: The Balanced Teach</title>
+<meta name="description" content="Middle school ELA and history units, PBL, AI tools for teachers, and freebies from Michaela Arabia, The Balanced Teach.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&family=Quicksand:wght@700&display=swap">
+<style>
+/* Layout: logo-led gradient hero, chunky sticker-style cards with solid ink offset shadows,
+   centered section heads, one big best-seller block, one blacklight seasonal spotlight. */
+:root {
+  --paper: #F6F2FF;
+  --card: #FFFFFF;
+  --text: #251C4A;
+  --muted: #564D7C;
+  --ink: #2E2458;
+  --line: #2E2458;
+  --pink: #D86CDB;
+  --violet: #8F6FE0;
+  --blue: #5E83E8;
+  --sun: #F4B940;
+  --glow: #E4FF4F;
+  --night: #170C3A;
+  --night-2: #241455;
+  --night-text: #F3EEFF;
+  --tint-pink: #FBE6FB;
+  --tint-blue: #E3EBFF;
+  --tint-violet: #EEE7FF;
+  --tint-sun: #FFF1D2;
+  --tint-free: #E6F8D8;
+  --free: #3A8F2C;
+  --icon-cut: #FFFFFF;
+  --f-display: "Lilita One", "Arial Black", "Helvetica Neue", Impact, sans-serif;
+  --f-body: "Nunito", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-spaced: "Quicksand", "Nunito", "Avenir Next", system-ui, sans-serif;
+  --shadow: 5px 5px 0 var(--ink);
+  --shadow-sm: 3px 3px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #120D26; --card: #1F1840; --text: #F1ECFF; --muted: #BEB4E2;
+    --ink: #05030C; --line: #8F7BEB;
+    --tint-pink: #3A1E45; --tint-blue: #1C2A52; --tint-violet: #2A2152; --tint-sun: #3F3118; --tint-free: #1D3A1F;
+    --free: #8EDB72; --icon-cut: #2A1F55;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #120D26; --card: #1F1840; --text: #F1ECFF; --muted: #BEB4E2;
+  --ink: #05030C; --line: #8F7BEB;
+  --tint-pink: #3A1E45; --tint-blue: #1C2A52; --tint-violet: #2A2152; --tint-sun: #3F3118; --tint-free: #1D3A1F;
+  --free: #8EDB72; --icon-cut: #2A1F55;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--text); font-family: var(--f-body); font-weight: 600; font-size: 1rem; line-height: 1.55; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+svg { width: 1.2em; height: 1.2em; flex: none; }
+img { max-width: 100%; }
+.wrap { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+[hidden] { display: none !important; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, #D86CDB 0%, #9A79E2 48%, #5E83E8 100%);
+  color: #FFFFFF; padding-block: 40px 76px; border-bottom: 4px solid var(--ink);
+}
+.hero-inner { display: flex; align-items: center; justify-content: center; gap: 44px; }
+.logo { width: clamp(180px, 28vw, 290px); height: auto; flex: none; filter: drop-shadow(5px 5px 0 rgba(46, 36, 88, .45)); }
+.hero-copy { display: grid; gap: 14px; min-width: 0; }
+.hero h1 {
+  font-family: var(--f-display); font-weight: 400; font-size: clamp(2.8rem, 8vw, 5.4rem); line-height: .95;
+  letter-spacing: .015em; text-transform: uppercase; color: #FFFFFF;
+  text-shadow: 2px 3px 0 rgba(46, 36, 88, .5);
+}
+.hero h1 span { display: inline-block; }
+.tagline { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .28em; font-size: clamp(1rem, 2.4vw, 1.35rem); }
+.bio { max-width: 40ch; font-size: 1.1rem; font-weight: 700; }
+.socials { display: flex; flex-wrap: wrap; gap: 10px; }
+.social {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  font-weight: 900; font-size: .95rem; padding: 10px 16px; border-radius: 999px;
+  border: 3px solid var(--ink); box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s;
+}
+.social svg { width: 1.35em; height: 1.35em; }
+.social-hero { background: #FFFFFF; color: #2E2458; --icon-cut: #FFFFFF; }
+.social-about { background: var(--card); color: var(--text); border-color: var(--line); }
+.social:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; cursor: pointer;
+  font-family: var(--f-body); font-weight: 900; font-size: 1rem;
+  padding: 12px 20px; border-radius: 14px; border: 3px solid var(--ink);
+  background: var(--pink); color: #FFFFFF; box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.btn-small { padding: 8px 14px; font-size: .92rem; border-radius: 12px; }
+.btn-big { font-size: 1.15rem; padding: 15px 26px; }
+.btn-glow { background: var(--glow); color: #170C3A; border-color: #05030C; box-shadow: 4px 4px 0 #05030C; }
+.btn-ghost { background: transparent; color: var(--night-text); border-color: var(--night-text); box-shadow: 4px 4px 0 #05030C; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn-row-center { justify-content: center; }
+.peek { display: inline-flex; align-items: center; gap: 8px; font-weight: 900; font-size: .9rem; text-decoration: none; color: var(--text); }
+.peek:hover span:last-child { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.peek-play { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--glow); flex: none; }
+.peek-play svg { width: 14px; height: 14px; }
+
+/* ---------- Quick links + search ---------- */
+.quick-wrap { margin-top: -44px; position: relative; display: grid; gap: 28px; }
+.quick-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.quick {
+  display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; column-gap: 10px; align-items: center;
+  text-decoration: none; background: var(--card); color: var(--text);
+  border: 3px solid var(--line); border-radius: 18px; padding: 16px 18px; box-shadow: var(--shadow);
+  transition: transform .12s, box-shadow .12s; min-width: 0;
+}
+.quick:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+.q-title { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.1; }
+.q-sub { grid-row: 2; font-size: .88rem; color: var(--muted); font-weight: 700; }
+.q-arrow { grid-row: 1 / 3; grid-column: 2; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: var(--pink); color: #FFFFFF; border: 2px solid var(--ink); }
+.quick:nth-child(2) .q-arrow { background: var(--violet); }
+.quick:nth-child(3) .q-arrow { background: var(--blue); }
+.quick:nth-child(4) .q-arrow { background: var(--sun); color: #2E2458; }
+
+.search { display: grid; justify-items: center; gap: 10px; text-align: center; }
+.search-label { font-family: var(--f-display); font-size: 1.5rem; }
+.search-box {
+  width: min(100%, 620px); display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 3px solid var(--line); border-radius: 999px; padding: 6px 8px 6px 20px; box-shadow: var(--shadow);
+  color: var(--muted);
+}
+.search-box svg { width: 22px; height: 22px; }
+.search-box input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--text); font: 800 1.05rem/1.2 var(--f-body); padding-block: 10px; }
+.search-box input::placeholder { color: var(--muted); font-weight: 700; }
+.search-box:focus-within { box-shadow: 5px 5px 0 var(--blue); }
+.search-clear { font: 900 .9rem var(--f-body); border: 2.5px solid var(--ink); border-radius: 999px; background: var(--sun); color: #2E2458; padding: 8px 14px; cursor: pointer; }
+.search-status { font-weight: 900; color: var(--muted); min-height: 1.4em; }
+.no-results { margin-top: 40px; text-align: center; font-size: 1.1rem; font-weight: 800; }
+
+/* ---------- Best seller ---------- */
+.best { margin-top: 36px; }
+.best-box {
+  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 40px; align-items: center;
+  background: var(--tint-violet); border: 3px solid var(--line); border-radius: 26px; padding: 36px; box-shadow: 8px 8px 0 var(--ink);
+}
+.best-cover { justify-self: center; display: block; max-width: 300px; width: 100%; transform: rotate(-3deg); transition: transform .15s; }
+.best-cover:hover { transform: rotate(-1deg) scale(1.02); }
+.best-cover img { display: block; width: 100%; height: auto; border-radius: 14px; border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+.best-copy { display: grid; gap: 16px; min-width: 0; }
+.best-title { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1; }
+.best-copy > p:not(.eyebrow) { font-size: 1.1rem; max-width: 52ch; }
+.stats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.stats li { font-weight: 900; padding: 8px 14px; border-radius: 12px; background: var(--card); border: 2.5px solid var(--line); box-shadow: 2px 2px 0 var(--ink); }
+.stats li:first-child { background: var(--sun); color: #2E2458; border-color: var(--ink); }
+
+/* ---------- Spotlight (blacklight) ---------- */
+.spotlight {
+  margin-top: 64px; padding-block: 60px;
+  background: radial-gradient(120% 70% at 50% 0%, #3B1C7A 0%, rgba(59, 28, 122, 0) 65%), var(--night);
+  color: var(--night-text); border-block: 4px solid #05030C;
+}
+.spot-head { display: grid; gap: 16px; justify-items: center; text-align: center; margin-bottom: 40px; }
+.eyebrow { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .22em; font-size: .85rem; color: var(--violet); }
+.eyebrow-glow { color: var(--glow); }
+.glow-title {
+  font-family: var(--f-display); font-weight: 400; font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.02; text-transform: uppercase;
+  color: var(--glow); text-shadow: 0 0 16px rgba(228, 255, 79, .45);
+}
+.spot-body { max-width: 56ch; font-size: 1.1rem; color: #DCD4FF; }
+.reel {
+  display: grid; justify-items: center; align-content: center; gap: 12px; text-align: center; position: relative;
+  grid-row: span 2; min-height: 360px;
+  text-decoration: none; color: var(--night-text); border-radius: 20px; border: 3px solid var(--glow);
+  background:
+    repeating-linear-gradient(-12deg, rgba(228, 255, 79, .08) 0 14px, transparent 14px 34px),
+    linear-gradient(160deg, #2A1366 0%, #12072E 100%);
+  box-shadow: 0 0 26px rgba(228, 255, 79, .3), 6px 6px 0 #05030C;
+  padding: 56px 24px 28px; transition: transform .15s;
+}
+.reel:hover { transform: translate(-2px, -2px) rotate(-.5deg); }
+.reel-label { position: absolute; top: 16px; left: 16px; font-weight: 900; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; background: var(--pink); color: #FFFFFF; padding: 6px 10px; border-radius: 999px; border: 2px solid #05030C; }
+.reel-play { display: grid; place-items: center; width: 88px; height: 88px; border-radius: 50%; background: var(--glow); color: #170C3A; border: 3px solid #05030C; box-shadow: 0 0 26px rgba(228, 255, 79, .65); }
+.reel-play svg { width: 42px; height: 42px; margin-left: 4px; }
+.reel-title { font-family: var(--f-display); font-size: 1.8rem; line-height: 1.05; text-transform: uppercase; }
+.reel-sub { font-weight: 800; font-size: .92rem; color: #CFC4FF; }
+
+/* ---------- Cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 22px; }
+.card {
+  display: flex; flex-direction: column; min-width: 0;
+  background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 18px;
+  box-shadow: var(--shadow); overflow: hidden;
+}
+.cover { aspect-ratio: 4 / 3; background: var(--card-tint, var(--tint-violet)); border-bottom: 3px solid var(--line); display: grid; place-items: center; padding: 12px; overflow: hidden; }
+.cover img { max-height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: 6px; box-shadow: 3px 3px 0 rgba(46, 36, 88, .35); }
+.cover-text span {
+  font-family: var(--f-display); font-size: clamp(1.6rem, 3.4vw, 2.2rem); line-height: 1; text-transform: uppercase; text-align: center;
+  color: var(--card-accent, var(--violet)); padding: 10px 14px; border: 3px dashed currentColor; border-radius: 14px; transform: rotate(-2deg);
+}
+.card-body { display: flex; flex-direction: column; gap: 9px; padding: 16px 18px 18px; flex: 1; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.card-tags:empty { display: none; }
+.card h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.28rem; line-height: 1.12; }
+.card p { color: var(--muted); font-size: .96rem; flex: 1; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 4px; }
+.card-pink { --card-accent: var(--pink); --card-tint: var(--tint-pink); }
+.card-blue { --card-accent: var(--blue); --card-tint: var(--tint-blue); }
+.card-violet { --card-accent: var(--violet); --card-tint: var(--tint-violet); }
+.card-sun { --card-accent: #C98A0E; --card-tint: var(--tint-sun); }
+.card-free { --card-accent: var(--free); --card-tint: var(--tint-free); }
+.card-sun .btn { background: var(--sun); color: #2E2458; }
+.card-blue .btn { background: var(--blue); }
+.card-violet .btn { background: var(--violet); }
+.card-free .btn { background: var(--free); color: #FFFFFF; }
+.tag { font-size: .74rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; padding: 3px 9px; border-radius: 999px; border: 2px solid var(--line); background: var(--tint-blue); color: var(--text); }
+.tag-free { background: var(--glow); color: #170C3A; border-color: #05030C; }
+.tag-best { background: var(--sun); color: #2E2458; border-color: #05030C; }
+
+.grid-night .card { background: var(--night-2); color: var(--night-text); border-color: #6C4FD6; box-shadow: 5px 5px 0 #05030C; --card-accent: var(--glow); --card-tint: #2E1A6B; }
+.grid-night .cover { border-color: #6C4FD6; }
+.grid-night .card p { color: #CFC4FF; }
+.grid-night .card .btn { background: var(--glow); color: #170C3A; border-color: #05030C; box-shadow: 3px 3px 0 #05030C; }
+.grid-night .peek { color: var(--night-text); }
+.grid-night .peek-play { background: var(--glow); color: #170C3A; }
+.grid-night .tag { background: var(--glow); color: #170C3A; border-color: #05030C; }
+
+/* ---------- Fan favorite ---------- */
+.fan { margin-top: 64px; }
+.fan-box {
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; align-items: center;
+  background: var(--tint-sun); border: 3px solid var(--line); border-radius: 24px; padding: 28px 32px; box-shadow: var(--shadow);
+}
+.fan-cover { width: 100%; height: auto; border-radius: 12px; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); transform: rotate(2deg); }
+.fan-copy { display: grid; gap: 12px; min-width: 0; }
+.fan-copy h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.05; }
+.fan-copy p:not(.eyebrow) { max-width: 58ch; }
+.fan .eyebrow { color: #B07400; }
+.fan .btn { background: var(--sun); color: #2E2458; }
+
+/* ---------- Sections ---------- */
+.block { margin-top: 80px; display: grid; gap: 30px; }
+.block-head { display: grid; gap: 12px; justify-items: center; text-align: center; }
+.section-title { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1; color: var(--text); }
+.block-sub { color: var(--muted); max-width: 58ch; font-size: 1.08rem; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 6px; }
+.chip { text-decoration: none; font-weight: 900; font-size: .95rem; padding: 8px 16px; border-radius: 999px; border: 2.5px solid var(--line); background: var(--card); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s, box-shadow .12s; }
+.chip:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+.chip-pink { background: var(--tint-pink); } .chip-blue { background: var(--tint-blue); } .chip-violet { background: var(--tint-violet); } .chip-sun { background: var(--tint-sun); }
+.group { display: grid; gap: 18px; scroll-margin-top: 20px; }
+.group + .group { margin-top: 22px; }
+.group-title { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.dot { width: 18px; height: 18px; border-radius: 6px; border: 2.5px solid var(--line); flex: none; }
+.dot-pink { background: var(--pink); } .dot-blue { background: var(--blue); } .dot-violet { background: var(--violet); } .dot-sun { background: var(--sun); }
+
+/* ---------- About ---------- */
+.about { margin-top: 88px; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 34px; align-items: center; }
+.about-logo { width: 200px; height: auto; }
+.about-copy { display: grid; gap: 12px; background: var(--tint-violet); border: 3px solid var(--line); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); }
+.about-copy p { max-width: 62ch; font-size: 1.06rem; }
+.about-copy .socials { margin-top: 6px; }
+
+/* ---------- Footer ---------- */
+.foot { margin-top: 80px; background: var(--ink); color: #F3EEFF; padding-block: 40px; border-top: 4px solid var(--violet); }
+.foot-inner { display: grid; gap: 18px; justify-items: center; text-align: center; }
+.foot-name { font-family: var(--f-display); font-size: 1.8rem; text-transform: uppercase; }
+.foot-name span { display: block; font-family: var(--f-spaced); font-size: .9rem; letter-spacing: .25em; color: #CFC4FF; }
+.foot .socials { justify-content: center; }
+.social-foot { background: transparent; color: #FFFFFF; border-color: #FFFFFF; box-shadow: 3px 3px 0 var(--violet); --icon-cut: #2E2458; }
+.foot-small { font-size: .88rem; color: #B9AEE0; }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 860px) {
+  .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .best-box { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; padding: 28px 22px; }
+  .best-copy { justify-items: center; }
+  .stats, .best-copy .btn-row { justify-content: center; }
+  .reel { grid-row: auto; min-height: 300px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding-inline: 16px; }
+  .hero { padding-block: 28px 66px; }
+  .hero-inner { flex-direction: column; text-align: center; gap: 18px; }
+  .hero-copy { justify-items: center; }
+  .socials { justify-content: center; }
+  .quick-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .fan-box { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; padding: 24px 20px; }
+  .fan-cover { width: 160px; }
+  .fan-copy .btn-row { justify-content: center; }
+  .about { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+  .about-logo { width: 150px; }
+  .about-copy .socials { justify-content: center; }
+}
+
+/* ---------- Drive window previews ---------- */
+.best-inside { grid-column: 1 / -1; display: grid; gap: 12px; justify-items: center; }
+.inside-label { font-family: var(--f-display); font-size: 1.4rem; }
+.drive { width: min(100%, 760px); background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); text-align: left; }
+.drive-bar { display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: var(--tint-blue); border-bottom: 3px solid var(--line); }
+.drive-bar span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--line); background: var(--pink); }
+.drive-bar span:nth-child(2) { background: var(--sun); }
+.drive-bar span:nth-child(3) { background: var(--free); }
+.drive-bar b { margin-left: 8px; font-weight: 900; font-size: .92rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.drive ul { list-style: none; margin: 0; padding: 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 6px; }
+.drive li { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; background: var(--paper); font-weight: 800; font-size: .93rem; line-height: 1.25; min-width: 0; }
+.drive li svg { color: var(--violet); width: 1.3em; height: 1.3em; }
+.drive-small { box-shadow: none; border-width: 2px; margin-top: 10px; }
+.drive-small ul { grid-template-columns: minmax(0, 1fr); padding: 6px; gap: 4px; }
+.drive-small li { padding: 7px 10px; font-size: .86rem; }
+.inside summary { cursor: pointer; font-weight: 900; font-size: .9rem; color: var(--text); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; margin-top: 4px; }
+
+/* ---------- Live Instagram embed (site only) ---------- */
+.reel-embed { padding: 48px 12px 12px; align-content: start; }
+.reel-embed .instagram-media { margin: 0 auto !important; min-width: 0 !important; width: 100% !important; max-width: 400px !important; border-radius: 14px !important; background: transparent !important; border: 0 !important; }
+.reel-fallback { display: grid; justify-items: center; gap: 12px; padding: 40px 12px; text-decoration: none; color: var(--night-text); }
+
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <img class="logo" src="logo.webp" alt="Michaela, The Balanced Teach, @Middle_Teacher_Syndrome" width="560" height="561">
+    <div class="hero-copy">
+      <h1><span>Michaela</span> <span>Arabia</span></h1>
+      <p class="tagline">The Balanced Teach</p>
+      <p class="bio">Middle school ELA and history teacher, tech and AI nerd, and here to help you beat burnout. Everything on this page gets tested on my own middle schoolers first!</p>
+      <nav class="socials" aria-label="Follow me"><a class="social social-hero" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-hero" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-hero" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-hero" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap quick-wrap" aria-label="Quick links">
+    <div class="quick-grid"><a class="quick" href="https://www.amazon.com/shop/middle_teacher_syndrome" target="_blank" rel="noopener"><span class="q-title">Amazon Storefront</span><span class="q-sub">All my classroom faves in one spot</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener"><span class="q-title">TPT Store</span><span class="q-sub">Prefer TPT? I&#x27;m there too!</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://mrsarabiarocks.my.canva.site/canva-templates" target="_blank" rel="noopener"><span class="q-title">Free Canva Templates</span><span class="q-sub">Just copy, tweak, and teach</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://mrsarabiarocks.my.canva.site/mrs-arabia-rocks-ai-sites-to-try" target="_blank" rel="noopener"><span class="q-title">Free AI Tools</span><span class="q-sub">The ones you MUST try</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    <form class="search" role="search" id="search-form">
+      <label for="q" class="search-label">Looking for something?</label>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Try Poe, PBL, free, AI, back to school" autocomplete="off">
+        <button type="button" id="q-clear" class="search-clear" hidden>Clear</button>
+      </div>
+      <p class="search-status" id="q-status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="wrap best hide-on-search" aria-labelledby="best-h">
+    <div class="best-box">
+      <a class="best-cover" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener"><img src="covers/pbl.webp" alt="The Growing Project Based Learning Google Drive" loading="lazy"></a>
+      <div class="best-copy">
+        <p class="eyebrow">My #1 best seller</p>
+        <h2 id="best-h" class="best-title">The PBL Google Drive</h2>
+        <p>50+ full project based learning units and resources for grades 5 to 12, all in ONE growing Google Drive. Grab it once, and every new project I add is yours too. If you only get one thing from me, make it this one!</p>
+        <ul class="stats"><li>50+ units and resources</li><li>Grades 5 to 12</li><li>Keeps growing</li></ul>
+        <div class="btn-row"><a class="btn btn-big" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Get the PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddq95n9D9z3/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+      </div>
+      <div class="best-inside">
+        <p class="inside-label">Peek inside the Drive</p>
+        <div class="drive " role="img" aria-label="Folders inside the Project Based Learning GROWING Drive">
+  <div class="drive-bar"><span></span><span></span><span></span><b>Project Based Learning GROWING Drive</b></div>
+  <ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>1. START HERE</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>2. Novel &amp; Short Story Annotations &amp; Units</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>3. Edgar Allan Poe Collection</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>4. Choice Projects (Any Text)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>5. Black Excellence Month &amp; Womens History Month</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>6. Other Subjects (History &amp; Science)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>7. Guides &amp; AI Help</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>8. Seasonal Slides &amp; Bonuses</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>9. Interactive Notebooks</span></li></ul>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spotlight search-zone" aria-labelledby="spot-h">
+    <div class="wrap">
+      <div class="spot-head hide-on-search">
+        <p class="eyebrow eyebrow-glow">Spooky Season Spotlight</p>
+        <h2 id="spot-h" class="glow-title">Lights off, highlighters out.</h2>
+        <p class="spot-body">This is my FAVORITE week of the whole year. We turn off the lights, pass out the blacklight highlighters, and annotate Poe. Here&#x27;s what it looks like in my room, plus everything you need to do it in yours!</p>
+        <div class="btn-row btn-row-center"><a class="btn btn-glow" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-4-week-bundle/" target="_blank" rel="noopener">Get the Poe bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost" href="https://urlgeni.us/amazon/ZcwVyW" target="_blank" rel="noopener">Shop my blacklight supplies<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+      <div class="grid grid-night">
+        <div class="reel reel-embed hide-on-search">
+          <span class="reel-label">Peek inside my classroom</span>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DeJ8tEED88J/?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DeJ8tEED88J/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Blacklight Poe annotating</span><span class="reel-sub">Watch on Instagram</span></a>
+          </blockquote>
+        </div>
+        <article class="card card-night" data-search="poe: the raven mini unit a full week of raven plans, fully editable. moody, creepy, and so fun to teach. poe halloween october ">
+  <div class="cover"><img src="covers/raven.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Poe: The Raven Mini Unit</h4>
+    <p>A full week of Raven plans, fully editable. Moody, creepy, and SO fun to teach.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddy_SyTgYP_/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="poe: the tell-tale heart mini unit a full week of tell-tale heart plans, fully editable. heart-pounding in the best way. poe halloween october ">
+  <div class="cover"><img src="covers/telltale.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Poe: The Tell-Tale Heart Mini Unit</h4>
+    <p>A full week of Tell-Tale Heart plans, fully editable. Heart-pounding in the best way.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="poe: the fall of the house of usher mini unit a full week of usher plans, fully editable. watch my kids try to sell the house! poe halloween october ">
+  <div class="cover"><img src="covers/usher.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Poe: The Fall of the House of Usher Mini Unit</h4>
+    <p>A full week of Usher plans, fully editable. Watch my kids try to SELL the house!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="poe: the cask of amontillado mini unit annotations, a plot diagram, and a project for poe&#x27;s sneakiest revenge story. poe halloween october amontillado ">
+  <div class="cover"><img src="covers/cask.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Poe: The Cask of Amontillado Mini Unit</h4>
+    <p>Annotations, a plot diagram, and a project for Poe&#x27;s sneakiest revenge story.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/The-Cask-of-Amontillado-Mini-Unit-Poe-Annotations-Plot-Diagram-PBL-Project-10262608" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="the monkey&#x27;s paw: 5-day foreshadowing unit five days of foreshadowing with a story that gives everyone chills. short story halloween october ">
+  <div class="cover"><img src="covers/monkey.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>The Monkey&#x27;s Paw: 5-Day Foreshadowing Unit</h4>
+    <p>Five days of foreshadowing with a story that gives EVERYONE chills.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/the-monkeys-paw-5-day-foreshadowing-unit/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddw6W2JyEWH/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="the lottery: meme and lesson activity a creepy classic plus a meme assessment your students will actually want to do. and it&#x27;s free! short story halloween meme free free">
+  <div class="cover"><img src="covers/lottery.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>The Lottery: Meme and Lesson Activity</h4>
+    <p>A creepy classic plus a meme assessment your students will actually want to do. And it&#x27;s FREE!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/the-lottery-meme--lesson-activity/" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZk76x-vo-M/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="free annotations guide, grades 5 to 12 exactly how i teach annotating, step by step. perfect before blacklight week! annotation free free">
+  <div class="cover cover-text"><span>Annotate!</span></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Free Annotations Guide, Grades 5 to 12</h4>
+    <p>Exactly how I teach annotating, step by step. Perfect before blacklight week!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotations-guide-for-grades-5-12/" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="free poe unit: 4 weeks of ideas my whole month of poe lesson ideas and plans, totally free. start here! poe halloween october free free">
+  <div class="cover"><img src="covers/tpt10254735.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>FREE Poe Unit: 4 Weeks of Ideas</h4>
+    <p>My whole month of Poe lesson ideas and plans, totally free. Start here!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/FREE-Edgar-Allan-Poe-Unit-4-Weeks-of-IDEAS-Lesson-Plans-10254735" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap fan hide-on-search" aria-labelledby="fan-h">
+    <div class="fan-box">
+      <img class="fan-cover" src="covers/agenda.webp" alt="" loading="lazy">
+      <div class="fan-copy">
+        <p class="eyebrow">Fan favorite</p>
+        <h2 id="fan-h">A WHOLE YEAR of agenda slides in minutes</h2>
+        <p>Every day of the school year, already made and fully editable in Canva. Plus I show you how to make your own with Bulk Create. This is my most-loved video ever!</p>
+        <div class="btn-row"><a class="btn" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block search-zone" aria-labelledby="shop-h">
+    <div class="block-head"><h2 id="shop-h" class="section-title">Shop the Classroom</h2><p class="block-sub">The units and projects I actually teach in my own middle school classroom. Tap any one to peek inside and see the price.</p><nav class="chips hide-on-search" aria-label="Jump to"><a class="chip chip-pink" href="#ela">ELA Units</a><a class="chip chip-blue" href="#history">History Mini Units</a><a class="chip chip-violet" href="#projects">Projects</a><a class="chip chip-sun" href="#setup">Classroom Setup</a></nav></div>
+    <div class="group" id="ela"><h3 class="group-title"><span class="dot dot-pink"></span>ELA Units</h3><div class="grid"><article class="card card-pink" data-search="edgar allan poe: 4-week bundle all my poe units in one bundle. a whole month of creepy, fully editable lessons. poe halloween october bundle ">
+  <div class="cover"><img src="covers/poebundle.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Edgar Allan Poe: 4-Week Bundle</h4>
+    <p>ALL my Poe units in one bundle. A whole month of creepy, fully editable lessons.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-4-week-bundle/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="the outsiders novel study three weeks of the outsiders, ready to teach. stay gold! novel ">
+  <div class="cover"><img src="covers/outsiders.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>The Outsiders Novel Study</h4>
+    <p>Three weeks of The Outsiders, ready to teach. Stay gold!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/outsiders-novel-study/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZBb8xAvJpS/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="novel choice project works with any novel or short story. students make a one-pager and a magazine-style character feature. one pager novel short story ">
+  <div class="cover"><img src="covers/novel.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Novel Choice Project</h4>
+    <p>Works with ANY novel or short story. Students make a one-pager and a magazine-style character feature.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/novel-choice-project-1-pager--character-feature/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="ela must-read list my go-to short stories and novels for middle school, all in one list. books reading list ">
+  <div class="cover cover-text"><span>Must Reads</span></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>ELA Must-Read List</h4>
+    <p>My go-to short stories and novels for middle school, all in one list.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/ela-must-read-list-short-stories--novels/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DdDHMZnBb5C/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="langston hughes mini unit project based learning with &quot;dreams&quot; and &quot;harlem.&quot; poetry they&#x27;ll actually remember. poetry black history month harlem renaissance ">
+  <div class="cover"><img src="covers/tpt11022227.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Langston Hughes Mini Unit</h4>
+    <p>Project based learning with &quot;Dreams&quot; and &quot;Harlem.&quot; Poetry they&#x27;ll actually remember.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Langston-Hughes-Mini-Unit-Project-Based-Learning-in-Poetry-Dreams-Harlem-11022227" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="maya angelou: i know why the caged bird sings a full week of pbl activities with the excerpt. annotations, art, and socratic seminar. black history month memoir ">
+  <div class="cover"><img src="covers/tpt10925165.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Maya Angelou: I Know Why the Caged Bird Sings</h4>
+    <p>A full week of PBL activities with the excerpt. Annotations, art, and Socratic seminar.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Maya-Angelou-Excerpt-from-I-Know-Why-The-Caged-Bird-Sings-PBL-Activities-10925165" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="the lightning thief choice project a percy jackson themed choice project, fully editable. percy jackson novel choice ">
+  <div class="cover"><img src="covers/tpt5616002.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>The Lightning Thief Choice Project</h4>
+    <p>A Percy Jackson themed choice project, fully editable.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Editable-The-Lightning-Thief-Themed-Choice-Project-5616002" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article></div></div><div class="group" id="history"><h3 class="group-title"><span class="dot dot-blue"></span>History Mini Units</h3><div class="grid"><article class="card card-blue" data-search="dr. king mini unit lessons, readings, annotations, and art for mlk day and beyond. mlk martin luther king january ">
+  <div class="cover"><img src="covers/king.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Dr. King Mini Unit</h4>
+    <p>Lessons, readings, annotations, and art for MLK Day and beyond.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/dr-king-mini-unit/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="malcolm x mini unit a ready-to-teach unit, perfect for black history month. black history month february ">
+  <div class="cover"><img src="covers/malcolm.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Malcolm X Mini Unit</h4>
+    <p>A ready-to-teach unit, perfect for Black History Month.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/malcolm-x-mini-unit/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="kobe mini unit poetry, art, and argument writing built around kobe&#x27;s &quot;dear basketball.&quot; kobe bryant black history month ">
+  <div class="cover"><img src="covers/kobe.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>KOBE Mini Unit</h4>
+    <p>Poetry, art, and argument writing built around Kobe&#x27;s &quot;Dear Basketball.&quot;</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/kobe-mini-unit/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="black history month bundle malcolm x, maya angelou, langston hughes, and kobe. four weeks of lessons in one bundle! black history month february bundle ">
+  <div class="cover"><img src="covers/tpt11024586.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Black History Month Bundle</h4>
+    <p>Malcolm X, Maya Angelou, Langston Hughes, and Kobe. Four weeks of lessons in one bundle!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Black-History-Month-Bundle-Malcolm-X-Maya-Angelou-Langston-Hughes-Kobe-11024586" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="mlk and rfk&#x27;s speech dr. king through robert f. kennedy&#x27;s speech the night he died. a full week of plans. mlk martin luther king january rfk ">
+  <div class="cover"><img src="covers/tpt10841183.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>MLK and RFK&#x27;s Speech</h4>
+    <p>Dr. King through Robert F. Kennedy&#x27;s speech the night he died. A full week of plans.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Black-Excellence-Month-Martin-Luther-King-Jr-Robert-F-Kennedy-Speech-10841183" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="leaders of west africa choice project students choose a west african ruler and build a project around them. africa mali mansa musa world history ">
+  <div class="cover"><img src="covers/tpt15255445.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Leaders of West Africa Choice Project</h4>
+    <p>Students choose a West African ruler and build a project around them.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Leaders-of-West-Africa-Choice-Project-15255445" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="french revolution: slam letter or meme hamilton vs. jefferson on the french revolution. students pick a side and slam it. hamilton jefferson american history ">
+  <div class="cover"><img src="covers/tpt10763118.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>French Revolution: SLAM Letter or MEME</h4>
+    <p>Hamilton vs. Jefferson on the French Revolution. Students pick a side and SLAM it.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/The-French-Revolution-AHam-vs-TJeff-SLAM-Letter-MEME-10763118" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="mythbusters: ancient greece students bust (or confirm!) greek myths using claim, evidence, reasoning. greece cer pbl myths ">
+  <div class="cover"><img src="covers/tpt5310535.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>MYTHBUSTERS: Ancient Greece</h4>
+    <p>Students bust (or confirm!) Greek myths using claim, evidence, reasoning.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/MYTHBUSTERS-Ancient-Greece-Edition-using-CER-5310535" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article></div></div><div class="group" id="projects"><h3 class="group-title"><span class="dot dot-violet"></span>Projects</h3><div class="grid"><article class="card card-violet" data-search="project based learning google drive my #1 best seller! 50+ full pbl units and resources for grades 5 to 12 in one growing drive. pbl project based learning drive bundle best seller 1. start here 2. novel &amp; short story annotations &amp; units 3. edgar allan poe collection 4. choice projects (any text) 5. black excellence month &amp; womens history month 6. other subjects (history &amp; science) 7. guides &amp; ai help 8. seasonal slides &amp; bonuses 9. interactive notebooks ">
+  <div class="cover"><img src="covers/pbl.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-best">Best seller</span></div>
+    <h4>Project Based Learning Google Drive</h4>
+    <p>My #1 best seller! 50+ full PBL units and resources for grades 5 to 12 in one growing Drive.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    <details class="inside"><summary>See what's inside the Drive</summary><div class="drive drive-small" role="img" aria-label="Folders inside the Project Based Learning Google Drive">
+  <div class="drive-bar"><span></span><span></span><span></span><b>Project Based Learning Google Drive</b></div>
+  <ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>1. START HERE</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>2. Novel &amp; Short Story Annotations &amp; Units</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>3. Edgar Allan Poe Collection</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>4. Choice Projects (Any Text)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>5. Black Excellence Month &amp; Womens History Month</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>6. Other Subjects (History &amp; Science)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>7. Guides &amp; AI Help</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>8. Seasonal Slides &amp; Bonuses</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>9. Interactive Notebooks</span></li></ul>
+</div></details>
+  </div>
+</article><article class="card card-violet" data-search="sgn: some good news newscast students find the good news and broadcast it in their own newscast. a 5-day media literacy project. media literacy pbl ">
+  <div class="cover"><img src="covers/sgn.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>SGN: Some Good News Newscast</h4>
+    <p>Students find the GOOD news and broadcast it in their own newscast. A 5-day media literacy project.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/some-good-news-sgn-newscast-project/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="shark tank inventor project the editable version of my shark tank project. students invent, pitch, and defend. pbl shark tank invention ">
+  <div class="cover"><img src="covers/tpt5381643.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Shark Tank Inventor Project</h4>
+    <p>The editable version of my Shark Tank project. Students invent, pitch, and defend.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Editable-SHARK-TANK-Inventor-Project-5381643" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article></div></div><div class="group" id="setup"><h3 class="group-title"><span class="dot dot-sun"></span>Classroom Setup</h3><div class="grid"><article class="card card-sun" data-search="back to school growing drive everything i use to start the year, in one google drive that keeps growing. back to school first week 1. start here agenda &amp; daily slides planning templates reading &amp; annotation ice breakers &amp; activities classroom setup &amp; decor ai tools &amp; guides ">
+  <div class="cover"><img src="covers/bts.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Back to School Growing Drive</h4>
+    <p>Everything I use to start the year, in one Google Drive that keeps growing.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZsWa_uDBBw/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    <details class="inside"><summary>See what's inside the Drive</summary><div class="drive drive-small" role="img" aria-label="Folders inside the Back to School Growing Drive">
+  <div class="drive-bar"><span></span><span></span><span></span><b>Back to School Growing Drive</b></div>
+  <ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>1. Start Here</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>Agenda &amp; Daily Slides</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>Planning Templates</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>Reading &amp; Annotation</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>Ice Breakers &amp; Activities</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>Classroom Setup &amp; Decor</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" fill="currentColor"/></svg><span>AI Tools &amp; Guides</span></li></ul>
+</div></details>
+  </div>
+</article><article class="card card-sun" data-search="back to school syllabus an editable syllabus that&#x27;s ready for your first week. back to school ">
+  <div class="cover"><img src="covers/syllabus.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Back to School Syllabus</h4>
+    <p>An editable syllabus that&#x27;s ready for your first week.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-syllabus/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="back to school brochure a cute canva brochure for meet the teacher and back to school night. back to school parents canva ">
+  <div class="cover"><img src="covers/brochure.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Back to School Brochure</h4>
+    <p>A cute Canva brochure for meet the teacher and back to school night.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/backtoschool-brochure/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="editable upper grade classroom decor decor made for middle and high school walls. no baby stuff! decor posters ">
+  <div class="cover"><img src="covers/decor.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Editable Upper Grade Classroom Decor</h4>
+    <p>Decor made for middle and high school walls. No baby stuff!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/EDITABLE-Upper-Grade-Classroom-Decor-Middle-Junior-High-High-School-9888991" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="gen alpha slang posters slang posters that get a laugh every time. your students will roast you, in the best way. decor posters slang ">
+  <div class="cover"><img src="covers/slang.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Gen Alpha Slang Posters</h4>
+    <p>Slang posters that get a laugh EVERY time. Your students will roast you, in the best way.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/LIT-Gen-Alpha-Slang-Posters-for-Middle-Junior-High-Classrooms-11945525" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="december agenda and riddle slides morning slides with a riddle a day to get you to winter break. december winter agenda slides riddles ">
+  <div class="cover"><img src="covers/tpt14954927.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>December Agenda and Riddle Slides</h4>
+    <p>Morning slides with a riddle a day to get you to winter break.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/December-Daily-Agenda-Riddle-Slides-Editable-Canva-Google-Slides-14954927" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="american history classroom posters a history poster set plus my guide to making your own with ai. decor posters history ai ">
+  <div class="cover"><img src="covers/tpt17154210.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>American History Classroom Posters</h4>
+    <p>A history poster set plus my guide to making your own with AI.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/American-History-Classroom-Poster-Set-AI-Poster-Creation-Guide-17154210" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="editable composition notebook tabs tabs for interactive notebooks. organized notebooks all year! interactive notebook inb tabs ">
+  <div class="cover"><img src="covers/tpt4806109.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Editable Composition Notebook Tabs</h4>
+    <p>Tabs for interactive notebooks. Organized notebooks all year!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/EDITABLE-Composition-Notebook-Tabs-4806109" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article></div></div>
+  </section>
+
+  <section class="wrap block search-zone" aria-labelledby="teacher-h" id="teacher">
+    <div class="block-head"><h2 id="teacher-h" class="section-title">For You, the Teacher</h2><p class="block-sub">AI, tech, and planning tools to get your time back. Because you deserve your weekends!</p></div>
+    <div class="grid"><article class="card card-violet" data-search="annotation unlocked build annotation packets for any text, any grade, in about 10 minutes with ai. ai annotation ">
+  <div class="cover"><img src="covers/annotunlock.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Annotation Unlocked</h4>
+    <p>Build annotation packets for ANY text, any grade, in about 10 minutes with AI.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="interactive notebooks unlocked how to launch, grade, and create interactive notebooks with ai tools. ai inb interactive notebook ">
+  <div class="cover"><img src="covers/inb.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Interactive Notebooks Unlocked</h4>
+    <p>How to launch, grade, and create interactive notebooks with AI tools.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="hot takes: ai and canva magic my beginner&#x27;s guide to bulk create. make a year of slides while your coffee is still hot. canva bulk create ai ">
+  <div class="cover"><img src="covers/hottakes.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Hot Takes: AI and Canva Magic</h4>
+    <p>My beginner&#x27;s guide to Bulk Create. Make a year of slides while your coffee is still hot.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/guide-bulk-creation-for-teachers/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbYdTMAE6j0/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="how to master ai as a teacher a step-by-step pdf with the tools and templates i actually use. ai guide ">
+  <div class="cover"><img src="covers/masterai.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>How to Master AI as a Teacher</h4>
+    <p>A step-by-step PDF with the tools and templates I actually use.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/how-to-master-ai-pdf/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="gemini, chatgpt and canva coding prompts the prompts i can&#x27;t live without. copy, paste, done. ai canva code chatgpt gemini ">
+  <div class="cover"><img src="covers/prompts.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Gemini, ChatGPT and Canva Coding Prompts</h4>
+    <p>The prompts I can&#x27;t live without. Copy, paste, done.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/geminichatgptcanva-prompts/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="pbl backwards planning with claude start with the final project and let claude help you plan backwards. ai pbl claude ">
+  <div class="cover"><img src="covers/pblclaude.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>PBL Backwards Planning with Claude</h4>
+    <p>Start with the final project and let Claude help you plan backwards.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="digital lesson planner plan lessons and track accommodations and behavior, all in one place. planner accommodations behavior google ">
+  <div class="cover"><img src="covers/planner.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Digital Lesson Planner</h4>
+    <p>Plan lessons and track accommodations and behavior, all in one place.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/ai--digital-tools/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="how i use claude to run my teacher business for my fellow teacher creators: how i use claude behind the scenes. ai claude creator business ">
+  <div class="cover"><img src="covers/claudebiz.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>How I Use Claude to Run My Teacher Business</h4>
+    <p>For my fellow teacher creators: how I use Claude behind the scenes.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/using-claude-to-run-a-teacher-business/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="ai and digital tools masterclass my self-paced pd with video tutorials and templates. this is what teacher pd should look like! ai pd professional development ">
+  <div class="cover cover-text"><span>AI Masterclass</span></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>AI and Digital Tools Masterclass</h4>
+    <p>My self-paced PD with video tutorials and templates. This is what teacher PD should look like!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/aidigital-tools-pd-self-paced/" target="_blank" rel="noopener">Take a look<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZsWa_uDBBw/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article></div>
+  </section>
+
+  <section class="wrap block search-zone" aria-labelledby="free-h" id="free">
+    <div class="block-head"><h2 id="free-h" class="section-title">Free Resources</h2><p class="block-sub">Totally free! Try these first and see if my style works for your kiddos.</p></div>
+    <div class="grid"><article class="card card-free" data-search="pbl prompt guide ai prompts to plan project based learning fast. ai pbl free">
+  <div class="cover"><img src="covers/pblprompt.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>PBL Prompt Guide</h4>
+    <p>AI prompts to plan project based learning fast.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pblpromptguide/" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="teacher tools cheat sheet the ai tools i tell every teacher to try. ai tools free">
+  <div class="cover"><img src="covers/cheat.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Teacher Tools Cheat Sheet</h4>
+    <p>The AI tools I tell EVERY teacher to try.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/aitoolscheatsheet/" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DWecIERE0nd/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="shark tank project students invent a product and pitch it to the sharks. pbl project free">
+  <div class="cover cover-text"><span>Shark Tank</span></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Shark Tank Project</h4>
+    <p>Students invent a product and pitch it to the sharks.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/free-shark-tank/" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="lesson plan and sub plan template google docs. make a copy and go! sub plans lesson plan free">
+  <div class="cover"><img src="covers/subplan.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Lesson Plan and Sub Plan Template</h4>
+    <p>Google Docs. Make a copy and go!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://docs.google.com/document/d/13rkhzs4WCBjGETf5Nv78dnA3HotOSnOS/copy" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="ai prompt-writing guide how to write prompts that actually get you what you want. ai prompts free">
+  <div class="cover cover-text"><span>Prompt Guide</span></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>AI Prompt-Writing Guide</h4>
+    <p>How to write prompts that actually get you what you want.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://drive.google.com/file/d/1CODjXRAXyXIi6JX2XMr4RQbC8eN5IM1Y/view" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="daily agenda slides template canva and google slides versions. agenda slides canva free">
+  <div class="cover"><img src="covers/agendafree.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Daily Agenda Slides Template</h4>
+    <p>Canva and Google Slides versions.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.canva.com/design/DAGJc8K9FtU/rATziqhGmq4r6ZImHRCEsQ/view" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="yearly scope and sequence template map out your whole year in google slides. planning year free">
+  <div class="cover"><img src="covers/scope.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Yearly Scope and Sequence Template</h4>
+    <p>Map out your whole year in Google Slides.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://docs.google.com/presentation/d/1XFMfXqxMUnQBuGOmCGB_qu6waSAjQ1uWiGI1whN5YqQ/edit" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="socratic seminar guide my rules and setup for discussions students actually lead. discussion free">
+  <div class="cover"><img src="covers/socratic.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Socratic Seminar Guide</h4>
+    <p>My rules and setup for discussions students actually lead.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://drive.google.com/file/d/1-BM_l4P1ayUyQhdX1724t49aSVDyhk2C/view" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="name tag template an editable canva name tag for the first week. back to school canva free">
+  <div class="cover"><img src="covers/nametag.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Name Tag Template</h4>
+    <p>An editable Canva name tag for the first week.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.canva.com/design/DAGI-xmdHdg/SLEHcUfRe4r9NGDSqUGr-w/view" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="hot takes first day activity an agree or disagree icebreaker that gets everyone talking. back to school icebreaker canva free">
+  <div class="cover"><img src="covers/hottakes1.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Hot Takes First Day Activity</h4>
+    <p>An agree or disagree icebreaker that gets EVERYONE talking.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.canva.com/design/DAGKxAy270c/oxtsgBim61xrBSggWuitOQ/view" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="morning classroomscreen make a copy of my morning screen setup. classroomscreen morning free">
+  <div class="cover cover-text"><span>Morning Screen</span></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Morning ClassroomScreen</h4>
+    <p>Make a copy of my morning screen setup.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://classroomscreen.com/app/p/3949e989-50a8-4b9d-9cff-0db1f1eb4811/0" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="how to survive a fun end-of-year activity where students write the survival guide. end of year free">
+  <div class="cover"><img src="covers/survive.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>How To Survive</h4>
+    <p>A fun end-of-year activity where students write the survival guide.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://drive.google.com/file/d/1IHXOlqylyBcKKFE0Psk6x5Q23kFbv-Gv/view" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="indigenous peoples day lesson a primary source discussion lesson. perfect for october! october history primary source free">
+  <div class="cover"><img src="covers/tpt7327280.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>Indigenous Peoples Day Lesson</h4>
+    <p>A primary source discussion lesson. Perfect for October!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Indigenous-Peoples-Day-Primary-Source-Document-Discussion-Lesson-7327280" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="figurative language in music an art assessment where students find figurative language in songs. figurative language music free">
+  <div class="cover"><img src="covers/tpt9746836.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>Figurative Language in Music</h4>
+    <p>An art assessment where students find figurative language in songs.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Figurative-Language-in-MUSIC-ART-Assessment-9746836" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="caged bird annotations and art maya angelou annotations plus an art assessment. maya angelou annotation free">
+  <div class="cover"><img src="covers/tpt5165983.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>Caged Bird Annotations and Art</h4>
+    <p>Maya Angelou annotations plus an art assessment.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Maya-Angelou-I-Know-Why-The-Caged-Bird-Sings-Annotations-Art-Assessment-5165983" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="rfk&#x27;s speech on dr. king annotations and a graphic organizer for rfk&#x27;s speech. mlk rfk speech january free">
+  <div class="cover"><img src="covers/tpt6438557.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>RFK&#x27;s Speech on Dr. King</h4>
+    <p>Annotations and a graphic organizer for RFK&#x27;s speech.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/On-the-Death-of-Martin-Luther-King-Jr-RFKs-Speech-6438557" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="most likely to awards peer-voted digital awards with google forms. end of year gold. end of year awards free">
+  <div class="cover"><img src="covers/tpt5528821.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>Most Likely To Awards</h4>
+    <p>Peer-voted digital awards with Google Forms. End of year GOLD.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Most-Likely-To-Digital-Awards-Created-by-Peers-through-Google-Forms-5528821" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="inspirational quote posters quote posters for your classroom walls. decor posters free">
+  <div class="cover"><img src="covers/tpt4782479.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>Inspirational Quote Posters</h4>
+    <p>Quote posters for your classroom walls.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Inspirational-Quote-Posters-4782479" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="step up to writing organizer an 8 to 11 sentence paragraph organizer and rubric. writing paragraph organizer free">
+  <div class="cover"><img src="covers/tpt4068940.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>Step Up to Writing Organizer</h4>
+    <p>An 8 to 11 sentence paragraph organizer and rubric.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Step-Up-To-Writing-8-11-Sentence-Graphic-Organizer-Rubric-4068940" target="_blank" rel="noopener">Grab it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article></div>
+  </section>
+
+  <p class="wrap no-results" id="no-results" hidden>Hmm, nothing matches that yet. Try another word, or check my <a href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener">TPT store</a>.</p>
+
+  <section class="wrap about hide-on-search" aria-labelledby="about-h">
+    <img class="about-logo" src="logo.webp" alt="" width="560" height="561">
+    <div class="about-copy">
+      <h2 id="about-h" class="section-title">Hi, I'm Michaela!</h2>
+      <p>I&#x27;ve been teaching middle school ELA and American History for 17 years, and I still love it (most days!).</p><p>I started making my own resources because I wanted lessons that actually hook middle schoolers, and tech tricks that get me out of school before dark. Now I share all of it with you.</p><p>Come say hi on Instagram or TikTok. I post what&#x27;s really happening in my classroom!</p>
+      <nav class="socials" aria-label="Follow me"><a class="social social-about" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-about" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-about" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-about" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p class="foot-name">Michaela Arabia <span>The Balanced Teach</span></p>
+    <nav class="socials" aria-label="Follow me"><a class="social social-foot" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-foot" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-foot" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-foot" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
+    <p class="foot-small">@middle_teacher_syndrome &middot; &copy; 2026 Michaela Arabia</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var input = document.getElementById("q");
+  var clear = document.getElementById("q-clear");
+  var status = document.getElementById("q-status");
+  var none = document.getElementById("no-results");
+  var form = document.getElementById("search-form");
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-search]"));
+  var hideable = Array.prototype.slice.call(document.querySelectorAll(".hide-on-search"));
+  var groups = Array.prototype.slice.call(document.querySelectorAll(".group, .search-zone"));
+
+  function run() {
+    var q = input.value.trim().toLowerCase();
+    var words = q.split(/\s+/).filter(Boolean);
+    var searching = words.length > 0;
+    var shown = 0;
+    cards.forEach(function (c) {
+      var hay = c.getAttribute("data-search");
+      var ok = !searching || words.every(function (w) { return hay.indexOf(w) !== -1; });
+      c.hidden = !ok;
+      if (ok && searching) shown++;
+    });
+    hideable.forEach(function (el) { el.hidden = searching; });
+    groups.forEach(function (g) {
+      if (!searching) { g.hidden = false; return; }
+      var any = g.querySelector(".card[data-search]:not([hidden])");
+      g.hidden = !any;
+    });
+    clear.hidden = !searching;
+    none.hidden = !(searching && shown === 0);
+    status.textContent = searching ? (shown === 1 ? "1 match" : shown + " matches") : "";
+  }
+
+  input.addEventListener("input", run);
+  form.addEventListener("submit", function (ev) { ev.preventDefault(); run(); });
+  clear.addEventListener("click", function () { input.value = ""; run(); input.focus(); });
+})();
+
+</script>
+<script async src="https://www.instagram.com/embed.js"></script>
+
+</body>
+</html>
