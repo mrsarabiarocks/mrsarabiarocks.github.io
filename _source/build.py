@@ -221,9 +221,11 @@ def build():
         <p class="spot-body">{e(sp["body"])}</p>
         <div class="btn-row btn-row-center">{sp_buttons}</div>
       </div>
-      <div class="poe-gallery hide-on-search" aria-label="Poe portrait and illustrations">{gallery}</div>
+      <div class="spot-feature hide-on-search">
+        <div class="spot-reel">{reel_block}</div>
+        <div class="poe-gallery" aria-label="Poe portrait and illustrations">{gallery}</div>
+      </div>
       <div class="grid grid-night">
-        {reel_block}
         {spooky_cards}
       </div>
     </div>

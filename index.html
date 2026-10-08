@@ -383,6 +383,22 @@ p { margin: 0; }
 .reel-label { white-space: nowrap; }
 .reel-embed { padding-top: 58px; }
 
+/* ---------- Spotlight feature row: reel beside the Poe gallery ---------- */
+.spot-feature { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 36px; align-items: center; margin-bottom: 44px; }
+.spot-reel .reel { grid-row: auto; min-height: 0; width: 100%; }
+.spot-reel .reel-embed { padding: 54px 10px 10px; }
+.spot-feature .poe-gallery { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; max-width: none; }
+.spot-feature .poe-frame { width: auto; }
+.spot-feature .poe-credit { grid-column: 1 / -1; }
+@media (max-width: 860px) {
+  .spot-feature { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .spot-reel { width: min(100%, 360px); }
+  .spot-feature .poe-gallery { width: 100%; }
+}
+@media (max-width: 640px) {
+  .spot-feature .poe-frame { width: auto; padding: 5px 5px 14px; }
+}
+
 </style>
 
 </head>
@@ -441,14 +457,16 @@ p { margin: 0; }
         <p class="spot-body">This is my FAVORITE MONTH of the whole year. We turn off the lights, pass out the blacklight highlighters, and annotate Poe. Here&#x27;s what it looks like in my room, plus everything you need to do it in yours!</p>
         <div class="btn-row btn-row-center"><a class="btn btn-glow" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-4-week-bundle/" target="_blank" rel="noopener">Get the Poe bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost" href="https://urlgeni.us/amazon/ZcwVyW" target="_blank" rel="noopener">Shop my blacklight supplies<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
-      <div class="poe-gallery hide-on-search" aria-label="Poe portrait and illustrations"><figure class="poe-frame"><img src="covers/spooky-poe1848.webp" alt="Edgar Allan Poe, 1848" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-dore19.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke6.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-pg33.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke4.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><p class="poe-credit">Portrait and illustrations: Edgar Allan Poe daguerreotype (1848), Gustave Dore's The Raven (1884), Harry Clarke (1919). Public domain.</p></div>
-      <div class="grid grid-night">
-        <div class="reel reel-embed hide-on-search">
+      <div class="spot-feature hide-on-search">
+        <div class="spot-reel"><div class="reel reel-embed hide-on-search">
           <span class="reel-label">Peek inside my classroom</span>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DeJ8tEED88J/?utm_source=ig_embed" data-instgrm-version="14">
             <a href="https://www.instagram.com/reel/DeJ8tEED88J/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Blacklight Poe annotating</span><span class="reel-sub">Watch on Instagram</span></a>
           </blockquote>
-        </div>
+        </div></div>
+        <div class="poe-gallery" aria-label="Poe portrait and illustrations"><figure class="poe-frame"><img src="covers/spooky-poe1848.webp" alt="Edgar Allan Poe, 1848" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-dore19.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke6.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-pg33.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke4.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><p class="poe-credit">Portrait and illustrations: Edgar Allan Poe daguerreotype (1848), Gustave Dore's The Raven (1884), Harry Clarke (1919). Public domain.</p></div>
+      </div>
+      <div class="grid grid-night">
         <article class="card card-night" data-search="poe: the raven mini unit a full week of raven plans, fully editable. moody, creepy, and so fun to teach. poe halloween october ">
   <div class="cover"><img src="covers/raven.webp" alt="" loading="lazy"></div>
   <div class="card-body">

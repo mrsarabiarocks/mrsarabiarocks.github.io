@@ -370,3 +370,19 @@ p { margin: 0; }
 }
 .reel-label { white-space: nowrap; }
 .reel-embed { padding-top: 58px; }
+
+/* ---------- Spotlight feature row: reel beside the Poe gallery ---------- */
+.spot-feature { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 36px; align-items: center; margin-bottom: 44px; }
+.spot-reel .reel { grid-row: auto; min-height: 0; width: 100%; }
+.spot-reel .reel-embed { padding: 54px 10px 10px; }
+.spot-feature .poe-gallery { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; max-width: none; }
+.spot-feature .poe-frame { width: auto; }
+.spot-feature .poe-credit { grid-column: 1 / -1; }
+@media (max-width: 860px) {
+  .spot-feature { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .spot-reel { width: min(100%, 360px); }
+  .spot-feature .poe-gallery { width: 100%; }
+}
+@media (max-width: 640px) {
+  .spot-feature .poe-frame { width: auto; padding: 5px 5px 14px; }
+}
