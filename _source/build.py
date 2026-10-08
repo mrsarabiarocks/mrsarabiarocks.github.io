@@ -131,13 +131,11 @@ def build():
     def one_reel(url, title):
         if MODE == "preview":
             return f'''<a class="reel" href="{e(url)}" target="_blank" rel="noopener">
-          <span class="reel-label">Peek inside my classroom</span>
           <span class="reel-play">{PLAY}</span>
           <span class="reel-title">{e(title)}</span>
           <span class="reel-sub">Watch on Instagram</span>
         </a>'''
         return f'''<div class="reel reel-embed">
-          <span class="reel-label">Peek inside my classroom</span>
           <blockquote class="instagram-media" data-instgrm-permalink="{e(url)}?utm_source=ig_embed" data-instgrm-version="14">
             <a href="{e(url)}" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play">{PLAY}</span><span class="reel-title">{e(title)}</span><span class="reel-sub">Watch on Instagram</span></a>
           </blockquote>
@@ -261,7 +259,10 @@ def build():
         <div class="btn-row btn-row-center">{sp_buttons}</div>
       </div>
       <div class="spot-feature hide-on-search">
-        <div class="spot-reels">{reel_block}</div>
+        <div class="reels-frame">
+          <span class="reels-label">Peek inside my classroom</span>
+          <div class="spot-reels">{reel_block}</div>
+        </div>
         <div class="poe-gallery" aria-label="Poe portrait and illustrations">{gallery}</div>
       </div>
       <div class="grid grid-night">
