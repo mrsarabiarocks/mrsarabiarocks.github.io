@@ -416,3 +416,15 @@ p { margin: 0; }
 @media (max-width: 860px) { .inside-row { justify-content: center; } .best-list { justify-self: center; } }
 .card-inside { justify-content: flex-start !important; margin-top: 2px; }
 .card-inside .inside-link { font-size: .9rem; }
+
+/* ---------- PBL box v3: links under the cover, huge button ---------- */
+.best-side { display: grid; gap: 22px; justify-items: center; min-width: 0; }
+.best-side .inside-row { display: grid; gap: 12px; justify-items: start; }
+.best-copy > .peek { justify-self: start; }
+.btn-huge { font-size: 1.4rem; padding: 18px 34px; border-radius: 16px; justify-content: center; width: min(100%, 380px); box-shadow: 5px 5px 0 var(--ink); }
+.btn-huge svg { width: 1.4em; height: 1.4em; }
+@media (max-width: 860px) {
+  .best-side .inside-row { justify-items: center; }
+  .best-copy > .peek { justify-self: center; }
+  .btn-huge { width: 100%; }
+}

@@ -164,7 +164,7 @@ def build():
         ("best-seller", "PBL Drive", []),
         ("spotlight", "Spooky Season", []),
         ("shop", "Shop the Classroom", [(k, n) for k, n in C.SHOP_GROUPS]),
-        ("teacher", "For Teachers", []),
+        ("teacher", "Teacher Guides", []),
         ("free", "Free Resources", []),
         ("find-me", "Find Me Everywhere", []),
         ("about", "About", []),
@@ -235,14 +235,17 @@ def build():
 
   <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">
     <div class="best-box">
-      <a class="best-cover" href="{e(bs["url"])}" target="_blank" rel="noopener"><img src="{img_src(bs["img"])}" alt="The Growing Project Based Learning Google Drive" loading="lazy"></a>
+      <div class="best-side">
+        <a class="best-cover" href="{e(bs["url"])}" target="_blank" rel="noopener"><img src="{img_src(bs["img"])}" alt="The Growing Project Based Learning Google Drive" loading="lazy"></a>
+        {inside_link}
+      </div>
       <div class="best-copy">
         <p class="eyebrow">{e(bs["eyebrow"])}</p>
         <h2 id="best-h" class="best-title">{e(bs["headline"])}</h2>
         <p>{e(bs["body"])}</p>
         <ul class="best-list">{bs_stats}</ul>
-        {inside_link}
-        <div class="btn-row">{a(bs["url"], "Get the PBL Drive" + ARROW, "btn btn-big")}{peek(bs["reel"])}</div>
+        {a(bs["url"], "Get the PBL Drive" + ARROW, "btn btn-huge")}
+        {peek(bs["reel"])}
       </div>
     </div>
   </section>
@@ -284,7 +287,7 @@ def build():
   </section>
 
   <section class="wrap block search-zone" aria-labelledby="teacher-h" id="teacher">
-    {head("For You, the Teacher", "AI, tech, and planning tools to get your time back. Because you deserve your weekends!", "teacher-h", claude_cta + bts_cta)}
+    {head("Teacher Guides", "Your complete toolkit for running your classroom, using AI with confidence, and beating burnout. Step-by-step guides I actually use, so you can get your evenings and weekends back.", "teacher-h", claude_cta + bts_cta, eyebrow="AI, planning, and burnout help")}
     <div class="grid">{teacher}</div>
   </section>
 

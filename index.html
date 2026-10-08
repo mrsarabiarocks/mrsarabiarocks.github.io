@@ -429,15 +429,27 @@ p { margin: 0; }
 .card-inside { justify-content: flex-start !important; margin-top: 2px; }
 .card-inside .inside-link { font-size: .9rem; }
 
+/* ---------- PBL box v3: links under the cover, huge button ---------- */
+.best-side { display: grid; gap: 22px; justify-items: center; min-width: 0; }
+.best-side .inside-row { display: grid; gap: 12px; justify-items: start; }
+.best-copy > .peek { justify-self: start; }
+.btn-huge { font-size: 1.4rem; padding: 18px 34px; border-radius: 16px; justify-content: center; width: min(100%, 380px); box-shadow: 5px 5px 0 var(--ink); }
+.btn-huge svg { width: 1.4em; height: 1.4em; }
+@media (max-width: 860px) {
+  .best-side .inside-row { justify-items: center; }
+  .best-copy > .peek { justify-self: center; }
+  .btn-huge { width: 100%; }
+}
+
 </style>
 
 <nav class="topnav" aria-label="Site sections">
   <div class="wrap topnav-inner">
     <a class="topnav-name" href="#top">Michaela Arabia</a>
-    <div class="topnav-links"><a href="#best-seller">PBL Drive</a><a href="#spotlight">Spooky Season</a><a href="#shop">Shop the Classroom</a><a href="#teacher">For Teachers</a><a href="#free">Free Resources</a></div>
+    <div class="topnav-links"><a href="#best-seller">PBL Drive</a><a href="#spotlight">Spooky Season</a><a href="#shop">Shop the Classroom</a><a href="#teacher">Teacher Guides</a><a href="#free">Free Resources</a></div>
     <details class="topnav-menu" id="topnav-menu">
       <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
-      <div class="menu-panel"><a class="menu-main" href="#best-seller">PBL Drive</a><a class="menu-main" href="#spotlight">Spooky Season</a><a class="menu-main" href="#shop">Shop the Classroom</a><a class="menu-sub" href="#ela">ELA Units</a><a class="menu-sub" href="#history">History Mini Units</a><a class="menu-sub" href="#projects">Projects</a><a class="menu-sub" href="#setup">Classroom Setup</a><a class="menu-main" href="#teacher">For Teachers</a><a class="menu-main" href="#free">Free Resources</a><a class="menu-main" href="#find-me">Find Me Everywhere</a><a class="menu-main" href="#about">About</a></div>
+      <div class="menu-panel"><a class="menu-main" href="#best-seller">PBL Drive</a><a class="menu-main" href="#spotlight">Spooky Season</a><a class="menu-main" href="#shop">Shop the Classroom</a><a class="menu-sub" href="#ela">ELA Units</a><a class="menu-sub" href="#history">History Mini Units</a><a class="menu-sub" href="#projects">Projects</a><a class="menu-sub" href="#setup">Classroom Setup</a><a class="menu-main" href="#teacher">Teacher Guides</a><a class="menu-main" href="#free">Free Resources</a><a class="menu-main" href="#find-me">Find Me Everywhere</a><a class="menu-main" href="#about">About</a></div>
     </details>
   </div>
 </nav>
@@ -471,14 +483,17 @@ p { margin: 0; }
 
   <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">
     <div class="best-box">
-      <a class="best-cover" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener"><img src="covers/pbl.webp" alt="The Growing Project Based Learning Google Drive" loading="lazy"></a>
+      <div class="best-side">
+        <a class="best-cover" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener"><img src="covers/pbl.webp" alt="The Growing Project Based Learning Google Drive" loading="lazy"></a>
+        <div class="inside-row"><a class="inside-link" href="https://docs.google.com/document/d/1lqK2REW80vdM4bStOoN_afZO_wwGnZWh9qSo5O2NOmc/edit?usp=drive_link" target="_blank" rel="noopener">See everything that's in the Drive</a><a class="peek" href="https://drive.google.com/file/d/1QHhqmserRXeZ7XYPdSUtxJWYYHdGAVNk/view?usp=drive_link" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch a video tour of the Drive</span></a></div>
+      </div>
       <div class="best-copy">
         <p class="eyebrow">My #1 best seller</p>
         <h2 id="best-h" class="best-title">The PBL Google Drive</h2>
         <p>50+ full project based learning units and resources for grades 5 to 12, all in ONE growing Google Drive. Grab it once, and every new project I add is yours too. If you only get one thing from me, make it this one!</p>
         <ul class="best-list"><li>50+ full units and resources</li><li>Grades 5 to 12</li><li>Grows every year, and new additions are yours free</li></ul>
-        <div class="inside-row"><a class="inside-link" href="https://docs.google.com/document/d/1lqK2REW80vdM4bStOoN_afZO_wwGnZWh9qSo5O2NOmc/edit?usp=drive_link" target="_blank" rel="noopener">See everything that's in the Drive</a><a class="peek" href="https://drive.google.com/file/d/1QHhqmserRXeZ7XYPdSUtxJWYYHdGAVNk/view?usp=drive_link" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch a video tour of the Drive</span></a></div>
-        <div class="btn-row"><a class="btn btn-big" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Get the PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddq95n9D9z3/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+        <a class="btn btn-huge" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Get the PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="peek" href="https://www.instagram.com/reel/Ddq95n9D9z3/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a>
       </div>
     </div>
   </section>
@@ -831,7 +846,7 @@ p { margin: 0; }
   </section>
 
   <section class="wrap block search-zone" aria-labelledby="teacher-h" id="teacher">
-    <div class="block-head"><h2 id="teacher-h" class="section-title">For You, the Teacher</h2><p class="block-sub">AI, tech, and planning tools to get your time back. Because you deserve your weekends!</p><div class="cta-box cta-claude">
+    <div class="block-head"><p class="eyebrow">AI, planning, and burnout help</p><h2 id="teacher-h" class="section-title">Teacher Guides</h2><p class="block-sub">Your complete toolkit for running your classroom, using AI with confidence, and beating burnout. Step-by-step guides I actually use, so you can get your evenings and weekends back.</p><div class="cta-box cta-claude">
       <div class="cta-copy"><p class="eyebrow">Free for teachers</p><h3 class="cta-title">New to Claude? Start here!</h3><p>My free Claude for Teachers site walks you through it step by step, with the exact prompts I use to plan faster, differentiate without losing my mind, and get my evenings back. Beginner friendly, with an advanced level when you&#x27;re ready.</p>
       <a class="btn" href="https://thebalancedteach.tiiny.site/?v=beg" target="_blank" rel="noopener">Visit Claude for Teachers<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div><div class="cta-box">
