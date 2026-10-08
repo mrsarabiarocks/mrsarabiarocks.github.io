@@ -45,7 +45,7 @@ SPOTLIGHT = {
     "reel_title": "Blacklight Poe annotating",
     "reels": [
         (ig("DeJ8tEED88J"), "Blacklight Poe annotating"),
-        (ig("DePGTNdgsdF"), "Spooky season in my classroom"),
+        (ig("DePGTNdgsdF"), "Teaching one of Poe's hardest stories"),
     ],
     "gallery": [
         ("spooky-poe1848", "Edgar Allan Poe, 1848"),
