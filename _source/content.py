@@ -99,7 +99,7 @@ PRODUCTS = [
     dict(s="history", t="MYTHBUSTERS: Ancient Greece", d="Students bust (or confirm!) Greek myths using claim, evidence, reasoning.", u=T+"MYTHBUSTERS-Ancient-Greece-Edition-using-CER-5310535", tpt=True, img="tpt5310535", kw="greece cer pbl myths"),
 
     # Projects
-    dict(s="projects", t="Project Based Learning Google Drive", d="My #1 best seller! 50+ full PBL units and resources for grades 5 to 12 in one growing Drive.", u=TC + "pbl-growing-drive/", img="pbl", best=True, inside="PBL_INSIDE", kw="pbl project based learning drive bundle best seller"),
+    dict(s="projects", t="Project Based Learning Google Drive", d="My #1 best seller! 50+ full PBL units and resources for grades 5 to 12 in one growing Drive.", u=TC + "pbl-growing-drive/", img="pbl", best=True, doc="https://docs.google.com/document/d/1lqK2REW80vdM4bStOoN_afZO_wwGnZWh9qSo5O2NOmc/edit?usp=drive_link", tour="https://drive.google.com/file/d/1QHhqmserRXeZ7XYPdSUtxJWYYHdGAVNk/view?usp=drive_link", kw="pbl project based learning drive bundle best seller"),
     dict(s="projects", t="SGN: Some Good News Newscast", d="Students find the GOOD news and broadcast it in their own newscast. A 5-day media literacy project.", u=TC + "some-good-news-sgn-newscast-project/", img="sgn", kw="media literacy pbl"),
 
     dict(s="projects", t="Shark Tank Inventor Project", d="The editable version of my Shark Tank project. Students invent, pitch, and defend.", u=T+"Editable-SHARK-TANK-Inventor-Project-5381643", tpt=True, img="tpt5381643", kw="pbl shark tank invention"),
