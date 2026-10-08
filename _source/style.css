@@ -414,3 +414,5 @@ p { margin: 0; }
 .inside-link:hover { color: var(--pink); }
 .inside-row { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
 @media (max-width: 860px) { .inside-row { justify-content: center; } .best-list { justify-self: center; } }
+.card-inside { justify-content: flex-start !important; margin-top: 2px; }
+.card-inside .inside-link { font-size: .9rem; }

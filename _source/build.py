@@ -65,6 +65,13 @@ def card(p, tone):
     cta = "Get it free" if (p.get("free") or p["s"] == "free") else "Shop now"
     reel = peek(p["r"]) if p.get("r") else ""
     inside = ""
+    if p.get("tour") or p.get("doc"):
+        bits = []
+        if p.get("doc"):
+            bits.append(a(p["doc"], "See everything that's in the Drive", "inside-link"))
+        if p.get("tour"):
+            bits.append(a(p["tour"], f'<span class="peek-play">{PLAY}</span><span>Watch a video tour of the Drive</span>', "peek"))
+        inside = f'<div class="inside-row card-inside">{"".join(bits)}</div>'
     if p.get("inside"):
         folders = getattr(C, p["inside"])
         inside = f'<details class="inside"><summary>See what\'s inside the Drive</summary>{drive_window(p["t"], folders, "drive-small")}</details>'

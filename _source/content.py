@@ -105,7 +105,7 @@ PRODUCTS = [
     dict(s="projects", t="Shark Tank Inventor Project", d="The editable version of my Shark Tank project. Students invent, pitch, and defend.", u=T+"Editable-SHARK-TANK-Inventor-Project-5381643", tpt=True, img="tpt5381643", kw="pbl shark tank invention"),
 
     # Classroom setup
-    dict(s="setup", t="Back to School Growing Drive", d="Everything I use to start the year, in one Google Drive that keeps growing.", u=TC + "back-to-school-growing-drive/", r=ig("DZsWa_uDBBw"), img="bts", inside="BTS_INSIDE", kw="back to school first week"),
+    dict(s="setup", t="Back to School Growing Drive", d="Everything I use to start the year, in one Google Drive that keeps growing.", u=TC + "back-to-school-growing-drive/", r=ig("DZsWa_uDBBw"), img="bts", tour="https://drive.google.com/file/d/1rEnuz_vUuhykzUCSE13qe1e6TwAFw3R3/view?usp=drive_link", kw="back to school first week"),
     dict(s="setup", t="Back to School Syllabus", d="An editable syllabus that's ready for your first week.", u=TC + "back-to-school-syllabus/", img="syllabus", kw="back to school"),
     dict(s="setup", t="Back to School Brochure", d="A cute Canva brochure for meet the teacher and back to school night.", u=TC + "backtoschool-brochure/", img="brochure", kw="back to school parents canva"),
     dict(s="setup", t="Editable Upper Grade Classroom Decor", d="Decor made for middle and high school walls. No baby stuff!", u="https://www.teacherspayteachers.com/Product/EDITABLE-Upper-Grade-Classroom-Decor-Middle-Junior-High-High-School-9888991", tpt=True, img="decor", kw="decor posters"),
