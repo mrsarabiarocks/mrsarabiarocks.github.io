@@ -167,8 +167,7 @@ def build():
 </header>
 
 <main>
-  <section class="wrap quick-wrap" aria-label="Quick links">
-    <div class="quick-grid">{quick}</div>
+  <section class="wrap quick-wrap" aria-label="Search">
     <form class="search" role="search" id="search-form">
       <label for="q" class="search-label">Looking for something?</label>
       <div class="search-box">
@@ -240,6 +239,11 @@ def build():
   </section>
 
   <p class="wrap no-results" id="no-results" hidden>Hmm, nothing matches that yet. Try another word, or check my <a href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener">TPT store</a>.</p>
+
+  <section class="wrap block more hide-on-search" aria-labelledby="more-h">
+    {head("Find Me Everywhere", "My Amazon faves, my TPT store, and even more freebies.", "more-h")}
+    <div class="quick-grid">{quick}</div>
+  </section>
 
   <section class="wrap about hide-on-search" aria-labelledby="about-h">
     <img class="about-logo" src="{logo_src}" alt="" width="560" height="561">

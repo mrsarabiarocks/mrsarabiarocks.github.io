@@ -324,6 +324,11 @@ p { margin: 0; }
 .reel-embed .instagram-media { margin: 0 auto !important; min-width: 0 !important; width: 100% !important; max-width: 400px !important; border-radius: 14px !important; background: transparent !important; border: 0 !important; }
 .reel-fallback { display: grid; justify-items: center; gap: 12px; padding: 40px 12px; text-decoration: none; color: var(--night-text); }
 
+/* ---------- Quick links moved to bottom ---------- */
+.quick-wrap { margin-top: 36px; }
+.hero { padding-block: 40px 48px; }
+@media (max-width: 640px) { .hero { padding-block: 28px 40px; } }
+
 </style>
 
 </head>
@@ -341,8 +346,7 @@ p { margin: 0; }
 </header>
 
 <main>
-  <section class="wrap quick-wrap" aria-label="Quick links">
-    <div class="quick-grid"><a class="quick" href="https://www.amazon.com/shop/middle_teacher_syndrome" target="_blank" rel="noopener"><span class="q-title">Amazon Storefront</span><span class="q-sub">All my classroom faves in one spot</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener"><span class="q-title">TPT Store</span><span class="q-sub">Prefer TPT? I&#x27;m there too!</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://mrsarabiarocks.my.canva.site/canva-templates" target="_blank" rel="noopener"><span class="q-title">Free Canva Templates</span><span class="q-sub">Just copy, tweak, and teach</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://mrsarabiarocks.my.canva.site/mrs-arabia-rocks-ai-sites-to-try" target="_blank" rel="noopener"><span class="q-title">Free AI Tools</span><span class="q-sub">The ones you MUST try</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+  <section class="wrap quick-wrap" aria-label="Search">
     <form class="search" role="search" id="search-form">
       <label for="q" class="search-label">Looking for something?</label>
       <div class="search-box">
@@ -986,6 +990,11 @@ p { margin: 0; }
   </section>
 
   <p class="wrap no-results" id="no-results" hidden>Hmm, nothing matches that yet. Try another word, or check my <a href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener">TPT store</a>.</p>
+
+  <section class="wrap block more hide-on-search" aria-labelledby="more-h">
+    <div class="block-head"><h2 id="more-h" class="section-title">Find Me Everywhere</h2><p class="block-sub">My Amazon faves, my TPT store, and even more freebies.</p></div>
+    <div class="quick-grid"><a class="quick" href="https://www.amazon.com/shop/middle_teacher_syndrome" target="_blank" rel="noopener"><span class="q-title">Amazon Storefront</span><span class="q-sub">All my classroom faves in one spot</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener"><span class="q-title">TPT Store</span><span class="q-sub">Prefer TPT? I&#x27;m there too!</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://mrsarabiarocks.my.canva.site/canva-templates" target="_blank" rel="noopener"><span class="q-title">Free Canva Templates</span><span class="q-sub">Just copy, tweak, and teach</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="quick" href="https://mrsarabiarocks.my.canva.site/mrs-arabia-rocks-ai-sites-to-try" target="_blank" rel="noopener"><span class="q-title">Free AI Tools</span><span class="q-sub">The ones you MUST try</span><span class="q-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+  </section>
 
   <section class="wrap about hide-on-search" aria-labelledby="about-h">
     <img class="about-logo" src="logo.webp" alt="" width="560" height="561">

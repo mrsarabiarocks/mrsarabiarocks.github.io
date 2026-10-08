@@ -311,3 +311,8 @@ p { margin: 0; }
 .reel-embed { padding: 48px 12px 12px; align-content: start; }
 .reel-embed .instagram-media { margin: 0 auto !important; min-width: 0 !important; width: 100% !important; max-width: 400px !important; border-radius: 14px !important; background: transparent !important; border: 0 !important; }
 .reel-fallback { display: grid; justify-items: center; gap: 12px; padding: 40px 12px; text-decoration: none; color: var(--night-text); }
+
+/* ---------- Quick links moved to bottom ---------- */
+.quick-wrap { margin-top: 36px; }
+.hero { padding-block: 40px 48px; }
+@media (max-width: 640px) { .hero { padding-block: 28px 40px; } }
