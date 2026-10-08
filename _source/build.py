@@ -110,7 +110,12 @@ def build():
 
     bs = C.BEST_SELLER
     bs_stats = "".join(f"<li>{e(s)}</li>" for s in bs["stats"])
-    inside_link = a(bs["inside_doc"], "See everything that's in the Drive", "inside-link") if bs.get("inside_doc") else ""
+    inside_bits = []
+    if bs.get("inside_doc"):
+        inside_bits.append(a(bs["inside_doc"], "See everything that's in the Drive", "inside-link"))
+    if bs.get("tour_video"):
+        inside_bits.append(a(bs["tour_video"], f'<span class="peek-play">{PLAY}</span><span>Watch a video tour of the Drive</span>', "peek"))
+    inside_link = f'<div class="inside-row">{"".join(inside_bits)}</div>' if inside_bits else ""
 
     sp = C.SPOTLIGHT
     sp_buttons = "".join(a(u, e(t) + ARROW, "btn btn-glow" if i == 0 else "btn btn-ghost") for i, (t, u) in enumerate(sp["buttons"]))

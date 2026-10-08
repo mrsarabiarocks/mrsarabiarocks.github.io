@@ -412,3 +412,5 @@ p { margin: 0; }
 .best-list li::marker { color: var(--pink); }
 .inside-link { font-weight: 900; color: var(--text); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .inside-link:hover { color: var(--pink); }
+.inside-row { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+@media (max-width: 860px) { .inside-row { justify-content: center; } .best-list { justify-self: center; } }
