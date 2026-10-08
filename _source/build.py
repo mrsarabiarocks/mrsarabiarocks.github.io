@@ -142,6 +142,11 @@ def build():
       {a(C.TC + "back-to-school-growing-drive/", "Get the Back to School Drive" + ARROW, "btn")}</div>
     </div>'''
 
+    gallery = "".join(f'<figure class="poe-frame"><img src="{img_src(k)}" alt="{e(alt)}" loading="lazy"></figure>' for k, alt in sp.get("gallery", []))
+    gallery += '<p class="poe-credit">Portrait and illustrations: Edgar Allan Poe daguerreotype (1848), Gustave Dore\'s The Raven (1884), Harry Clarke (1919). Public domain.</p>'
+    BAT = '<svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg>'
+    bats = "".join(f'<span class="bat bat-{i}">{BAT}</span>' for i in range(1, 6))
+
     ff = C.FAN_FAVORITE
     shop_nav = "".join(f'<a class="chip chip-{tones[k]}" href="#{k}">{e(n)}</a>' for k, n in C.SHOP_GROUPS)
     shop = "".join(
@@ -208,6 +213,7 @@ def build():
   </section>
 
   <section class="spotlight search-zone" aria-labelledby="spot-h">
+    <div class="moon" aria-hidden="true"></div>{bats}
     <div class="wrap">
       <div class="spot-head hide-on-search">
         <p class="eyebrow eyebrow-glow">{e(sp["eyebrow"])}</p>
@@ -215,6 +221,7 @@ def build():
         <p class="spot-body">{e(sp["body"])}</p>
         <div class="btn-row btn-row-center">{sp_buttons}</div>
       </div>
+      <div class="poe-gallery hide-on-search" aria-label="Poe portrait and illustrations">{gallery}</div>
       <div class="grid grid-night">
         {reel_block}
         {spooky_cards}
