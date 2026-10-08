@@ -15,7 +15,7 @@ SOCIALS = [
     ("pinterest", "Pinterest", "https://www.pinterest.com/Middle_Teacher_Syndrome"),
 ]
 
-BIO = "Middle school ELA and history teacher, tech and AI nerd, and here to help you beat burnout. Everything on this page gets tested on my own middle schoolers first!"
+BIO = "20 years in, and still teaching middle school ELA and history every single day. Tech and AI nerd, here to help you beat burnout. Everything on this page gets tested in my own classroom first!"
 
 QUICK_LINKS = [
     ("Amazon Storefront", "All my classroom faves in one spot", "https://www.amazon.com/shop/middle_teacher_syndrome"),
