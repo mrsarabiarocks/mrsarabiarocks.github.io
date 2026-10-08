@@ -62,7 +62,7 @@ def card(p, tone):
         tags.append('<span class="tag tag-free">Free</span>')
     if p.get("tpt"):
         tags.append('<span class="tag">On TPT</span>')
-    cta = "Grab it free" if (p.get("free") or p["s"] == "free") else "Take a look"
+    cta = "Get it free" if (p.get("free") or p["s"] == "free") else "Shop now"
     reel = peek(p["r"]) if p.get("r") else ""
     inside = ""
     if p.get("inside"):
@@ -110,6 +110,7 @@ def build():
 
     bs = C.BEST_SELLER
     bs_stats = "".join(f"<li>{e(s)}</li>" for s in bs["stats"])
+    inside_link = a(bs["inside_doc"], "See everything that's in the Drive", "inside-link") if bs.get("inside_doc") else ""
 
     sp = C.SPOTLIGHT
     sp_buttons = "".join(a(u, e(t) + ARROW, "btn btn-glow" if i == 0 else "btn btn-ghost") for i, (t, u) in enumerate(sp["buttons"]))
@@ -147,6 +148,20 @@ def build():
     BAT = '<svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg>'
     bats = "".join(f'<span class="bat bat-{i}">{BAT}</span>' for i in range(1, 6))
 
+    NAV = [
+        ("best-seller", "PBL Drive", []),
+        ("spotlight", "Spooky Season", []),
+        ("shop", "Shop the Classroom", [(k, n) for k, n in C.SHOP_GROUPS]),
+        ("teacher", "For Teachers", []),
+        ("free", "Free Resources", []),
+        ("find-me", "Find Me Everywhere", []),
+        ("about", "About", []),
+    ]
+    nav_inline = "".join(f'<a href="#{i}">{e(n)}</a>' for i, n, _ in NAV if i in ("best-seller", "spotlight", "shop", "teacher", "free"))
+    nav_menu = "".join(
+        f'<a class="menu-main" href="#{i}">{e(n)}</a>' + "".join(f'<a class="menu-sub" href="#{si}">{e(sn)}</a>' for si, sn in subs)
+        for i, n, subs in NAV)
+
     ff = C.FAN_FAVORITE
     shop_nav = "".join(f'<a class="chip chip-{tones[k]}" href="#{k}">{e(n)}</a>' for k, n in C.SHOP_GROUPS)
     shop = "".join(
@@ -170,7 +185,18 @@ def build():
 {css}
 </style>
 
-<header class="hero">
+<nav class="topnav" aria-label="Site sections">
+  <div class="wrap topnav-inner">
+    <a class="topnav-name" href="#top">Michaela Arabia</a>
+    <div class="topnav-links">{nav_inline}</div>
+    <details class="topnav-menu" id="topnav-menu">
+      <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
+      <div class="menu-panel">{nav_menu}</div>
+    </details>
+  </div>
+</nav>
+
+<header class="hero" id="top">
   <div class="wrap hero-inner">
     <img class="logo" src="{logo_src}" alt="Michaela, The Balanced Teach, @Middle_Teacher_Syndrome" width="560" height="561">
     <div class="hero-copy">
@@ -195,24 +221,21 @@ def build():
     </form>
   </section>
 
-  <section class="wrap best hide-on-search" aria-labelledby="best-h">
+  <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">
     <div class="best-box">
       <a class="best-cover" href="{e(bs["url"])}" target="_blank" rel="noopener"><img src="{img_src(bs["img"])}" alt="The Growing Project Based Learning Google Drive" loading="lazy"></a>
       <div class="best-copy">
         <p class="eyebrow">{e(bs["eyebrow"])}</p>
         <h2 id="best-h" class="best-title">{e(bs["headline"])}</h2>
         <p>{e(bs["body"])}</p>
-        <ul class="stats">{bs_stats}</ul>
+        <ul class="best-list">{bs_stats}</ul>
+        {inside_link}
         <div class="btn-row">{a(bs["url"], "Get the PBL Drive" + ARROW, "btn btn-big")}{peek(bs["reel"])}</div>
-      </div>
-      <div class="best-inside">
-        <p class="inside-label">Peek inside the Drive</p>
-        {drive_window("Project Based Learning GROWING Drive", C.PBL_INSIDE)}
       </div>
     </div>
   </section>
 
-  <section class="spotlight search-zone" aria-labelledby="spot-h">
+  <section class="spotlight search-zone" id="spotlight" aria-labelledby="spot-h">
     <div class="moon" aria-hidden="true"></div>{bats}
     <div class="wrap">
       <div class="spot-head hide-on-search">
@@ -231,19 +254,19 @@ def build():
     </div>
   </section>
 
-  <section class="wrap fan hide-on-search" aria-labelledby="fan-h">
+  <section class="wrap fan hide-on-search" id="fan-favorite" aria-labelledby="fan-h">
     <div class="fan-box">
       <img class="fan-cover" src="{img_src(ff["img"])}" alt="" loading="lazy">
       <div class="fan-copy">
         <p class="eyebrow">{e(ff["eyebrow"])}</p>
         <h2 id="fan-h">{e(ff["headline"])}</h2>
         <p>{e(ff["body"])}</p>
-        <div class="btn-row">{a(ff["url"], "Take a look" + ARROW, "btn")}{peek(ff["reel"])}</div>
+        <div class="btn-row">{a(ff["url"], "Shop now" + ARROW, "btn")}{peek(ff["reel"])}</div>
       </div>
     </div>
   </section>
 
-  <section class="wrap block search-zone" aria-labelledby="shop-h">
+  <section class="wrap block search-zone" id="shop" aria-labelledby="shop-h">
     {head("Shop the Classroom", "The units and projects I actually teach in my own middle school classroom. Tap any one to peek inside and see the price.", "shop-h", f'<nav class="chips hide-on-search" aria-label="Jump to">{shop_nav}</nav>')}
     {shop}
   </section>
@@ -260,12 +283,12 @@ def build():
 
   <p class="wrap no-results" id="no-results" hidden>Hmm, nothing matches that yet. Try another word, or check my <a href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener">TPT store</a>.</p>
 
-  <section class="wrap block more hide-on-search" aria-labelledby="more-h">
+  <section class="wrap block more hide-on-search" id="find-me" aria-labelledby="more-h">
     {head("Find Me Everywhere", "My Amazon faves, my TPT store, and even more freebies.", "more-h")}
     <div class="quick-grid">{quick}</div>
   </section>
 
-  <section class="wrap about hide-on-search" aria-labelledby="about-h">
+  <section class="wrap about hide-on-search" id="about" aria-labelledby="about-h">
     <img class="about-logo" src="{logo_src}" alt="" width="560" height="561">
     <div class="about-copy">
       <h2 id="about-h" class="section-title">Hi, I'm Michaela!</h2>

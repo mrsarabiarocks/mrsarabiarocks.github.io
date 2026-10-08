@@ -29,7 +29,8 @@ BEST_SELLER = {
     "eyebrow": "My #1 best seller",
     "headline": "The PBL Google Drive",
     "body": "50+ full project based learning units and resources for grades 5 to 12, all in ONE growing Google Drive. Grab it once, and every new project I add is yours too. If you only get one thing from me, make it this one!",
-    "stats": ["50+ units and resources", "Grades 5 to 12", "Keeps growing"],
+    "stats": ["50+ full units and resources", "Grades 5 to 12", "Grows every year, and new additions are yours free"],
+    "inside_doc": "",  # Michaela will send the link to her "what's in the Drive" doc
     "img": "pbl",
     "url": TC + "pbl-growing-drive/",
     "reel": ig("Ddq95n9D9z3"),

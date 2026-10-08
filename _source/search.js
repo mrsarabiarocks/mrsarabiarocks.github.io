@@ -34,3 +34,17 @@
   form.addEventListener("submit", function (ev) { ev.preventDefault(); run(); });
   clear.addEventListener("click", function () { input.value = ""; run(); input.focus(); });
 })();
+
+(function () {
+  var menu = document.getElementById("topnav-menu");
+  var input = document.getElementById("q");
+  document.querySelectorAll('.topnav a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (menu) menu.open = false;
+      if (input && input.value) { input.value = ""; input.dispatchEvent(new Event("input")); }
+    });
+  });
+  document.addEventListener("click", function (ev) {
+    if (menu && menu.open && !menu.contains(ev.target)) menu.open = false;
+  });
+})();
