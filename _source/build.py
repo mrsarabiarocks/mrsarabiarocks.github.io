@@ -18,6 +18,7 @@ ICONS = {
     "linkedin": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg>',
     "pinterest": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg>',
 }
+HEADPHONES = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="3" y="13" width="5" height="7" rx="2" fill="currentColor"/><rect x="16" y="13" width="5" height="7" rx="2" fill="currentColor"/></svg>'
 PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>'
 ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>'
@@ -62,8 +63,13 @@ def card(p, tone):
         tags.append('<span class="tag tag-free">Free</span>')
     if p.get("tpt"):
         tags.append('<span class="tag">On TPT</span>')
+    if p.get("audio"):
+        tags.append('<span class="tag tag-free">Free audio</span>')
     cta = "Get it free" if (p.get("free") or p["s"] == "free") else "Shop now"
     reel = peek(p["r"]) if p.get("r") else ""
+    if p.get("audio"):
+        reel += a(p["audio"], f'<span class="peek-play">{HEADPHONES}</span><span>Listen free: the audio I play in class</span>', "peek")
+        reel += f'<span class="audio-credit">{e(p.get("audio_credit", ""))}</span>' 
     inside = ""
     if p.get("tour") or p.get("doc"):
         bits = []

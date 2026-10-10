@@ -459,3 +459,5 @@ p { margin: 0; }
 .reels-frame .spot-reels { flex-wrap: nowrap; }
 .reels-frame .spot-reel { flex: 1 1 0; min-width: 0; }
 @media (max-width: 760px) { .reels-frame .spot-reels { flex-wrap: wrap; } .reels-frame .spot-reel { flex: 1 1 100%; } }
+.audio-credit { flex-basis: 100%; font-size: .74rem; font-weight: 700; color: var(--muted); margin-top: -6px; }
+.grid-night .audio-credit { color: #A99FD6; }
