@@ -216,6 +216,11 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
   .marquee-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}
   .marquee-track .brand[aria-hidden="true"]{display:none}
 }
+
+/* ---------- Even platform cards ---------- */
+.platform{flex-direction:column;align-items:stretch;justify-content:flex-start;gap:14px;border-width:2px;box-shadow:4px 4px 0 color-mix(in srgb,var(--tan) 40%,transparent)}
+.platform dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.platform dl > div{min-width:0}
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
