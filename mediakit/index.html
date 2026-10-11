@@ -13,7 +13,7 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700;800&family=Lilita+One&family=Quicksand:wght@700&display=swap">
 <style>
 /* Layout: one centered column of stacked sections; brand gradient used only on the hero band, stat numbers and buttons */
 :root{
@@ -158,31 +158,77 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--tan);outline-offset
   section{padding-block:44px}
 }
 @media (prefers-reduced-motion:no-preference){.btn,.vtile{transition:transform .15s ease}.btn:hover,.vtile:hover{transform:translateY(-2px)}}
+
+/* ---------- v2: logo-style hero (matches mrsarabiarocks.com) + livelier type and buttons ---------- */
+:root{--logo:"Lilita One","Archivo Black","Arial Black",sans-serif;--spaced:"Quicksand","Figtree",sans-serif;--btnShadow:#33261c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--btnShadow:#000}}
+:root[data-theme="dark"]{--btnShadow:#000}
+
+.hero-banner{position:relative;overflow:hidden;color:#33261c;background:linear-gradient(180deg,#cfc6bc 0%,#c8c3be 55%,#b9b6b7 100%);min-height:620px;display:flex;align-items:center;border-bottom:4px solid #33261c}
+.hb-inner{position:relative;z-index:1;width:100%}
+.hb-text{max-width:52%;padding-block:56px}
+.hb-photo{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:62%;object-fit:cover;object-position:left bottom;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
+.hb-tag{display:inline-block;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;background:#33261c;color:#fbf6ef;padding:6px 12px;border-radius:999px}
+.logo-name{font-family:var(--logo);font-weight:400;font-size:clamp(3.2rem,8.4vw,6rem);line-height:.92;text-transform:uppercase;letter-spacing:.01em;margin-top:16px;color:#33261c;text-shadow:3px 4px 0 #c9a983,6px 8px 0 rgba(51,38,28,.18)}
+.logo-sub{font-family:var(--spaced);font-weight:700;text-transform:uppercase;letter-spacing:.3em;font-size:clamp(.95rem,2vw,1.2rem);color:#7b5b3e;margin:14px 0 0}
+.hb-stats{margin:18px 0 0;font-weight:700;font-size:1.05rem}
+.hb-stats b{font-family:var(--logo);font-weight:400;font-size:1.35em;color:#33261c;text-shadow:2px 2px 0 #c9a983}
+.hb-intro{max-width:44ch;margin:14px 0 0;font-size:1.05rem;font-weight:500}
+.hb-email{margin-top:18px;font-weight:700;user-select:all}
+.hb-socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.hb-socials a{color:#33261c;text-decoration:none;font-weight:800;font-size:.9rem;padding:6px 14px;border-radius:999px;border:2px solid #33261c;background:rgba(255,253,249,.7);box-shadow:2px 2px 0 #33261c;transition:transform .12s,box-shadow .12s}
+.hb-socials a:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 #33261c}
+
+/* buttons: chunky, sticker style like the main site */
+.btn{border-radius:14px;padding:13px 22px;font-weight:800;border:3px solid #33261c;box-shadow:4px 4px 0 #33261c;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #33261c}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #33261c}
+.btn-primary{background:#7b5b3e;color:#fffdf9}
+.btn-cream{background:#fffdf9;color:#33261c}
+.contact .btn{box-shadow:4px 4px 0 #120c07;border-color:#120c07}
+
+/* headings and numbers get the same soft offset shadow */
+h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
+.stat b,.cred b{text-shadow:2px 2px 0 color-mix(in srgb,var(--tan) 45%,transparent)}
+.eyebrow{display:table;margin-inline:auto;background:var(--chip);padding:5px 12px;border-radius:999px}
+.stat,.cred,.service,.quote{border-width:2px;box-shadow:4px 4px 0 color-mix(in srgb,var(--tan) 40%,transparent)}
+.brand{box-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 50%,transparent);transition:transform .12s}
+.brand:hover{transform:translate(-1px,-1px)}
+
+@media (max-width:860px){
+  .hero-banner{display:block;min-height:0}
+  .hb-text{max-width:none;padding-block:40px 18px;text-align:center}
+  .hero-actions,.hb-socials{justify-content:center}
+  .hb-intro{margin-inline:auto}
+  .hb-photo{position:static;display:block;width:100%;max-width:520px;height:auto;margin:0 auto;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%);mask-image:linear-gradient(180deg,transparent 0,#000 14%)}
+}
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
 </head>
 <body>
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="tag">Media Kit 2026</div>
-      <h1>Mrs. Arabia<span>The Balanced Teach</span></h1>
-      <p>Middle school ELA and American History teacher sharing real classroom lessons, AI tools that actually save time, and the projects my students talk about all year.</p>
+<header class="hero-banner">
+  <div class="wrap hb-inner">
+    <div class="hb-text">
+      <div class="hb-tag">Media Kit 2026</div>
+      <h1 class="logo-name">Mrs. Arabia</h1>
+      <p class="logo-sub">The Balanced Teach</p>
+      <p class="hb-stats"><b>49K</b> Instagram <span aria-hidden="true">&middot;</span> <b>32K</b> TikTok <span aria-hidden="true">&middot;</span> <b>17 years</b> teaching</p>
+      <p class="hb-intro">Middle school ELA and American History teacher sharing real classroom lessons, AI tools that actually save time, and the projects my students talk about all year.</p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="#contact">Work with me</a>
-        <a class="btn btn-ghost" href="#videos">See my videos</a>
+        <a class="btn btn-primary" href="#contact">Work with me</a>
+        <a class="btn btn-cream" href="#videos">See my videos</a>
       </div>
-      <div class="email-line">mrsarabiarocks@gmail.com</div>
-      <nav class="socials" aria-label="Social accounts">
+      <div class="hb-email">mrsarabiarocks@gmail.com</div>
+      <nav class="hb-socials" aria-label="Social accounts">
         <a href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener">TikTok</a>
         <a href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener">Pinterest</a>
       </nav>
     </div>
-    <div class="hero-photo"><img src="img/hero.jpg" alt="Michaela Arabia holding a laptop at home"></div>
   </div>
+  <img class="hb-photo" src="img/hero-wide.jpg" alt="Michaela Arabia holding her laptop at home" width="1000" height="998">
 </header>
 
 <main>
@@ -360,7 +406,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--tan);outline-offset
       <p>Have a product teachers will love? I'd love to hear about it. Email me with your idea and timeline and I'll get back to you within a few days.</p>
       <div class="email-box">
         <code id="email">mrsarabiarocks@gmail.com</code>
-        <button class="btn btn-light" id="copyBtn" type="button">Copy email</button>
+        <button class="btn btn-cream" id="copyBtn" type="button">Copy email</button>
         <span class="copied" id="copied" aria-live="polite"></span>
       </div>
       <nav class="socials" aria-label="Social accounts">
