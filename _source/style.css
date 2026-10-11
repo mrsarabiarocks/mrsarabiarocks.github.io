@@ -82,6 +82,8 @@ p { margin: 0; }
 }
 .social svg { width: 1.35em; height: 1.35em; }
 .social-hero { background: #FFFFFF; color: #2E2458; --icon-cut: #FFFFFF; }
+.brand-link { width: fit-content; color: #FFFFFF; font-weight: 800; font-size: .95rem; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; opacity: .92; }
+.brand-link:hover { opacity: 1; }
 .social-about { background: var(--card); color: var(--text); border-color: var(--line); }
 .social:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
 
