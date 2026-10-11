@@ -202,6 +202,20 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
   .hb-intro{margin-inline:auto}
   .hb-photo{position:static;display:block;width:100%;max-width:520px;height:auto;margin:0 auto;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%);mask-image:linear-gradient(180deg,transparent 0,#000 14%)}
 }
+
+/* ---------- Scrolling brand rows ---------- */
+.brands-marquee{display:grid;gap:14px;margin-top:30px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-row{overflow:hidden;padding-block:4px 8px}
+.marquee-track{display:flex;gap:12px;width:max-content;animation:brandScroll 46s linear infinite}
+.marquee-row.rev .marquee-track{animation-direction:reverse;animation-duration:52s}
+.brands-marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track .brand{white-space:nowrap;flex:none}
+@keyframes brandScroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}
+@media (prefers-reduced-motion:reduce){
+  .brands-marquee{-webkit-mask-image:none;mask-image:none}
+  .marquee-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}
+  .marquee-track .brand[aria-hidden="true"]{display:none}
+}
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
@@ -295,25 +309,7 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
   <div class="wrap">
     <span class="eyebrow">Past partners</span>
     <h2>Brands I've worked with</h2>
-    <div class="brands">
-      <span class="brand">MagicSchool AI</span>
-      <span class="brand">Crayola</span>
-      <span class="brand">CoGrader</span>
-      <span class="brand">Canva for Education</span>
-      <span class="brand">Green Ninja</span>
-      <span class="brand">Pangram Labs</span>
-      <span class="brand">Diffit</span>
-      <span class="brand">Seesaw</span>
-      <span class="brand">CK-12 Flexi</span>
-      <span class="brand">Brisk</span>
-      <span class="brand">CodeMonkey</span>
-      <span class="brand">Think Academy</span>
-      <span class="brand">Temu</span>
-      <span class="brand">Office Depot</span>
-      <span class="brand">University of Phoenix</span>
-      <span class="brand">Literal</span>
-      <span class="brand">Bark</span>
-    </div>
+    <div class="brands-marquee" aria-label="Brands I've worked with"><div class="marquee-row"><div class="marquee-track"><span class="brand">MagicSchool AI</span><span class="brand">Crayola</span><span class="brand">CoGrader</span><span class="brand">Canva for Education</span><span class="brand">Green Ninja</span><span class="brand">Pangram Labs</span><span class="brand">Diffit</span><span class="brand">Seesaw</span><span class="brand">CK-12 Flexi</span><span class="brand" aria-hidden="true">MagicSchool AI</span><span class="brand" aria-hidden="true">Crayola</span><span class="brand" aria-hidden="true">CoGrader</span><span class="brand" aria-hidden="true">Canva for Education</span><span class="brand" aria-hidden="true">Green Ninja</span><span class="brand" aria-hidden="true">Pangram Labs</span><span class="brand" aria-hidden="true">Diffit</span><span class="brand" aria-hidden="true">Seesaw</span><span class="brand" aria-hidden="true">CK-12 Flexi</span></div></div><div class="marquee-row rev"><div class="marquee-track"><span class="brand">Brisk</span><span class="brand">CodeMonkey</span><span class="brand">Think Academy</span><span class="brand">Temu</span><span class="brand">Office Depot</span><span class="brand">University of Phoenix</span><span class="brand">Literal</span><span class="brand">Bark</span><span class="brand" aria-hidden="true">Brisk</span><span class="brand" aria-hidden="true">CodeMonkey</span><span class="brand" aria-hidden="true">Think Academy</span><span class="brand" aria-hidden="true">Temu</span><span class="brand" aria-hidden="true">Office Depot</span><span class="brand" aria-hidden="true">University of Phoenix</span><span class="brand" aria-hidden="true">Literal</span><span class="brand" aria-hidden="true">Bark</span></div></div></div>
     <div class="quotes">
       <blockquote class="quote">
         <p>"Perfection, Michaela! Very nicely done."</p>
