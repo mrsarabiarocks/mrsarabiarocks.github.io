@@ -244,6 +244,22 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
   .pill:hover{background:color-mix(in srgb,var(--tan) 45%,var(--chip));transform:translateY(-2px)}
   .hero-banner:hover .hb-photo{transform:scale(1.015)}
 }
+
+/* ---------- Notable AI brands ---------- */
+.ai-brands{margin-top:12px;background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:4px 4px 0 color-mix(in srgb,var(--tan) 40%,transparent);display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.ai-label{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ai-brands ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ai-brands li{font-family:var(--display);font-size:1rem;text-transform:uppercase;color:var(--brown);background:var(--chip);border-radius:999px;padding:6px 14px}
+
+/* ---------- Mobile-safe video grid (Instagram embeds need about 330px each) ---------- */
+.vid-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.vid-grid > *,.vid-item{min-width:0}
+.vid-item{max-width:400px}
+.vid-item .instagram-media,.vid-item iframe{min-width:0 !important;width:100% !important;max-width:100% !important;box-sizing:border-box}
+.vtile{max-width:100%}
+@media (max-width:1040px){.vid-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.vid-grid{grid-template-columns:minmax(0,1fr)}.vid-item{max-width:380px;margin-inline:auto}}
+@media (max-width:520px){.wrap{padding-inline:16px}.photo-grid{grid-template-columns:minmax(0,1fr)}}
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
@@ -288,6 +304,14 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
           <div class="cred"><b>17 years</b><span>in the middle school classroom</span></div>
           <div class="cred"><b>Google Certified</b><span>Educator</span></div>
           <div class="cred"><b>5+ years</b><span>with AI tools: ChatGPT, Gemini, Claude</span></div>
+        </div>
+        <div class="ai-brands">
+          <span class="ai-label">Notable AI brands I've worked with</span>
+          <ul>
+            <li>Google EDU</li>
+            <li>Microsoft EDU</li>
+            <li>Canva</li>
+          </ul>
         </div>
       </div>
     </div>
