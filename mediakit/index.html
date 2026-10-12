@@ -260,6 +260,17 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
 @media (max-width:1040px){.vid-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.vid-grid{grid-template-columns:minmax(0,1fr)}.vid-item{max-width:380px;margin-inline:auto}}
 @media (max-width:520px){.wrap{padding-inline:16px}.photo-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Shorter phone scroll: swipeable video rows, 2-up photos ---------- */
+@media (max-width:760px){
+  .vid-grid{display:flex;grid-template-columns:none;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 14px;margin-inline:-16px;justify-items:initial;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .vid-grid > .vid-item{flex:0 0 86%;max-width:360px;scroll-snap-align:center;margin-inline:0}
+  .swipe-hint{display:block}
+  .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .photo-grid figcaption{font-size:.8rem;padding:8px 10px}
+  section{padding-block:40px}
+}
+.swipe-hint{display:none;text-align:center;font-size:.85rem;font-weight:700;color:var(--muted);margin:-8px 0 10px}
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
@@ -272,7 +283,7 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
       <h1 class="logo-name">Mrs. Arabia</h1>
       <p class="logo-sub">The Balanced Teach</p>
       <p class="hb-stats"><b>49K</b> Instagram <span aria-hidden="true">&middot;</span> <b>32K</b> TikTok <span aria-hidden="true">&middot;</span> <b>17 years</b> teaching</p>
-      <p class="hb-intro">Middle school ELA and American History teacher sharing real classroom lessons, AI tools that actually save time, and the projects my students talk about all year.</p>
+      <p class="hb-intro">Middle school teacher sharing real lessons and the AI tools that save teachers time.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Work with me</a>
         <a class="btn btn-cream" href="#videos">See my videos</a>
@@ -297,9 +308,8 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
     <div class="about-grid">
       <div class="about-photo"><img src="img/about.jpg" alt="Michaela on the couch with a Best Teacher Ever mug"></div>
       <div class="about-text">
-        <p>I'm Michaela Arabia, a middle school teacher in Southern California, and I'm still in the classroom every single day. I teach ELA and American History to grades 6 through 8, so everything I post has been tested on real twelve and thirteen year olds before it ever hits your feed.</p>
-        <p>My content lives where teaching meets technology. Blacklight Poe annotations, project based learning, Canva everything, and the AI tools I actually use to plan, grade, and get my weekends back. Teachers save my posts and come back to them when they plan, which is exactly where your product wants to be.</p>
-        <p>When I partner with a brand, it sounds like me, because my audience trusts me to tell them what works in a real classroom.</p>
+        <p>I teach middle school ELA and American History in Southern California, and I'm still in the classroom every day. Everything I post is tested on real middle schoolers first.</p>
+        <p>Teachers save my posts for planning, and they trust my picks because they sound like me.</p>
         <div class="creds">
           <div class="cred"><b>17 years</b><span>in the middle school classroom</span></div>
           <div class="cred"><b>Google Certified</b><span>Educator</span></div>
@@ -387,11 +397,12 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
   <div class="wrap">
     <span class="eyebrow">The good stuff</span>
     <h2>My videos</h2>
-    <p class="lede">Real lessons, real students, real tools. Tap any video to watch it on Instagram.</p>
+    <p class="lede">Tap any video to watch.</p>
 
     <div class="vid-group">
       <h3>Brand partnerships</h3>
       <p class="sub">Sponsored work for edtech and classroom brands</p>
+      <p class="swipe-hint">Swipe for more</p>
       <div class="vid-grid">
         <div class="vid-item"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbrtTZMhbzn/" data-instgrm-version="14"><a class="vtile alt" href="https://www.instagram.com/reel/DbrtTZMhbzn/" target="_blank" rel="noopener"><div><div class="who">MagicSchool AI</div><div class="what">A syllabus escape room for the first week</div></div><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span><div class="meta"><span>Paid partnership</span><span>Aug 2026</span></div></a></blockquote><p class="vid-stats"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/></svg><b>484</b> likes</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z" fill="currentColor"/></svg><b>42</b> comments</span></p></div>
         <div class="vid-item"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DdeLzzxhQs9/" data-instgrm-version="14"><a class="vtile alt" href="https://www.instagram.com/reel/DdeLzzxhQs9/" target="_blank" rel="noopener"><div><div class="who">CoGrader</div><div class="what">AI grading feedback for real student writing</div></div><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span><div class="meta"><span>Collab post</span><span>Sep 2026</span></div></a></blockquote><p class="vid-stats"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/></svg><b>133</b> likes</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z" fill="currentColor"/></svg><b>264</b> comments</span></p></div>
@@ -404,7 +415,8 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
 
     <div class="vid-group">
       <h3>My top performing videos</h3>
-      <p class="sub">The lessons teachers save, share, and come back to most</p>
+      <p class="sub">Lessons teachers save most</p>
+      <p class="swipe-hint">Swipe for more</p>
       <div class="vid-grid">
         <div class="vid-item"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbBoju3veLA/" data-instgrm-version="14"><a class="vtile" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><div><div class="who">Agenda Slides</div><div class="what">A whole year of agenda slides with Canva Bulk Create</div></div><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span><div class="meta"><span>Teacher tech</span><span>Jul 2026</span></div></a></blockquote><p class="vid-stats"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/></svg><b>6,898</b> likes</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z" fill="currentColor"/></svg><b>494</b> comments</span></p></div>
         <div class="vid-item"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DX-s1VWzEqv/" data-instgrm-version="14"><a class="vtile alt" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><div><div class="who">How I Annotate</div><div class="what">The full breakdown of annotating in my classroom</div></div><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span><div class="meta"><span>ELA</span><span>May 2026</span></div></a></blockquote><p class="vid-stats"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/></svg><b>1,827</b> likes</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z" fill="currentColor"/></svg><b>481</b> comments</span></p></div>
@@ -422,7 +434,7 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
   <div class="wrap">
     <span class="eyebrow">Behind the scenes</span>
     <h2>Photos</h2>
-    <p class="lede">Real classroom moments and the Canva content I create for my students and my audience.</p>
+    <p class="lede">Real classroom moments and my Canva content.</p>
     <div class="photo-grid">
       <figure><img src="img/class-board.jpg" alt="Michaela pointing to a Follow or Challenge sticky note board in her classroom" loading="lazy"><figcaption>Civics lesson in action</figcaption></figure>
       <figure><img src="img/class-notebook.jpg" alt="An interactive notebook held up in front of a sticky note board" loading="lazy"><figcaption>Student notebooks, built around the lesson</figcaption></figure>
@@ -439,14 +451,14 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
     <span class="eyebrow">How we can work together</span>
     <h2>Services</h2>
     <div class="services">
-      <div class="service"><h3>Sponsored Reels and TikToks</h3><p>An original short video in my own voice, posted to Instagram and TikTok, with an auto-DM link for anyone who comments.</p></div>
-      <div class="service"><h3>UGC videos</h3><p>Classroom-tested videos you post on your own channels, filmed in a real middle school room.</p></div>
-      <div class="service"><h3>Instagram Stories</h3><p>Story sets with a link sticker that send teachers straight to your product.</p></div>
-      <div class="service"><h3>Whitelisting and ad usage</h3><p>Run my content as paid ads from my account or yours, with usage terms we agree on up front.</p></div>
-      <div class="service"><h3>Teacher PD and webinars</h3><p>Live or recorded sessions showing teachers how to use your tool in their own classroom.</p></div>
-      <div class="service"><h3>Classroom product testing</h3><p>I try your product with my students and give you honest feedback before launch.</p></div>
+      <div class="service"><h3>Sponsored Reels and TikToks</h3><p>One video in my voice on Instagram and TikTok, plus an auto-DM link.</p></div>
+      <div class="service"><h3>UGC videos</h3><p>Classroom videos for your own channels.</p></div>
+      <div class="service"><h3>Instagram Stories</h3><p>Story sets with a link to your product.</p></div>
+      <div class="service"><h3>Whitelisting and ad usage</h3><p>Run my content as paid ads.</p></div>
+      <div class="service"><h3>Teacher PD and webinars</h3><p>Live or recorded training on your tool.</p></div>
+      <div class="service"><h3>Classroom product testing</h3><p>Honest feedback from a real classroom.</p></div>
     </div>
-    <p class="rates">Rates depend on the project. Email me and I'll send a custom quote.</p>
+    <p class="rates">Email me for a custom quote.</p>
   </div>
 </section>
 
@@ -455,7 +467,7 @@ h2{text-shadow:3px 3px 0 color-mix(in srgb,var(--tan) 55%,transparent)}
     <div class="contact-photo"><img src="img/contact.jpg" alt="Michaela smiling on the couch" loading="lazy"></div>
     <div>
       <h2>Let's work together</h2>
-      <p>Have a product teachers will love? I'd love to hear about it. Email me with your idea and timeline and I'll get back to you within a few days.</p>
+      <p>Have a product teachers will love? Email me your idea and timeline.</p>
       <div class="email-box">
         <code id="email">mrsarabiarocks@gmail.com</code>
         <button class="btn btn-cream" id="copyBtn" type="button">Copy email</button>
