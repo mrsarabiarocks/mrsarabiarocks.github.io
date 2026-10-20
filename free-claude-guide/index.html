@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Free Claude Guide for Teachers | Michaela Arabia: The Balanced Teach</title>
-<meta name="description" content="My free Claude guide for teachers: the exact prompts and moves I use to plan faster, differentiate, and get my evenings back. Copy, paste, done.">
+<meta name="description" content="How I use Claude in my middle school classroom: demo videos, free prompts, and The Teacher Helper Project, my Claude teacher assistant guide.">
 <link rel="canonical" href="https://mrsarabiarocks.com/free-claude-guide/">
 <meta property="og:title" content="Free Claude Guide for Teachers">
 <meta property="og:description" content="The exact Claude prompts and moves I use in my middle school classroom. Copy, paste, done.">
@@ -624,6 +624,30 @@ body.no-scroll { overflow: hidden; }
 .home-link:hover .home-tag { background: #FFFFFF; color: #2B1A12; }
 @media (max-width: 420px) { .home-link { font-size: 1.02rem; gap: 6px; } .topnav-inner { gap: 10px; } }
 
+/* ---------- Teacher Helper Project ---------- */
+.hero-helper { width: fit-content; background: #FFFFFF !important; color: #2B1A12 !important; }
+@media (max-width: 860px) { .hero-helper { justify-self: center; } }
+.helper { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; align-items: center; background: var(--card); border: 4px solid var(--ink); border-radius: 28px; box-shadow: 8px 8px 0 var(--ink); padding: 34px; }
+.helper-covers { position: relative; padding: 0 30px 40px 0; }
+.helper-cover { display: block; width: 100%; height: auto; border: 3px solid var(--ink); border-radius: 12px; box-shadow: 6px 6px 0 var(--ink); transform: rotate(-3deg); position: relative; z-index: 2; }
+.helper-page { position: absolute; right: 0; bottom: 0; width: 58%; height: auto; border: 3px solid var(--ink); border-radius: 10px; box-shadow: 5px 5px 0 var(--ink); transform: rotate(4deg); z-index: 3; background: #FFF; }
+.helper-copy { display: grid; gap: 14px; }
+.helper-title { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; }
+.helper-lead { font-size: 1.12rem; font-weight: 700; }
+.helper-list { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.helper-list li::marker { color: #D97757; }
+.helper-btn { background: #D97757 !important; color: #FFFFFF !important; }
+.helper-small { font-size: .88rem; color: var(--muted); font-weight: 700; }
+@media (max-width: 860px) { .helper { grid-template-columns: minmax(0, 1fr); padding: 22px; gap: 24px; } .helper-covers { max-width: 380px; margin: 0 auto; } }
+.more-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 26px; padding: 18px 22px; background: var(--tint-pink); border: 3px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.more-strip p { flex: 1; min-width: 240px; }
+.more-strip .btn { background: #D97757; color: #FFF; }
+.peek-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+.peek-card { background: var(--card); border: 3px solid var(--line); border-top: 12px solid var(--card-accent); border-radius: 18px; box-shadow: var(--shadow); padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.peek-level { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--card-accent); }
+.peek-card h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.45rem; line-height: 1.1; }
+.peek-card p { color: var(--muted); font-weight: 700; }
+
 </style>
 </head>
 <body>
@@ -633,7 +657,7 @@ body.no-scroll { overflow: hidden; }
     <div class="topnav-links"><a href="/#best-seller">PBL Drive</a><a href="/#shop">Shop the Classroom</a><a href="/#teacher">Teacher Guides</a><a href="/#free">Free Resources</a><a href="/free-claude-guide/" class="on">Free Claude Guide</a></div>
     <details class="topnav-menu" id="topnav-menu">
       <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
-      <div class="menu-panel"><a class="menu-main" href="/#best-seller">PBL Drive</a><a class="menu-main" href="/#spotlight">Spooky Season</a><a class="menu-main" href="/#shop">Shop the Classroom</a><a class="menu-main" href="/#teacher">Teacher Guides</a><a class="menu-main" href="/#free">Free Resources</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a><a class="menu-sub" href="#watch">Watch me use Claude</a><a class="menu-sub" href="#ways">Ways I use Claude</a><a class="menu-sub" href="#level-1">Beginner prompts</a><a class="menu-sub" href="#guides">My Claude guides</a><a class="menu-sub" href="#level-2">Advanced</a><a class="menu-sub" href="#follow">Follow me</a></div>
+      <div class="menu-panel"><a class="menu-main" href="/#best-seller">PBL Drive</a><a class="menu-main" href="/#spotlight">Spooky Season</a><a class="menu-main" href="/#shop">Shop the Classroom</a><a class="menu-main" href="/#teacher">Teacher Guides</a><a class="menu-main" href="/#free">Free Resources</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a><a class="menu-sub" href="#watch">Watch me use Claude</a><a class="menu-sub" href="#teacher-helper">The Teacher Helper Project</a><a class="menu-sub" href="#ways">Ways I use Claude</a><a class="menu-sub" href="#try">Try these free</a><a class="menu-sub" href="#inside">What&#x27;s inside</a><a class="menu-sub" href="#follow">Follow me</a></div>
     </details>
   </div>
 </nav>
@@ -644,26 +668,26 @@ body.no-scroll { overflow: hidden; }
     <div class="hero-copy">
       <h1><span>Free Claude</span> <span>Guide</span></h1>
       <p class="tagline">For Teachers</p>
-      <p class="bio">The exact prompts and moves I use to plan faster, differentiate without losing my mind, and get my evenings back. Copy, paste, done.</p>
+      <p class="bio">See how I use Claude in my real classroom, grab a few free prompts, and meet my teacher assistant guide.</p>
       <nav class="socials" aria-label="Follow me"><a class="social social-hero" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-hero" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-hero" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-hero" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
+      <a class="btn hero-helper" href="#teacher-helper" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </header>
 
 <main>
 <section class="wrap start-grid" aria-label="How this page works">
-  <div class="start"><span class="start-n">1. Grab it free</span><p>Verified K-12 US teachers get premium Claude free for a year. <a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">Click here</a>, then hit "Get Verified." Once you're in, come back.</p></div>
-  <div class="start"><span class="start-n">2. Copy a prompt</span><p>Hit copy on any prompt below. Paste it into Claude. Swap the [brackets] for your stuff.</p></div>
-  <div class="start"><span class="start-n">3. Watch me do it</span><p>Every section links to a real demo from my classroom so you can see it in action.</p></div>
+  <div class="start"><span class="start-n">1. Grab it free</span><p>Verified K-12 US teachers get premium Claude free for a year. <a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">Click here</a>, then hit "Get Verified."</p></div>
+  <div class="start"><span class="start-n">2. Watch and try</span><p>Watch my classroom demos, then copy a few of my favorite prompts below. Free, yours to keep.</p></div>
+  <div class="start"><span class="start-n">3. Get the whole system</span><p>Ready for Claude to work like your own teacher assistant? <a href="#teacher-helper">Meet The Teacher Helper Project</a>.</p></div>
 </section>
-<p class="wrap intro">You do not need to be techy. Just Claude open in one tab and about ten minutes. <b>Start at the top</b> with the beginner moves, copy-paste prompts you can use today. Keep scrolling and it levels up to the <b>advanced stuff at the bottom</b>: Projects, Skills, and Cowork. I've linked a guide at almost every step if you want the done-for-you version, and every one of them lives in my Back to School Google Drive.</p>
 <section class="wrap block" id="watch" aria-labelledby="watch-h">
-  <div class="block-head"><h2 id="watch-h" class="section-title">Watch Me Use Claude</h2><p class="block-sub">Short, no-fluff demos straight from my classroom. Tap play, then come back and copy the matching prompt.</p></div>
+  <div class="block-head"><h2 id="watch-h" class="section-title">Watch Me Use Claude</h2><p class="block-sub">Short, no-fluff demos straight from my classroom. Tap play and see what Claude can do.</p></div>
   <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Desvw-WTv6l/?utm_source=ig_embed" data-instgrm-version="14">
         <a href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude builds my workshop boards</span><span class="reel-sub">Watch on Instagram</span></a>
       </blockquote>
-    </div></div></div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab <a href="#p4-h">the exact prompt I used</a>.</p></div>
+    </div></div></div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. The exact prompt is a move in <a href="#teacher-helper">The Teacher Helper Project</a>.</p></div>
   <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbBoju3veLA/?utm_source=ig_embed" data-instgrm-version="14">
         <a href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude + Canva: a year of slides</span><span class="reel-sub">Watch on Instagram</span></a>
@@ -692,12 +716,35 @@ body.no-scroll { overflow: hidden; }
     </div></div></div></div>
   <div class="hl-row"><a class="hl" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Claude Tips</b><small>Lots of ways I use it</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>AI in the Classroom</b><small>Real examples</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>PBL</b><small>Project ideas</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17844653230766602/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Poe Projects</b><small>Balance in action</small></span></a></div>
 </section>
-<section class="wrap block" id="ways" aria-labelledby="ways-h">
-  <div class="block-head"><p class="eyebrow">Straight from my classroom</p><h2 id="ways-h" class="section-title">Ways I&#x27;ve Used Claude in My Classroom</h2><p class="block-sub">The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it.</p></div>
-  <div class="ways"><article class="way card-sun"><h4>Reading workshop boards</h4><p>One screen for station rotations: color group schedule, station directions, a built-in timer, and a group points tracker. I made a Raven board and a Tell-Tale Heart board with an escape room station.</p><div class="card-actions"><a class="peek" href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-pink"><h4>Backwards-planned my PBL units</h4><p>I start with the final project and Claude maps the daily lessons backward from it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get the guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-blue"><h4>Made 180 days of agenda slides</h4><p>Claude fills the table, Canva Bulk Create spins up the whole year in one go.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Agenda Slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-violet"><h4>Built annotation packets for ANY text</h4><p>Numbered paragraphs, margin prompts, vocab, and a teacher key in about 10 minutes.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><h4>A study tool for my real students</h4><p>A student-facing Outsiders coach for theme, motif, conflict, plot, and symbolism. It refuses anything off-topic.</p><div class="card-actions"><a class="btn btn-small" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="way card-pink"><h4>Interactive notebook pages</h4><p>Glue-in pages, launch plans, and grading for my comp notebooks.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Notebooks Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-blue"><h4>History graphic organizers</h4><p>Cause and Effect, Primary Source Analysis, SOAPSTONE, and notes organizers for 8th grade American History.</p><div class="card-actions"></div></article><article class="way card-violet"><h4>Poe month projects</h4><p>Like the House of Usher real estate brochure: students annotate the house, then SELL it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Usher mini unit<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><h4>Three readiness levels of one text</h4><p>Same ideas, same thinking, three different reading loads. Saves my prep period.</p><div class="card-actions"></div></article><article class="way card-pink"><h4>Parent emails and newsletters</h4><p>The email I&#x27;ve been avoiding since Tuesday, drafted in my voice in 30 seconds.</p><div class="card-actions"></div></article><article class="way card-blue"><h4>Organized my whole PBL Drive</h4><p>Claude audited every folder, flagged duplicates, and suggested a cleaner setup before moving a thing.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="way card-violet"><h4>Field trip and event logistics</h4><p>Roommate lists, buddy schedules, and graduation programs without the spreadsheet headache.</p><div class="card-actions"></div></article><article class="way card-sun"><h4>My whole classroom website</h4><p>This site! Claude built it from my product list and keeps it up to date.</p><div class="card-actions"><a class="btn btn-small" href="/">See the homepage<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article></div>
+<section class="wrap block" id="teacher-helper" aria-labelledby="helper-h">
+  <div class="helper">
+    <div class="helper-covers">
+      <img class="helper-cover" src="img/teacher-helper-cover.jpg" alt="The Teacher Helper Project cover" loading="lazy">
+      <img class="helper-page" src="img/teacher-helper-page.jpg" alt="How The Teacher Helper Project works page" loading="lazy">
+    </div>
+    <div class="helper-copy">
+      <p class="eyebrow">My ultimate Claude teacher assistant guide</p>
+      <h2 id="helper-h" class="helper-title">The Teacher Helper Project</h2>
+      <p class="helper-lead">Drop it into Claude and it works the way I work. Make a Project, add the guide, and just say <b>"Do the Workshop Board move for The Raven."</b> Claude asks a few questions, then builds it.</p>
+      <ul class="helper-list">
+        <li><b>36 ready-to-run moves</b> for planning, differentiation, parent emails, PBL, annotation, and assessments</li>
+        <li><b>Build It:</b> workshop boards, student study tools, review games, and Canva Bulk Create</li>
+        <li><b>Claude Advanced:</b> Projects, Skills, and letting Claude do the work on your computer</li>
+        <li><b>Real screenshots</b> from my classroom, plus links to every demo video</li>
+        <li><b>Always up to date:</b> one link that always has the newest version</li>
+      </ul>
+      <div class="btn-row"><a class="btn btn-big helper-btn" href="#teacher-helper" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <p class="helper-small">A PDF for your personal classroom use. Works with Claude, including the free verified teacher account.</p>
+    </div>
+  </div>
 </section>
-<div class="wrap" id="level-1"><div class="level-banner"><span class="level-tag">Level 1: Start here</span><h2>Claude for Beginners</h2><p>Open one tab, copy a prompt, get your night back. These are the things I tell every teacher to try first. No setup, no learning curve.</p></div></div>
-<section class="wrap block" aria-labelledby="p0-h"><div class="block-head"><p class="eyebrow">Copy-paste prompt</p><h2 id="p0-h" class="section-title">Lesson and unit planning</h2><p class="block-sub">Start from the end and work backward. Claude drafts the plan, you keep the judgment. Build faster so you can teach better.</p></div><div class="pgrid"><article class="pcard card-pink">
+<section class="wrap block" id="ways" aria-labelledby="ways-h">
+  <div class="block-head"><p class="eyebrow">Straight from my classroom</p><h2 id="ways-h" class="section-title">Ways I&#x27;ve Used Claude in My Classroom</h2><p class="block-sub">The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it. Every one of these is a move in The Teacher Helper Project.</p></div>
+  <div class="ways"><article class="way card-sun"><h4>Reading workshop boards</h4><p>One screen for station rotations: color group schedule, station directions, a built-in timer, and a group points tracker. I made a Raven board and a Tell-Tale Heart board with an escape room station.</p><div class="card-actions"><a class="peek" href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-pink"><h4>Backwards-planned my PBL units</h4><p>I start with the final project and Claude maps the daily lessons backward from it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get the guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-blue"><h4>Made 180 days of agenda slides</h4><p>Claude fills the table, Canva Bulk Create spins up the whole year in one go.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Agenda Slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-violet"><h4>Built annotation packets for ANY text</h4><p>Numbered paragraphs, margin prompts, vocab, and a teacher key in about 10 minutes.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><h4>A study tool for my real students</h4><p>A student-facing Outsiders coach for theme, motif, conflict, plot, and symbolism. It refuses anything off-topic.</p><div class="card-actions"><a class="btn btn-small" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="way card-pink"><h4>Interactive notebook pages</h4><p>Glue-in pages, launch plans, and grading for my comp notebooks.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Notebooks Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-violet"><h4>Poe month projects</h4><p>Like the House of Usher real estate brochure: students annotate the house, then SELL it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Usher mini unit<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><h4>My whole classroom website</h4><p>This site! Claude built it from my product list and keeps it up to date.</p><div class="card-actions"><a class="btn btn-small" href="/">See the homepage<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article></div>
+</section>
+<section class="wrap block" id="try" aria-labelledby="try-h">
+  <div class="block-head"><p class="eyebrow">Copy, paste, done</p><h2 id="try-h" class="section-title">Try These Free</h2><p class="block-sub">Three of my favorite prompts, on the house. Copy one, paste it into Claude, and swap the [brackets] for your stuff.</p></div>
+  <div class="pgrid"><article class="pcard card-pink">
   <h4>Backwards-design a unit</h4>
   <p class="use">When you have a text or topic and a blank calendar staring at you.</p>
   
@@ -713,32 +760,6 @@ Ask me some questions to make sure I get the best output possible.</div>
   <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get my step-by-step guide here!<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: Backwards planning with Claude</span></a></div>
   
 </article><article class="pcard card-blue">
-  <h4>Turn a standard into a lesson</h4>
-  <p class="use">When you know the standard but not the lesson.</p>
-  
-  <div class="promptbox">I teach [grade] [subject]. Build me a single [length]-minute lesson that hits this standard: [paste standard].
-
-Give me: a hook that takes 5 minutes or less, the main activity, one check for understanding, and an exit ticket. Tell me exactly what I say and what students do.
-
-Assume I have zero prep time and a class that talks a lot.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">See how I plan with PBL<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>AI in the classroom</span></a></div>
-  <p class="note">Want to see how I plan lessons using project-based learning? Peek inside my Project Based Learning Google Drive to see what&#x27;s inside.</p>
-</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="p1-h"><div class="block-head"><p class="eyebrow">Copy-paste prompt</p><h2 id="p1-h" class="section-title">Differentiation</h2><p class="block-sub">One lesson, three readiness levels, five minutes. This is the one that saves your prep period.</p></div><div class="pgrid"><article class="pcard card-blue">
-  <h4>Scaffolds for the kids who need them</h4>
-  <p class="use">When you have IEPs, ELLs, and everyone in between.</p>
-  
-  <div class="promptbox">I am teaching this assignment to [grade]: [paste assignment].
-
-Give me a support version for: (1) students who need reading support, (2) English language learners, and (3) students who finish early and need a challenge.
-
-For each, give me the actual modified directions and any sentence stems or word banks. Keep the learning goal identical for all of them.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>See it in action</span></a></div>
-  
-</article><article class="pcard card-violet">
   <h4>Three readiness levels of the same text</h4>
   <p class="use">When one reading is too hard for half the room and too easy for the other half.</p>
   
@@ -754,7 +775,7 @@ For each version, add 2 comprehension questions and 1 discussion question. Do no
 Ask me some questions to make sure I get the best output possible.</div>
   <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
   
-</article></div></section><section class="wrap block" aria-labelledby="p2-h"><div class="block-head"><p class="eyebrow">Copy-paste prompt</p><h2 id="p2-h" class="section-title">Parent and admin emails</h2><p class="block-sub">The email you have been avoiding since Tuesday. Draft it in your voice, kind but firm, in 30 seconds.</p></div><div class="pgrid"><article class="pcard card-violet">
+</article><article class="pcard card-violet">
   <h4>The tricky parent email</h4>
   <p class="use">When you need to be honest without starting a war.</p>
   
@@ -767,72 +788,21 @@ Give me two versions: one softer, one more direct.
 Ask me some questions to make sure I get the best output possible.</div>
   <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
   
-</article><article class="pcard card-sun">
-  <h4>Newsletter or admin update in your voice</h4>
-  <p class="use">When you have to write it and would rather do literally anything else.</p>
-  
-  <div class="promptbox">Write a [class newsletter / update to my admin] covering these points: [dump your bullet points here, messy is fine].
-
-My voice: real, warm, a little dry, no corporate buzzwords, no exclamation-point overload. Short paragraphs. Make it skimmable. Then give me a subject line that people will actually open.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>AI in the classroom</span></a></div>
-  
-</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="p3-h"><div class="block-head"><p class="eyebrow">Copy-paste prompt</p><h2 id="p3-h" class="section-title">PBL and creative projects</h2><p class="block-sub">This is my whole thing. Take any text or topic and turn it into a project kids actually want to do.</p></div><div class="pgrid"><article class="pcard card-sun">
-  <h4>Remix a lesson into a pop-culture project</h4>
-  <p class="use">Shark Tank, Mythbusters, a newscast, a meme. Same standards, way more buy-in.</p>
-  
-  <div class="promptbox">I teach [grade] [subject]. We are studying [text or topic]. I want to turn it into a project modeled on [Shark Tank / Mythbusters / a news broadcast / a social media takeover / your idea].
-
-Give me: the project pitch in kid-friendly language, the steps students follow, what they produce, and a simple rubric tied to [standard or skill]. Keep it doable in [number] class periods.
-
-Make it fun but rigorous. I do not do busywork projects.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pblpromptguide/" target="_blank" rel="noopener">Grab my FREE PBL Prompt Guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>PBL demos</span></a></div>
-  
-</article><article class="pcard card-pink">
-  <h4>Build an annotation set from any text</h4>
-  <p class="use">Speeches, primary sources, song lyrics, a chapter. Close reading with a purpose.</p>
-  
-  <div class="promptbox">Here is a text I want my [grade] students to annotate closely: [paste text or name it].
-
-Give me 6 to 8 annotation prompts that push real thinking (tone, word choice, author&#x27;s purpose, connections to now). Write them as questions students answer in the margins.
-
-Then give me one short project they do after annotating to show they got it. Balance matters to me, so make at least part of this something they do on paper, by hand.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked: build packets with Claude<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/annotations-guide-for-grades-5-12/" target="_blank" rel="noopener">Free Annotations Guide (5 to 12)<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: how I annotate</span></a></div>
-  
-</article></div></section><section class="wrap block" aria-labelledby="p4-h"><div class="block-head"><p class="eyebrow">Copy-paste prompt</p><h2 id="p4-h" class="section-title">Workshop and station boards</h2><p class="block-sub">Run stations without repeating directions 40 times. One board on the screen shows every group where to go, what to do, and how much time is left.</p></div><div class="pgrid"><article class="pcard card-pink">
-  <h4>Build a reading workshop board</h4>
-  <p class="use">When you have color groups rotating through stations and want everything on one screen.</p>
-  
-  <div class="promptbox">Build me a reading workshop board for my [grade] class as a single web page I can put on my classroom screen. The text is [text or topic].
-
-My groups are [Blue, Red, Orange, Green] and they rotate through [number] blocks. The stations are: [station 1 and where it is], [station 2 and where it is], [station 3 and where it is]. One station is a teacher meeting with me.
-
-Include: a schedule tab showing which station each group is at during each block, a directions tab with numbered steps, an example, and a sentence starter for every station, what to bring, a big countdown timer I can start and reset, and a points tracker for each group.
-
-Make it look like [theme, like a spooky Poe vibe], easy to read from the back of the room, and fun.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button></div>
-  <p class="note">Swap in your own stations. Mine have included an escape room, a choice board, and a teacher meeting.</p>
-</article></div></section><section class="wrap block" aria-labelledby="p5-h"><div class="block-head"><p class="eyebrow">Copy-paste prompt</p><h2 id="p5-h" class="section-title">Mastering Claude and Bulk Create</h2><p class="block-sub">The move that made me go viral: build the content once with Claude, then let Canva&#x27;s Bulk Create spin up a whole year of slides in one go. This is how you make 180 things without making 180 things.</p></div><div class="pgrid"><article class="pcard card-blue">
-  <h4>Fill a Canva Bulk Create template</h4>
-  <p class="use">Agenda slides, vocab cards, bell ringers, task cards. Anything you&#x27;d make one at a time.</p>
-  
-  <div class="promptbox">I want to mass-produce [180 daily agenda slides / vocab cards / bell ringers] in Canva using Bulk Create. First ask me what fields my template has (like Date, Day, Objective, Agenda, Homework).
-
-Then generate a clean table I can paste straight into Canva Bulk Create: one row per slide, columns matching my fields exactly. Fill it with [my topics and pacing], keep it [grade] appropriate, and do not skip days.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/guide-bulk-creation-for-teachers/" target="_blank" rel="noopener">Hot Takes: my Bulk Create guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Whole-Year Agenda Slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: Claude + Canva</span></a></div>
-  
-</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+</article></div>
+  <div class="more-strip"><p><strong>That's 3 of my 36 moves.</strong> The other 33 (workshop boards, study tools, sub plans, rubrics, Projects, Skills, and more) are waiting in The Teacher Helper Project.</p><a class="btn" href="#teacher-helper" target="_blank" rel="noopener">See what's inside<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</section>
+<section class="wrap block" id="inside" aria-labelledby="inside-h">
+  <div class="block-head"><p class="eyebrow">Sneak peek</p><h2 id="inside-h" class="section-title">What&#x27;s Inside</h2><p class="block-sub">Three levels, so you can start easy and grow into the advanced stuff.</p></div>
+  <div class="peek-grid"><article class="peek-card card-pink"><span class="peek-level">Level 1</span><h4>Claude for Beginners</h4><p>Copy-paste moves that get your night back: Backwards Unit, Sub Plans, Three Levels, Tricky Parent Email, Quick Rubric, Exit Tickets, and more.</p></article><article class="peek-card card-blue"><span class="peek-level">Level 2</span><h4>Build It</h4><p>Claude builds things you put on your screen and share with students: Workshop Board, Study Tool, Review Game, Student Hub, Bulk Create Table.</p></article><article class="peek-card card-violet"><span class="peek-level">Level 3</span><h4>Claude Advanced</h4><p>A Claude that already knows your classroom: Classroom HQ Project, Feedback Partner, PBL Remix Machine Skill, and Monday Week Ahead.</p></article></div>
+  <div class="showcase">
+    <p class="eyebrow" style="color:#B07400">See one I actually built</p>
+    <h3>The Outsiders study tool, for my real students</h3>
+    <p>A student-facing coach for theme, motif, conflict, plot, and symbolism, built from our actual class materials. It refuses anything off-topic, and yes, it has a 1960s vibe. The exact prompt is the Study Tool move in The Teacher Helper Project.</p>
+    <div class="btn-row"><a class="btn" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-soft" href="#teacher-helper" target="_blank" rel="noopener">Get the prompt<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
 <section class="wrap block" id="guides" aria-labelledby="guides-h">
-  <div class="block-head"><p class="eyebrow">Want it done for you?</p><h2 id="guides-h" class="section-title">My Claude Guides</h2><p class="block-sub">The prompts on this page are free and yours to keep. When you want the finished, classroom-ready versions, already built and already pretty, here they are.</p><div class="cta-box">
+  <div class="block-head"><p class="eyebrow">More done-for-you guides</p><h2 id="guides-h" class="section-title">More of My Guides</h2><p class="block-sub">Already built, already pretty, ready for your classroom.</p><div class="cta-box">
       <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="../covers/bts.webp" alt="Back to School Growing Google Drive" loading="lazy"></a>
       <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> My Back to School GROWING Drive is my whole library in one link: AI and Canva prompt guides, a full year of agenda slides, annotation templates, projects, decor, sub plans, and more. Always growing, lifetime access.</p>
       <div class="btn-row"><a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the whole bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-soft" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Get the PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
@@ -913,117 +883,6 @@ Ask me some questions to make sure I get the best output possible.</div>
   </div>
 </article></div>
 </section>
-<div class="wrap" id="level-2"><div class="level-banner adv"><span class="level-tag">Level 2: Challenge yourself</span><h2>Claude Advanced</h2><p>Ready to stop copying prompts one at a time? This is where Claude goes from a helper to a system that knows your classroom. Three features, three unfair advantages: Projects, Skills, and Cowork.</p></div></div>
-<section class="wrap">
-  <div class="showcase">
-    <p class="eyebrow" style="color:#B07400">See one I actually built</p>
-    <h3>The Outsiders study tool, for my real students</h3>
-    <p>I had Claude build a student-facing website for our Outsiders unit. It coaches kids through <b>theme, motif, conflict, plot diagram, and symbolism</b>, giving sentence stems and fill-in-the-blanks, then rewriting their attempts when they are close. I uploaded our actual class materials and gave it rules for how to talk to them, so they are not pulling random stuff off the internet. It refuses anything off-topic, and yes, it has a 1960s vibe.</p>
-    <a class="btn" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <details><summary>See the exact prompt I gave Claude (swap in your own novel)</summary>
-      <div class="promptbox">Build me an AI study tool for my students for the novel [The Outsiders]. Cover five sections: theme, motif, conflict, plot diagram, and symbolism.
-
-Students are middle school (6th to 8th grade). Give partial answers with sentence stems and blanks to fill in, and offer a rewrite when they are a little off. Every section requires students to include a quote as support, then write their own analysis, symbolism, or conflict statement.
-
-THEME: Guide them to a universal, non-cliche theme statement (no character names, no plot summary) using the &quot;the author wants us to know...&quot; frame, landing on the big lesson. Focus the theme on being true to yourself and knowing your true identity, inspired by Johnny&#x27;s line &quot;stay gold.&quot; Model statement: The innocence of youth is something we should cherish because nothing stays gold forever, and staying true to yourself as you grow and change helps guide your identity and choices.
-
-MOTIF: Focus on the motif of literature and how it recurs to build the identity theme, using three moments: the poem &quot;Nothing Gold Can Stay,&quot; Johnny and Ponyboy reading Gone with the Wind in the church, and the reveal that Ponyboy is the author. Model statement: The motif of literature is present when Ponyboy recites Robert Frost&#x27;s &quot;Nothing Gold Can Stay,&quot; when Ponyboy and Johnny read Gone with the Wind together in the church, and when Ponyboy reveals he is the author telling the story. These moments remind me that embracing your true identity instead of the labels society gives you helps guide your choices and lets you stay true to yourself.
-
-CONFLICT: Main conflict should be person vs. self or person vs. society.
-
-RULES: Refuse to answer anything not related to The Outsiders. Fun, engaging, student-friendly design with a 1960s Outsiders vibe.</div>
-      <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt" style="background:var(--sun);color:#2E2458">Copy prompt</button></div>
-    </details>
-  </div>
-</section>
-<section class="wrap block" aria-labelledby="a0-h"><div class="block-head"><p class="eyebrow">Advanced: Projects</p><h2 id="a0-h" class="section-title">Build a Claude that already knows your classroom</h2></div><div class="featnote"><b>New to Projects?</b> A Project is a saved workspace where you upload your files and set your instructions <em>once</em>. Everything you do inside it remembers your grade, your standards, and your voice. Set it up on a Sunday, save hours every week after.</div><div class="pgrid"><article class="pcard card-blue">
-  <h4>Your &quot;Classroom HQ&quot; project</h4>
-  <p class="why"><b>Why it's powerful:</b> Stop re-typing your grade, standards, and style every single time. Set it once and every lesson comes out aligned and sounding like you.</p>
-  <p class="setup-label">Starter setup</p>
-  <div class="promptbox">Create a new Project called &quot;Classroom HQ.&quot; Upload your pacing guide, your standards, one rubric, and one lesson that sounds like you. Then paste this into the project&#x27;s custom instructions:
-
-You are my teaching assistant for [grade] [subject]. Everything you make should align to the standards and pacing guide I uploaded and match the voice in my sample lesson: real, clear, a little dry, no busywork. Default to middle school reading levels. When I ask for a lesson or activity, tie it to a standard and keep prep low. Ask me the topic and how many days I have, then build.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy setup">Copy setup</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
-  
-</article><article class="pcard card-violet">
-  <h4>A project per novel or unit</h4>
-  <p class="why"><b>Why it's powerful:</b> Reuse everything you built for The Outsiders, Poe, or Night without rebuilding it. The project becomes your unit&#x27;s memory.</p>
-  <p class="setup-label">Starter setup</p>
-  <div class="promptbox">Make a Project named for the text (e.g. &quot;The Outsiders Unit&quot;). Upload the reading, your annotation sets, and past projects. Paste into custom instructions:
-
-This project holds everything for my [text] unit with [grade]. Treat the uploaded reading, annotations, and projects as the source of truth. When I ask for something new (a quiz, a bell ringer, a differentiated version, a project), match the style and rigor of what&#x27;s already here and keep it aligned to [standard].
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy setup">Copy setup</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">PBL Project Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">Poe: Tell-Tale Heart<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Poe: House of Usher<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">Poe: The Raven<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>See my live Outsiders example</span></a></div>
-  <p class="note">Need completed novel or short-story projects? Grab mine above.</p>
-</article><article class="pcard card-sun">
-  <h4>Your grading and feedback partner</h4>
-  <p class="why"><b>Why it's powerful:</b> Feedback that matches your rubric and still sounds like you, in a fraction of the time. You stay the teacher, it drafts the words.</p>
-  <p class="setup-label">Starter setup</p>
-  <div class="promptbox">Create a Project called &quot;Feedback.&quot; Upload your rubric and 2 to 3 samples of feedback you have written. Paste into custom instructions:
-
-You help me draft feedback on student work for [grade] [subject]. Always score against the uploaded rubric and explain it in kid-friendly language. Match the tone of my samples: warm, specific, honest, growth-focused. Give 2 glows and 1 grow. Never rewrite the student&#x27;s work for them.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy setup">Copy setup</button></div>
-  <p class="note">Keep it FERPA-safe: strip student names or use initials before you paste any work.</p>
-</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="a1-h"><div class="block-head"><p class="eyebrow">Advanced: Skills</p><h2 id="a1-h" class="section-title">Teach Claude your signature moves</h2></div><div class="featnote"><b>New to Skills?</b> A Skill is a set of instructions you save once and trigger by name. It is how you teach Claude a move you make all the time, so you never re-type the directions again. Build the skill once, call it forever.</div><div class="pgrid"><article class="pcard card-violet">
-  <h4>The PBL Remix Machine</h4>
-  <p class="why"><b>Why it's powerful:</b> Turn any text or topic into a project kids beg to do, on command. This is my whole brand in one saved skill.</p>
-  <p class="setup-label">Skill instructions to save</p>
-  <div class="promptbox">When I give you a text or topic and a format (Shark Tank, Mythbusters, a newscast, a social media takeover, a meme), turn it into a student project. Always output: a kid-friendly pitch, numbered student steps, what they turn in, and a simple 4-row rubric tied to the standard I name. Middle school level. Fun but rigorous. No busywork. If I do not give a format, suggest three.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy skill">Copy skill</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pblpromptguide/" target="_blank" rel="noopener">Grab my FREE PBL Prompt Guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>PBL demos</span></a></div>
-  
-</article><article class="pcard card-sun">
-  <h4>The Annotation-Set Generator</h4>
-  <p class="why"><b>Why it's powerful:</b> Your exact annotation format from any text in seconds, every time, without re-explaining it.</p>
-  <p class="setup-label">Skill instructions to save</p>
-  <div class="promptbox">When I give you a text, create an annotation set in my format: 6 to 8 numbered margin questions that push thinking about tone, word choice, author&#x27;s purpose, and connections to today. Then add one short after-reading task, and make at least part of it something students do on paper by hand. Keep it [grade] level.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy skill">Copy skill</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked: teach Claude to build your packets<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Ready-to-go sets (5 to 10 ELA)<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/17844653230766602/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Poe demo</span></a></div>
-  
-</article><article class="pcard card-pink">
-  <h4>The 3-Level Differentiator</h4>
-  <p class="why"><b>Why it's powerful:</b> One passage, three readiness levels, same thinking, on demand. The skill that quietly saves your prep period.</p>
-  <p class="setup-label">Skill instructions to save</p>
-  <div class="promptbox">When I paste a passage, rewrite it at 3 readiness levels (below, on, and above grade level) while keeping the same key ideas and vocabulary goals. For each level add 2 comprehension questions and 1 discussion question. Water down the reading load, never the thinking. Label each level clearly.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy skill">Copy skill</button></div>
-  
-</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="a2-h"><div class="block-head"><p class="eyebrow">Advanced: Cowork</p><h2 id="a2-h" class="section-title">Put Claude to work on your actual desktop</h2></div><div class="featnote"><b>New to Cowork?</b> Cowork is Claude on your computer. It can open your files, organize folders, build things, and even run tasks on a schedule. This is where Claude stops giving advice and starts doing the work.</div><div class="pgrid"><article class="pcard card-sun">
-  <h4>Clean up my Drive</h4>
-  <p class="why"><b>Why it's powerful:</b> Turn a chaotic resource folder into something you can actually find things in. I did exactly this with my whole PBL Drive.</p>
-  <p class="setup-label">Say this in Cowork</p>
-  <div class="promptbox">Connect to my Google Drive and audit my [folder name] folder. Give me a full inventory organized by subfolder, flag duplicates and misfiled items, and suggest a cleaner structure. Do not move anything until I approve it.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy task">Copy task</button><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>AI in the classroom</span></a></div>
-  
-</article><article class="pcard card-pink">
-  <h4>Build me a classroom tool</h4>
-  <p class="why"><b>Why it's powerful:</b> Interactive resources built for you, not bought. This whole hub was made with Claude.</p>
-  <p class="setup-label">Say this in Cowork</p>
-  <div class="promptbox">Build me an interactive [choice board / review game / student hub] for [grade] on [topic]. Make it a single web page, mobile-friendly, in my brand colors. Include [what you want on it]. Then give me the file so I can share or host it.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy task">Copy task</button><a class="peek" href="https://www.instagram.com/reel/DazQIb2zTvd/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: Cowork builds my Canva while I relax</span></a></div>
-  
-</article><article class="pcard card-blue">
-  <h4>My Monday &quot;week ahead&quot;</h4>
-  <p class="why"><b>Why it's powerful:</b> Start the week already organized without lifting a finger. Set it once and it runs itself.</p>
-  <p class="setup-label">Say this in Cowork</p>
-  <div class="promptbox">Every Monday at 6am, pull my calendar for the week and my to-do list, and send me a short &quot;week ahead&quot; brief: what is coming, what I need to prep, and the top 3 things to knock out first. Keep it skimmable.
-
-Ask me some questions to make sure I get the best output possible.</div>
-  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy task">Copy task</button></div>
-  <p class="note">This one runs as a scheduled task, so it keeps working every week on its own.</p>
-</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
 <section class="wrap block" id="follow" aria-labelledby="follow-h">
   <div class="block-head"><h2 id="follow-h" class="section-title">This Is Just the Start</h2><p class="block-sub">I post new prompts, demos, and classroom moves every week. Scan to follow, then come hang out. That is where all the good stuff lives.</p></div>
   <div class="qrrow"><a class="qrcard" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-instagram.png" alt="Instagram QR code" loading="lazy"><b>Instagram</b><small>@Middle_Teacher_Syndrome</small></a><a class="qrcard" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-tiktok.png" alt="TikTok QR code" loading="lazy"><b>TikTok</b><small>@middle_teacher_syndrome</small></a><a class="qrcard" href="https://www.facebook.com/middle_teacher_syndrome" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-facebook.png" alt="Facebook QR code" loading="lazy"><b>Facebook</b><small>Middle Teacher Syndrome</small></a></div>

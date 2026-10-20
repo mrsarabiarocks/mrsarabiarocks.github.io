@@ -14,6 +14,8 @@ TC = C.TC
 HERE = pathlib.Path(__file__).parent
 
 # Where the waitlist form sends signups. Swap this for the ThriveCart $0 product link once it exists.
+# PLACEHOLDER: swap in the ThriveCart checkout link for The Teacher Helper Project when it exists.
+TEACHER_HELPER_URL = "#teacher-helper"
 WAITLIST_URL = ""          # e.g. TC + "claude-waitlist/"
 WAITLIST_EMAIL = "mrsarabiarocks@gmail.com"
 
@@ -379,6 +381,30 @@ body.no-scroll { overflow: hidden; }
 .home-tag { font-family: var(--f-body); font-weight: 900; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; background: #D97757; color: #FFFFFF; border: 2px solid #FFFFFF; border-radius: 999px; padding: 2px 9px; }
 .home-link:hover .home-tag { background: #FFFFFF; color: #2B1A12; }
 @media (max-width: 420px) { .home-link { font-size: 1.02rem; gap: 6px; } .topnav-inner { gap: 10px; } }
+
+/* ---------- Teacher Helper Project ---------- */
+.hero-helper { width: fit-content; background: #FFFFFF !important; color: #2B1A12 !important; }
+@media (max-width: 860px) { .hero-helper { justify-self: center; } }
+.helper { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; align-items: center; background: var(--card); border: 4px solid var(--ink); border-radius: 28px; box-shadow: 8px 8px 0 var(--ink); padding: 34px; }
+.helper-covers { position: relative; padding: 0 30px 40px 0; }
+.helper-cover { display: block; width: 100%; height: auto; border: 3px solid var(--ink); border-radius: 12px; box-shadow: 6px 6px 0 var(--ink); transform: rotate(-3deg); position: relative; z-index: 2; }
+.helper-page { position: absolute; right: 0; bottom: 0; width: 58%; height: auto; border: 3px solid var(--ink); border-radius: 10px; box-shadow: 5px 5px 0 var(--ink); transform: rotate(4deg); z-index: 3; background: #FFF; }
+.helper-copy { display: grid; gap: 14px; }
+.helper-title { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; }
+.helper-lead { font-size: 1.12rem; font-weight: 700; }
+.helper-list { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.helper-list li::marker { color: #D97757; }
+.helper-btn { background: #D97757 !important; color: #FFFFFF !important; }
+.helper-small { font-size: .88rem; color: var(--muted); font-weight: 700; }
+@media (max-width: 860px) { .helper { grid-template-columns: minmax(0, 1fr); padding: 22px; gap: 24px; } .helper-covers { max-width: 380px; margin: 0 auto; } }
+.more-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 26px; padding: 18px 22px; background: var(--tint-pink); border: 3px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.more-strip p { flex: 1; min-width: 240px; }
+.more-strip .btn { background: #D97757; color: #FFF; }
+.peek-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+.peek-card { background: var(--card); border: 3px solid var(--line); border-top: 12px solid var(--card-accent); border-radius: 18px; box-shadow: var(--shadow); padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.peek-level { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--card-accent); }
+.peek-card h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.45rem; line-height: 1.1; }
+.peek-card p { color: var(--muted); font-weight: 700; }
 """
 
 JS = r"""
@@ -430,35 +456,78 @@ def build_page():
     by_title = {p["t"]: p for p in C.PRODUCTS}
 
     start = f'''<section class="wrap start-grid" aria-label="How this page works">
-  <div class="start"><span class="start-n">1. Grab it free</span><p>Verified K-12 US teachers get premium Claude free for a year. <a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">Click here</a>, then hit "Get Verified." Once you're in, come back.</p></div>
-  <div class="start"><span class="start-n">2. Copy a prompt</span><p>Hit copy on any prompt below. Paste it into Claude. Swap the [brackets] for your stuff.</p></div>
-  <div class="start"><span class="start-n">3. Watch me do it</span><p>Every section links to a real demo from my classroom so you can see it in action.</p></div>
-</section>
-<p class="wrap intro">You do not need to be techy. Just Claude open in one tab and about ten minutes. <b>Start at the top</b> with the beginner moves, copy-paste prompts you can use today. Keep scrolling and it levels up to the <b>advanced stuff at the bottom</b>: Projects, Skills, and Cowork. I've linked a guide at almost every step if you want the done-for-you version, and every one of them lives in my Back to School Google Drive.</p>'''
+  <div class="start"><span class="start-n">1. Grab it free</span><p>Verified K-12 US teachers get premium Claude free for a year. <a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">Click here</a>, then hit "Get Verified."</p></div>
+  <div class="start"><span class="start-n">2. Watch and try</span><p>Watch my classroom demos, then copy a few of my favorite prompts below. Free, yours to keep.</p></div>
+  <div class="start"><span class="start-n">3. Get the whole system</span><p>Ready for Claude to work like your own teacher assistant? <a href="#teacher-helper">Meet The Teacher Helper Project</a>.</p></div>
+</section>'''
 
     hl = "".join(B.a(u, f'<span class="peek-play">{B.PLAY}</span><span><b>{e(t)}</b><small>{e(s)}</small></span>', "hl") for u, t, s in HIGHLIGHTS)
     videos = f'''<section class="wrap block" id="watch" aria-labelledby="watch-h">
-  {B.head("Watch Me Use Claude", "Short, no-fluff demos straight from my classroom. Tap play, then come back and copy the matching prompt.", "watch-h")}
-  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab <a href="#p4-h">the exact prompt I used</a>.</p></div>
+  {B.head("Watch Me Use Claude", "Short, no-fluff demos straight from my classroom. Tap play and see what Claude can do.", "watch-h")}
+  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. The exact prompt is a move in <a href="#teacher-helper">The Teacher Helper Project</a>.</p></div>
   <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels">{"".join(reel(u, t) for u, t in TOP_REELS)}</div></div>
   <div class="reels-frame light-frame more-reels"><span class="reels-label">More Claude demos</span><div class="spot-reels">{"".join(reel(u, t) for u, t in MORE_REELS)}</div></div>
   <div class="hl-row">{hl}</div>
 </section>'''
 
+    SHOW = {"Reading workshop boards", "Backwards-planned my PBL units", "Made 180 days of agenda slides", "Built annotation packets for ANY text", "A study tool for my real students", "Interactive notebook pages", "Poe month projects", "My whole classroom website"}
     ways = ""
-    for i, (tone, t, d, btns, r) in enumerate(WAYS, 1):
+    for i, (tone, t, d, btns, r) in enumerate([w for w in WAYS if w[1] in SHOW], 1):
         acts = "".join(link(u, e(bt) + B.ARROW, "btn btn-small") for bt, u in btns) + (B.peek(r) if r else "")
         ways += f'<article class="way card-{tone}"><h4>{e(t)}</h4><p>{e(d)}</p><div class="card-actions">{acts}</div></article>'
     ways_sec = f'''<section class="wrap block" id="ways" aria-labelledby="ways-h">
-  {B.head("Ways I've Used Claude in My Classroom", "The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it.", "ways-h", eyebrow="Straight from my classroom")}
+  {B.head("Ways I've Used Claude in My Classroom", "The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it. Every one of these is a move in The Teacher Helper Project.", "ways-h", eyebrow="Straight from my classroom")}
   <div class="ways">{ways}</div>
 </section>'''
 
-    beg = ""
-    for n, (badge, title, sub, cards) in enumerate(BEGINNER):
-        cs = "".join(prompt_card(c, TONES[(n + j) % 4], "Copy prompt") for j, c in enumerate(cards))
-        beg += f'<section class="wrap block" aria-labelledby="p{n}-h">{B.head(title, sub, f"p{n}-h", eyebrow=badge)}<div class="pgrid">{cs}</div>'
-        beg += (bts_strip() if n in (0, 2, 5) else "") + "</section>"
+    by_card = {c[0]: (sec[2], c) for sec in BEGINNER for c in sec[3]}
+    teaser_names = ["Backwards-design a unit", "Three readiness levels of the same text", "The tricky parent email"]
+    teasers = "".join(prompt_card(by_card[n][1], TONES[i % 4], "Copy prompt") for i, n in enumerate(teaser_names))
+    teaser_sec = f'''<section class="wrap block" id="try" aria-labelledby="try-h">
+  {B.head("Try These Free", "Three of my favorite prompts, on the house. Copy one, paste it into Claude, and swap the [brackets] for your stuff.", "try-h", eyebrow="Copy, paste, done")}
+  <div class="pgrid">{teasers}</div>
+  <div class="more-strip"><p><strong>That's 3 of my 36 moves.</strong> The other 33 (workshop boards, study tools, sub plans, rubrics, Projects, Skills, and more) are waiting in The Teacher Helper Project.</p>{link(TEACHER_HELPER_URL, "See what's inside" + B.ARROW, "btn")}</div>
+</section>'''
+
+    helper_sec = f'''<section class="wrap block" id="teacher-helper" aria-labelledby="helper-h">
+  <div class="helper">
+    <div class="helper-covers">
+      <img class="helper-cover" src="img/teacher-helper-cover.jpg" alt="The Teacher Helper Project cover" loading="lazy">
+      <img class="helper-page" src="img/teacher-helper-page.jpg" alt="How The Teacher Helper Project works page" loading="lazy">
+    </div>
+    <div class="helper-copy">
+      <p class="eyebrow">My ultimate Claude teacher assistant guide</p>
+      <h2 id="helper-h" class="helper-title">The Teacher Helper Project</h2>
+      <p class="helper-lead">Drop it into Claude and it works the way I work. Make a Project, add the guide, and just say <b>"Do the Workshop Board move for The Raven."</b> Claude asks a few questions, then builds it.</p>
+      <ul class="helper-list">
+        <li><b>36 ready-to-run moves</b> for planning, differentiation, parent emails, PBL, annotation, and assessments</li>
+        <li><b>Build It:</b> workshop boards, student study tools, review games, and Canva Bulk Create</li>
+        <li><b>Claude Advanced:</b> Projects, Skills, and letting Claude do the work on your computer</li>
+        <li><b>Real screenshots</b> from my classroom, plus links to every demo video</li>
+        <li><b>Always up to date:</b> one link that always has the newest version</li>
+      </ul>
+      <div class="btn-row">{link(TEACHER_HELPER_URL, "Get The Teacher Helper Project" + B.ARROW, "btn btn-big helper-btn")}</div>
+      <p class="helper-small">A PDF for your personal classroom use. Works with Claude, including the free verified teacher account.</p>
+    </div>
+  </div>
+</section>'''
+
+    peeks = [
+        ("Level 1", "Claude for Beginners", "Copy-paste moves that get your night back: Backwards Unit, Sub Plans, Three Levels, Tricky Parent Email, Quick Rubric, Exit Tickets, and more."),
+        ("Level 2", "Build It", "Claude builds things you put on your screen and share with students: Workshop Board, Study Tool, Review Game, Student Hub, Bulk Create Table."),
+        ("Level 3", "Claude Advanced", "A Claude that already knows your classroom: Classroom HQ Project, Feedback Partner, PBL Remix Machine Skill, and Monday Week Ahead."),
+    ]
+    peek_cards = "".join(f'<article class="peek-card card-{TONES[i]}"><span class="peek-level">{e(a)}</span><h4>{e(t)}</h4><p>{e(d)}</p></article>' for i, (a, t, d) in enumerate(peeks))
+    peek_sec = f'''<section class="wrap block" id="inside" aria-labelledby="inside-h">
+  {B.head("What's Inside", "Three levels, so you can start easy and grow into the advanced stuff.", "inside-h", eyebrow="Sneak peek")}
+  <div class="peek-grid">{peek_cards}</div>
+  <div class="showcase">
+    <p class="eyebrow" style="color:#B07400">See one I actually built</p>
+    <h3>The Outsiders study tool, for my real students</h3>
+    <p>A student-facing coach for theme, motif, conflict, plot, and symbolism, built from our actual class materials. It refuses anything off-topic, and yes, it has a 1960s vibe. The exact prompt is the Study Tool move in The Teacher Helper Project.</p>
+    <div class="btn-row">{B.a(OUTSIDERS, "Open the live tool" + B.ARROW, "btn")}{link(TEACHER_HELPER_URL, "Get the prompt" + B.ARROW, "btn btn-soft")}</div>
+  </div>
+</section>'''
 
     guides = "".join(B.card(by_title[t], TONES[i % 4]) for i, t in enumerate(GUIDE_PRODUCTS) if t in by_title)
     frees = "".join(B.card(by_title[t], "free") for t in FREE_PRODUCTS if t in by_title)
@@ -468,29 +537,10 @@ def build_page():
       <div class="btn-row">{B.a(BTS, "Get the whole bundle" + B.ARROW, "btn")}{B.a(PBL, "Get the PBL Drive" + B.ARROW, "btn btn-soft")}</div></div>
     </div>'''
     guides_sec = f'''<section class="wrap block" id="guides" aria-labelledby="guides-h">
-  {B.head("My Claude Guides", "The prompts on this page are free and yours to keep. When you want the finished, classroom-ready versions, already built and already pretty, here they are.", "guides-h", bts_cta, eyebrow="Want it done for you?")}
+  {B.head("More of My Guides", "Already built, already pretty, ready for your classroom.", "guides-h", bts_cta, eyebrow="More done-for-you guides")}
   <div class="grid">{guides}</div>
   <h3 class="group-title" style="margin-top:40px">Start free</h3>
   <div class="grid" style="margin-top:18px">{frees}</div>
-</section>'''
-
-    adv = ""
-    for n, (badge, name, title, note, label, copy_label, cards) in enumerate(ADVANCED):
-        cs = "".join(prompt_card(c, TONES[(n + j + 1) % 4], copy_label, label, why=True) for j, c in enumerate(cards))
-        adv += f'<section class="wrap block" aria-labelledby="a{n}-h">{B.head(title, "", f"a{n}-h", eyebrow=f"{badge}: {name}")}<div class="featnote">{note}</div><div class="pgrid">{cs}</div>{bts_strip()}</section>'
-    adv = adv.replace('<p class="block-sub"></p>', "")
-
-    showcase = f'''<section class="wrap">
-  <div class="showcase">
-    <p class="eyebrow" style="color:#B07400">See one I actually built</p>
-    <h3>The Outsiders study tool, for my real students</h3>
-    <p>I had Claude build a student-facing website for our Outsiders unit. It coaches kids through <b>theme, motif, conflict, plot diagram, and symbolism</b>, giving sentence stems and fill-in-the-blanks, then rewriting their attempts when they are close. I uploaded our actual class materials and gave it rules for how to talk to them, so they are not pulling random stuff off the internet. It refuses anything off-topic, and yes, it has a 1960s vibe.</p>
-    {B.a(OUTSIDERS, "Open the live tool" + B.ARROW, "btn")}
-    <details><summary>See the exact prompt I gave Claude (swap in your own novel)</summary>
-      <div class="promptbox">{e(OUTSIDERS_PROMPT)}</div>
-      <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt" style="background:var(--sun);color:#2E2458">Copy prompt</button></div>
-    </details>
-  </div>
 </section>'''
 
     qr = "".join(f'<a class="qrcard" href="{e(u)}" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-{k}.png" alt="{e(n)} QR code" loading="lazy"><b>{e(n)}</b><small>{e(h)}</small></a>'
@@ -506,7 +556,7 @@ def build_page():
     nav = [("/#best-seller", "PBL Drive"), ("/#spotlight", "Spooky Season"), ("/#shop", "Shop the Classroom"), ("/#teacher", "Teacher Guides"), ("/#free", "Free Resources"), ("/free-claude-guide/", "Free Claude Guide")]
     nav_inline = "".join(f'<a href="{h}"{" class=\"on\"" if "claude" in h else ""}>{e(n)}</a>' for h, n in nav if "spotlight" not in h)
     nav_menu = "".join(f'<a class="menu-main" href="{h}">{e(n)}</a>' for h, n in nav) + \
-        "".join(f'<a class="menu-sub" href="#{i}">{e(n)}</a>' for i, n in [("watch", "Watch me use Claude"), ("ways", "Ways I use Claude"), ("level-1", "Beginner prompts"), ("guides", "My Claude guides"), ("level-2", "Advanced"), ("follow", "Follow me")])
+        "".join(f'<a class="menu-sub" href="#{i}">{e(n)}</a>' for i, n in [("watch", "Watch me use Claude"), ("teacher-helper", "The Teacher Helper Project"), ("ways", "Ways I use Claude"), ("try", "Try these free"), ("inside", "What's inside"), ("follow", "Follow me")])
 
     css = (HERE / "style.css").read_text() + EXTRA_CSS
     out = f'''<!doctype html>
@@ -515,7 +565,7 @@ def build_page():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Free Claude Guide for Teachers | Michaela Arabia: The Balanced Teach</title>
-<meta name="description" content="My free Claude guide for teachers: the exact prompts and moves I use to plan faster, differentiate, and get my evenings back. Copy, paste, done.">
+<meta name="description" content="How I use Claude in my middle school classroom: demo videos, free prompts, and The Teacher Helper Project, my Claude teacher assistant guide.">
 <link rel="canonical" href="https://mrsarabiarocks.com/free-claude-guide/">
 <meta property="og:title" content="Free Claude Guide for Teachers">
 <meta property="og:description" content="The exact Claude prompts and moves I use in my middle school classroom. Copy, paste, done.">
@@ -547,8 +597,9 @@ def build_page():
     <div class="hero-copy">
       <h1><span>Free Claude</span> <span>Guide</span></h1>
       <p class="tagline">For Teachers</p>
-      <p class="bio">The exact prompts and moves I use to plan faster, differentiate without losing my mind, and get my evenings back. Copy, paste, done.</p>
+      <p class="bio">See how I use Claude in my real classroom, grab a few free prompts, and meet my teacher assistant guide.</p>
       <nav class="socials" aria-label="Follow me">{B.socials("social-hero")}</nav>
+      {link(TEACHER_HELPER_URL, "Get The Teacher Helper Project" + B.ARROW, "btn hero-helper")}
     </div>
   </div>
 </header>
@@ -556,13 +607,11 @@ def build_page():
 <main>
 {start}
 {videos}
+{helper_sec}
 {ways_sec}
-<div class="wrap" id="level-1"><div class="level-banner"><span class="level-tag">Level 1: Start here</span><h2>Claude for Beginners</h2><p>Open one tab, copy a prompt, get your night back. These are the things I tell every teacher to try first. No setup, no learning curve.</p></div></div>
-{beg}
+{teaser_sec}
+{peek_sec}
 {guides_sec}
-<div class="wrap" id="level-2"><div class="level-banner adv"><span class="level-tag">Level 2: Challenge yourself</span><h2>Claude Advanced</h2><p>Ready to stop copying prompts one at a time? This is where Claude goes from a helper to a system that knows your classroom. Three features, three unfair advantages: Projects, Skills, and Cowork.</p></div></div>
-{showcase}
-{adv}
 {follow}
 </main>
 
