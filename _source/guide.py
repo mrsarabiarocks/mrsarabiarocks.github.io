@@ -401,7 +401,7 @@ def build_page():
     hl = "".join(B.a(u, f'<span class="peek-play">{B.PLAY}</span><span><b>{e(t)}</b><small>{e(s)}</small></span>', "hl") for u, t, s in HIGHLIGHTS)
     videos = f'''<section class="wrap block" id="watch" aria-labelledby="watch-h">
   {B.head("Watch Me Use Claude", "Short, no-fluff demos straight from my classroom. Tap play, then come back and copy the matching prompt.", "watch-h")}
-  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New: Claude builds my workshop boards</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab the exact prompt in <a href="#p4-h">Prompt 05</a>.</p></div>
+  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab the exact prompt in <a href="#p4-h">Prompt 05</a>.</p></div>
   <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels">{"".join(reel(u, t) for u, t in TOP_REELS)}</div></div>
   <div class="reels-frame light-frame more-reels"><span class="reels-label">More Claude demos</span><div class="spot-reels">{"".join(reel(u, t) for u, t in MORE_REELS)}</div></div>
   <div class="hl-row">{hl}</div>
