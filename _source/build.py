@@ -225,6 +225,7 @@ def build():
       <p class="tagline">The Balanced Teach</p>
       <p class="bio">{e(C.BIO)}</p>
       <nav class="socials" aria-label="Follow me">{socials("social-hero")}</nav>
+      <a class="btn hero-claude" href="/free-claude-guide/">New to Claude? Get my FREE Claude Guide{ARROW}</a>
       <a class="brand-link" href="/mediakit/">Brands: work with me</a>
     </div>
   </div>

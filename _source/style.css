@@ -464,3 +464,7 @@ p { margin: 0; }
 @media (max-width: 760px) { .reels-frame .spot-reels { flex-wrap: wrap; } .reels-frame .spot-reel { flex: 1 1 100%; } }
 .audio-credit { flex-basis: 100%; font-size: .74rem; font-weight: 700; color: var(--muted); margin-top: -6px; }
 .grid-night .audio-credit { color: #A99FD6; }
+
+/* ---------- Free Claude Guide button in the hero ---------- */
+.hero-claude { width: fit-content; background: var(--sun); color: #2E2458; font-size: 1.05rem; }
+@media (max-width: 860px) { .hero-claude { justify-self: center; } }
