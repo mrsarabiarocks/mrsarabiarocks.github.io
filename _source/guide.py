@@ -71,7 +71,7 @@ WAYS = [
 # ---------- Prompt sections ----------
 # card: (title, use line, prompt, [(btn text, url, soft?)], (watch text, url) or None, note)
 BEGINNER = [
-    ("Prompt 01", "Lesson and unit planning", "Start from the end and work backward. Claude drafts the plan, you keep the judgment. Build faster so you can teach better.", [
+    ("Copy-paste prompt", "Lesson and unit planning", "Start from the end and work backward. Claude drafts the plan, you keep the judgment. Build faster so you can teach better.", [
         ("Backwards-design a unit", "When you have a text or topic and a blank calendar staring at you.",
          "You are helping me plan a unit using backwards design. I teach [grade] [subject]. The unit is on [text or topic] and I have [number] class periods of [length] minutes.\n\nStart with the end: give me 3 possible summative assessments students could do to show mastery. For each, tell me what standard or skill it proves.\n\nThen, once I pick one, we will map the daily lessons backward from it. Ask me which assessment I want before you build the calendar.\n\nKeep it real for middle schoolers. No busywork." + ASK,
          [("Get my step-by-step guide here!", TC + "pbl-backwards-planning-with-claude/", False)], ("Watch: Backwards planning with Claude", ig("DZdWKfXh55X")), ""),
@@ -79,7 +79,7 @@ BEGINNER = [
          "I teach [grade] [subject]. Build me a single [length]-minute lesson that hits this standard: [paste standard].\n\nGive me: a hook that takes 5 minutes or less, the main activity, one check for understanding, and an exit ticket. Tell me exactly what I say and what students do.\n\nAssume I have zero prep time and a class that talks a lot." + ASK,
          [("See how I plan with PBL", PBL, False)], ("AI in the classroom", HL_AI), "Want to see how I plan lessons using project-based learning? Peek inside my Project Based Learning Google Drive to see what's inside."),
     ]),
-    ("Prompt 02", "Differentiation", "One lesson, three readiness levels, five minutes. This is the one that saves your prep period.", [
+    ("Copy-paste prompt", "Differentiation", "One lesson, three readiness levels, five minutes. This is the one that saves your prep period.", [
         ("Scaffolds for the kids who need them", "When you have IEPs, ELLs, and everyone in between.",
          "I am teaching this assignment to [grade]: [paste assignment].\n\nGive me a support version for: (1) students who need reading support, (2) English language learners, and (3) students who finish early and need a challenge.\n\nFor each, give me the actual modified directions and any sentence stems or word banks. Keep the learning goal identical for all of them." + ASK,
          [], ("See it in action", HL_AI), ""),
@@ -87,7 +87,7 @@ BEGINNER = [
          "Here is a reading passage for my [grade] [subject] class: [paste passage].\n\nRewrite it at 3 readiness levels while keeping the same key ideas and vocabulary goals:\n1. Below grade level (shorter sentences, more scaffolding)\n2. On grade level\n3. Above grade level (more complex text, a stretch question)\n\nFor each version, add 2 comprehension questions and 1 discussion question. Do not water down the thinking, just the reading load." + ASK,
          [], ("Claude tips", HL_TIPS), ""),
     ]),
-    ("Prompt 03", "Parent and admin emails", "The email you have been avoiding since Tuesday. Draft it in your voice, kind but firm, in 30 seconds.", [
+    ("Copy-paste prompt", "Parent and admin emails", "The email you have been avoiding since Tuesday. Draft it in your voice, kind but firm, in 30 seconds.", [
         ("The tricky parent email", "When you need to be honest without starting a war.",
          "Help me write an email to a parent. Here is the situation: [describe what happened, plain and honest].\n\nTone: warm, professional, and clear. I am not apologizing for holding a standard, but I want the parent on my team. Keep it short. Lead with something positive about their kid if there is one. End with a specific next step.\n\nGive me two versions: one softer, one more direct." + ASK,
          [], ("Claude tips", HL_TIPS), ""),
@@ -95,7 +95,7 @@ BEGINNER = [
          "Write a [class newsletter / update to my admin] covering these points: [dump your bullet points here, messy is fine].\n\nMy voice: real, warm, a little dry, no corporate buzzwords, no exclamation-point overload. Short paragraphs. Make it skimmable. Then give me a subject line that people will actually open." + ASK,
          [], ("AI in the classroom", HL_AI), ""),
     ]),
-    ("Prompt 04", "PBL and creative projects", "This is my whole thing. Take any text or topic and turn it into a project kids actually want to do.", [
+    ("Copy-paste prompt", "PBL and creative projects", "This is my whole thing. Take any text or topic and turn it into a project kids actually want to do.", [
         ("Remix a lesson into a pop-culture project", "Shark Tank, Mythbusters, a newscast, a meme. Same standards, way more buy-in.",
          "I teach [grade] [subject]. We are studying [text or topic]. I want to turn it into a project modeled on [Shark Tank / Mythbusters / a news broadcast / a social media takeover / your idea].\n\nGive me: the project pitch in kid-friendly language, the steps students follow, what they produce, and a simple rubric tied to [standard or skill]. Keep it doable in [number] class periods.\n\nMake it fun but rigorous. I do not do busywork projects." + ASK,
          [("Grab my FREE PBL Prompt Guide", TC + "pblpromptguide/", False)], ("PBL demos", HL_PBL), ""),
@@ -103,12 +103,12 @@ BEGINNER = [
          "Here is a text I want my [grade] students to annotate closely: [paste text or name it].\n\nGive me 6 to 8 annotation prompts that push real thinking (tone, word choice, author's purpose, connections to now). Write them as questions students answer in the margins.\n\nThen give me one short project they do after annotating to show they got it. Balance matters to me, so make at least part of this something they do on paper, by hand." + ASK,
          [("Annotation Unlocked: build packets with Claude", TC + "annotation-unlocked/", False), ("Free Annotations Guide (5 to 12)", TC + "annotations-guide-for-grades-5-12/", True)], ("Watch: how I annotate", ig("DX-s1VWzEqv")), ""),
     ]),
-    ("Prompt 05", "Workshop and station boards", "Run stations without repeating directions 40 times. One board on the screen shows every group where to go, what to do, and how much time is left.", [
+    ("Copy-paste prompt", "Workshop and station boards", "Run stations without repeating directions 40 times. One board on the screen shows every group where to go, what to do, and how much time is left.", [
         ("Build a reading workshop board", "When you have color groups rotating through stations and want everything on one screen.",
          "Build me a reading workshop board for my [grade] class as a single web page I can put on my classroom screen. The text is [text or topic].\n\nMy groups are [Blue, Red, Orange, Green] and they rotate through [number] blocks. The stations are: [station 1 and where it is], [station 2 and where it is], [station 3 and where it is]. One station is a teacher meeting with me.\n\nInclude: a schedule tab showing which station each group is at during each block, a directions tab with numbered steps, an example, and a sentence starter for every station, what to bring, a big countdown timer I can start and reset, and a points tracker for each group.\n\nMake it look like [theme, like a spooky Poe vibe], easy to read from the back of the room, and fun." + ASK,
          [], None, "Swap in your own stations. Mine have included an escape room, a choice board, and a teacher meeting."),
     ]),
-    ("Prompt 06", "Mastering Claude and Bulk Create", "The move that made me go viral: build the content once with Claude, then let Canva's Bulk Create spin up a whole year of slides in one go. This is how you make 180 things without making 180 things.", [
+    ("Copy-paste prompt", "Mastering Claude and Bulk Create", "The move that made me go viral: build the content once with Claude, then let Canva's Bulk Create spin up a whole year of slides in one go. This is how you make 180 things without making 180 things.", [
         ("Fill a Canva Bulk Create template", "Agenda slides, vocab cards, bell ringers, task cards. Anything you'd make one at a time.",
          "I want to mass-produce [180 daily agenda slides / vocab cards / bell ringers] in Canva using Bulk Create. First ask me what fields my template has (like Date, Day, Objective, Agenda, Homework).\n\nThen generate a clean table I can paste straight into Canva Bulk Create: one row per slide, columns matching my fields exactly. Fill it with [my topics and pacing], keep it [grade] appropriate, and do not skip days." + ASK,
          [("Hot Takes: my Bulk Create guide", TC + "guide-bulk-creation-for-teachers/", False), ("Whole-Year Agenda Slides + guide", TC + "180-daily-agenda-slides-canvabulkcreate/", True)], ("Watch: Claude + Canva", ig("DbBoju3veLA")), ""),
@@ -116,7 +116,7 @@ BEGINNER = [
 ]
 
 ADVANCED = [
-    ("Advanced 01", "Projects", "Build a Claude that already knows your classroom",
+    ("Advanced", "Projects", "Build a Claude that already knows your classroom",
      "<b>New to Projects?</b> A Project is a saved workspace where you upload your files and set your instructions <em>once</em>. Everything you do inside it remembers your grade, your standards, and your voice. Set it up on a Sunday, save hours every week after.",
      "Starter setup", "Copy setup", [
         ("Your \"Classroom HQ\" project", "Stop re-typing your grade, standards, and style every single time. Set it once and every lesson comes out aligned and sounding like you.",
@@ -130,7 +130,7 @@ ADVANCED = [
          "Create a Project called \"Feedback.\" Upload your rubric and 2 to 3 samples of feedback you have written. Paste into custom instructions:\n\nYou help me draft feedback on student work for [grade] [subject]. Always score against the uploaded rubric and explain it in kid-friendly language. Match the tone of my samples: warm, specific, honest, growth-focused. Give 2 glows and 1 grow. Never rewrite the student's work for them." + ASK,
          [], None, "Keep it FERPA-safe: strip student names or use initials before you paste any work."),
     ]),
-    ("Advanced 02", "Skills", "Teach Claude your signature moves",
+    ("Advanced", "Skills", "Teach Claude your signature moves",
      "<b>New to Skills?</b> A Skill is a set of instructions you save once and trigger by name. It is how you teach Claude a move you make all the time, so you never re-type the directions again. Build the skill once, call it forever.",
      "Skill instructions to save", "Copy skill", [
         ("The PBL Remix Machine", "Turn any text or topic into a project kids beg to do, on command. This is my whole brand in one saved skill.",
@@ -143,7 +143,7 @@ ADVANCED = [
          "When I paste a passage, rewrite it at 3 readiness levels (below, on, and above grade level) while keeping the same key ideas and vocabulary goals. For each level add 2 comprehension questions and 1 discussion question. Water down the reading load, never the thinking. Label each level clearly." + ASK,
          [], None, ""),
     ]),
-    ("Advanced 03", "Cowork", "Put Claude to work on your actual desktop",
+    ("Advanced", "Cowork", "Put Claude to work on your actual desktop",
      "<b>New to Cowork?</b> Cowork is Claude on your computer. It can open your files, organize folders, build things, and even run tasks on a schedule. This is where Claude stops giving advice and starts doing the work.",
      "Say this in Cowork", "Copy task", [
         ("Clean up my Drive", "Turn a chaotic resource folder into something you can actually find things in. I did exactly this with my whole PBL Drive.",
@@ -341,6 +341,42 @@ EXTRA_CSS = """
 .vmodal-body .instagram-media { margin: 0 auto !important; min-width: 0 !important; width: 100% !important; }
 .vmodal-alt { display: block; text-align: center; margin-top: 10px; font-weight: 900; color: var(--text); }
 body.no-scroll { overflow: hidden; }
+
+/* ---------- Claude orange theme for this page only ---------- */
+:root {
+  --paper: #FAF4EC; --card: #FFFFFF; --text: #2B1A12; --muted: #6B5246;
+  --ink: #2B1A12; --line: #2B1A12;
+  --pink: #D97757; --violet: #B85A3A; --blue: #A1492C; --sun: #F0B35B; --glow: #FFD3B6;
+  --tint-pink: #FBE3D8; --tint-violet: #F7E6DC; --tint-blue: #FCEEE4; --tint-sun: #FFF0D4;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1C130E; --card: #2A1D16; --text: #F8EEE7; --muted: #D2BBAE; --ink: #050302; --line: #E39A7A;
+    --tint-pink: #45261B; --tint-violet: #3B2419; --tint-blue: #3F2A1E; --tint-sun: #3F3018;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1C130E; --card: #2A1D16; --text: #F8EEE7; --muted: #D2BBAE; --ink: #050302; --line: #E39A7A;
+  --tint-pink: #45261B; --tint-violet: #3B2419; --tint-blue: #3F2A1E; --tint-sun: #3F3018;
+}
+.hero { background: linear-gradient(135deg, #F2A47D 0%, #D97757 52%, #B85A3A 100%); }
+.topnav { border-bottom-color: #D97757; }
+.topnav-menu summary { background: #D97757; }
+.level-banner { background: linear-gradient(135deg, #F2A47D 0%, #D97757 52%, #B85A3A 100%); }
+.level-banner.adv { background: linear-gradient(135deg, #8C3F26 0%, #B85A3A 50%, #D97757 100%); }
+.light-frame { background: repeating-linear-gradient(-12deg, rgba(217, 119, 87, .09) 0 14px, transparent 14px 34px), var(--tint-violet); }
+.reels-label { background: #D97757; }
+.eyebrow, .part-badge { color: #B85A3A; }
+.qr-scan { color: #B85A3A; }
+.webinar .btn { background: #B85A3A; }
+.peek-play { color: #FFD3B6; }
+.light-frame .reel-title { color: var(--text); }
+/* home link */
+.home-link { display: inline-flex; align-items: center; gap: 8px; }
+.home-arrow { font-family: var(--f-body); font-weight: 900; }
+.home-tag { font-family: var(--f-body); font-weight: 900; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; background: #D97757; color: #FFFFFF; border: 2px solid #FFFFFF; border-radius: 999px; padding: 2px 9px; }
+.home-link:hover .home-tag { background: #FFFFFF; color: #2B1A12; }
+@media (max-width: 420px) { .home-link { font-size: 1.02rem; gap: 6px; } .topnav-inner { gap: 10px; } }
 """
 
 JS = r"""
@@ -401,7 +437,7 @@ def build_page():
     hl = "".join(B.a(u, f'<span class="peek-play">{B.PLAY}</span><span><b>{e(t)}</b><small>{e(s)}</small></span>', "hl") for u, t, s in HIGHLIGHTS)
     videos = f'''<section class="wrap block" id="watch" aria-labelledby="watch-h">
   {B.head("Watch Me Use Claude", "Short, no-fluff demos straight from my classroom. Tap play, then come back and copy the matching prompt.", "watch-h")}
-  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab the exact prompt in <a href="#p4-h">Prompt 05</a>.</p></div>
+  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab <a href="#p4-h">the exact prompt I used</a>.</p></div>
   <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels">{"".join(reel(u, t) for u, t in TOP_REELS)}</div></div>
   <div class="reels-frame light-frame more-reels"><span class="reels-label">More Claude demos</span><div class="spot-reels">{"".join(reel(u, t) for u, t in MORE_REELS)}</div></div>
   <div class="hl-row">{hl}</div>
@@ -410,7 +446,7 @@ def build_page():
     ways = ""
     for i, (tone, t, d, btns, r) in enumerate(WAYS, 1):
         acts = "".join(link(u, e(bt) + B.ARROW, "btn btn-small") for bt, u in btns) + (B.peek(r) if r else "")
-        ways += f'<article class="way card-{tone}"><span class="way-n">#{i}</span><h4>{e(t)}</h4><p>{e(d)}</p><div class="card-actions">{acts}</div></article>'
+        ways += f'<article class="way card-{tone}"><h4>{e(t)}</h4><p>{e(d)}</p><div class="card-actions">{acts}</div></article>'
     ways_sec = f'''<section class="wrap block" id="ways" aria-labelledby="ways-h">
   {B.head("Ways I've Used Claude in My Classroom", "The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it.", "ways-h", eyebrow="Straight from my classroom")}
   <div class="ways">{ways}</div>
@@ -494,7 +530,7 @@ def build_page():
 <body>
 <nav class="topnav" aria-label="Site sections">
   <div class="wrap topnav-inner">
-    <a class="topnav-name" href="/">Michaela Arabia</a>
+    <a class="topnav-name home-link" href="/" title="Back to my home page"><span class="home-arrow" aria-hidden="true">&larr;</span>Michaela Arabia<span class="home-tag">Home</span></a>
     <div class="topnav-links">{nav_inline}</div>
     <details class="topnav-menu" id="topnav-menu">
       <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
