@@ -14,8 +14,8 @@ TC = C.TC
 HERE = pathlib.Path(__file__).parent
 
 # Where the waitlist form sends signups. Swap this for the ThriveCart $0 product link once it exists.
-# PLACEHOLDER: swap in the ThriveCart checkout link for The Teacher Helper Project when it exists.
-TEACHER_HELPER_URL = "#teacher-helper"
+# ThriveCart checkout link for The Teacher Helper Project
+TEACHER_HELPER_URL = "https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/"
 WAITLIST_URL = ""          # e.g. TC + "claude-waitlist/"
 WAITLIST_EMAIL = "mrsarabiarocks@gmail.com"
 
