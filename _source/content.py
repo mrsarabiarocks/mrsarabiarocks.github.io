@@ -22,7 +22,7 @@ QUICK_LINKS = [
     ("TPT Store", "Prefer TPT? I'm there too!", "https://www.teacherspayteachers.com/store/middle-teacher-syndrome"),
     ("Free Canva Templates", "Just copy, tweak, and teach", "https://mrsarabiarocks.my.canva.site/canva-templates"),
     ("Free AI Tools", "The ones you MUST try", "https://mrsarabiarocks.my.canva.site/mrs-arabia-rocks-ai-sites-to-try"),
-    ("Claude for Teachers", "My free how-to site", "https://thebalancedteach.tiiny.site/?v=beg"),
+    ("Free Claude Guide", "My free how-to for teachers", "/free-claude-guide/"),
 ]
 
 BEST_SELLER = {
@@ -190,6 +190,6 @@ BTS_INSIDE = [
 CLAUDE_SITE = {
     "eyebrow": "Free for teachers",
     "headline": "New to Claude? Start here!",
-    "body": "My free Claude for Teachers site walks you through it step by step, with the exact prompts I use to plan faster, differentiate without losing my mind, and get my evenings back. Beginner friendly, with an advanced level when you're ready.",
-    "url": "https://thebalancedteach.tiiny.site/?v=beg",
+    "body": "My Free Claude Guide walks you through it step by step, with the exact prompts I use to plan faster, differentiate without losing my mind, and get my evenings back. Beginner friendly, with an advanced level when you're ready.",
+    "url": "/free-claude-guide/",
 }

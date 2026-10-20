@@ -31,6 +31,8 @@ def img_src(key):
 
 
 def a(href, inner, cls):
+    if href.startswith("/"):
+        return f'<a class="{cls}" href="{e(href)}">{inner}</a>'
     return f'<a class="{cls}" href="{e(href)}" target="_blank" rel="noopener">{inner}</a>'
 
 
@@ -152,7 +154,7 @@ def build():
     cs = C.CLAUDE_SITE
     claude_cta = f'''<div class="cta-box cta-claude">
       <div class="cta-copy"><p class="eyebrow">{e(cs["eyebrow"])}</p><h3 class="cta-title">{e(cs["headline"])}</h3><p>{e(cs["body"])}</p>
-      {a(cs["url"], "Visit Claude for Teachers" + ARROW, "btn")}</div>
+      {a(cs["url"], "Open my Free Claude Guide" + ARROW, "btn")}</div>
     </div>'''
     bts_cta = f'''<div class="cta-box">
       <a class="cta-cover" href="{e(C.TC + "back-to-school-growing-drive/")}" target="_blank" rel="noopener"><img src="{img_src("bts")}" alt="Back to School Growing Google Drive" loading="lazy"></a>
@@ -173,10 +175,12 @@ def build():
         ("free", "Free Resources", []),
         ("find-me", "Find Me Everywhere", []),
         ("about", "About", []),
+        ("/free-claude-guide/", "Free Claude Guide", []),
     ]
-    nav_inline = "".join(f'<a href="#{i}">{e(n)}</a>' for i, n, _ in NAV if i in ("best-seller", "spotlight", "shop", "teacher", "free"))
+    href = lambda i: i if i.startswith("/") else "#" + i
+    nav_inline = "".join(f'<a href="{href(i)}">{e(n)}</a>' for i, n, _ in NAV if i in ("best-seller", "shop", "teacher", "free", "/free-claude-guide/"))
     nav_menu = "".join(
-        f'<a class="menu-main" href="#{i}">{e(n)}</a>' + "".join(f'<a class="menu-sub" href="#{si}">{e(sn)}</a>' for si, sn in subs)
+        f'<a class="menu-main" href="{href(i)}">{e(n)}</a>' + "".join(f'<a class="menu-sub" href="#{si}">{e(sn)}</a>' for si, sn in subs)
         for i, n, subs in NAV)
 
     ff = C.FAN_FAVORITE

@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Claude Guide for Teachers | Michaela Arabia: The Balanced Teach</title>
+<meta name="description" content="My free Claude guide for teachers: the exact prompts and moves I use to plan faster, differentiate, and get my evenings back. Copy, paste, done.">
+<link rel="canonical" href="https://mrsarabiarocks.com/free-claude-guide/">
+<meta property="og:title" content="Free Claude Guide for Teachers">
+<meta property="og:description" content="The exact Claude prompts and moves I use in my middle school classroom. Copy, paste, done.">
+<meta property="og:image" content="https://mrsarabiarocks.com/logo.webp">
+<meta property="og:url" content="https://mrsarabiarocks.com/free-claude-guide/">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&family=Quicksand:wght@700&display=swap">
+<style>
+/* Layout: logo-led gradient hero, chunky sticker-style cards with solid ink offset shadows,
+   centered section heads, one big best-seller block, one blacklight seasonal spotlight. */
+:root {
+  --paper: #F6F2FF;
+  --card: #FFFFFF;
+  --text: #251C4A;
+  --muted: #564D7C;
+  --ink: #2E2458;
+  --line: #2E2458;
+  --pink: #D86CDB;
+  --violet: #8F6FE0;
+  --blue: #5E83E8;
+  --sun: #F4B940;
+  --glow: #E4FF4F;
+  --night: #170C3A;
+  --night-2: #241455;
+  --night-text: #F3EEFF;
+  --tint-pink: #FBE6FB;
+  --tint-blue: #E3EBFF;
+  --tint-violet: #EEE7FF;
+  --tint-sun: #FFF1D2;
+  --tint-free: #E6F8D8;
+  --free: #3A8F2C;
+  --icon-cut: #FFFFFF;
+  --f-display: "Lilita One", "Arial Black", "Helvetica Neue", Impact, sans-serif;
+  --f-body: "Nunito", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-spaced: "Quicksand", "Nunito", "Avenir Next", system-ui, sans-serif;
+  --shadow: 5px 5px 0 var(--ink);
+  --shadow-sm: 3px 3px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #120D26; --card: #1F1840; --text: #F1ECFF; --muted: #BEB4E2;
+    --ink: #05030C; --line: #8F7BEB;
+    --tint-pink: #3A1E45; --tint-blue: #1C2A52; --tint-violet: #2A2152; --tint-sun: #3F3118; --tint-free: #1D3A1F;
+    --free: #8EDB72; --icon-cut: #2A1F55;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #120D26; --card: #1F1840; --text: #F1ECFF; --muted: #BEB4E2;
+  --ink: #05030C; --line: #8F7BEB;
+  --tint-pink: #3A1E45; --tint-blue: #1C2A52; --tint-violet: #2A2152; --tint-sun: #3F3118; --tint-free: #1D3A1F;
+  --free: #8EDB72; --icon-cut: #2A1F55;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--text); font-family: var(--f-body); font-weight: 600; font-size: 1rem; line-height: 1.55; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+svg { width: 1.2em; height: 1.2em; flex: none; }
+img { max-width: 100%; }
+.wrap { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+[hidden] { display: none !important; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, #D86CDB 0%, #9A79E2 48%, #5E83E8 100%);
+  color: #FFFFFF; padding-block: 40px 76px; border-bottom: 4px solid var(--ink);
+}
+.hero-inner { display: flex; align-items: center; justify-content: center; gap: 44px; }
+.logo { width: clamp(180px, 28vw, 290px); height: auto; flex: none; filter: drop-shadow(5px 5px 0 rgba(46, 36, 88, .45)); }
+.hero-copy { display: grid; gap: 14px; min-width: 0; }
+.hero h1 {
+  font-family: var(--f-display); font-weight: 400; font-size: clamp(2.8rem, 8vw, 5.4rem); line-height: .95;
+  letter-spacing: .015em; text-transform: uppercase; color: #FFFFFF;
+  text-shadow: 2px 3px 0 rgba(46, 36, 88, .5);
+}
+.hero h1 span { display: inline-block; }
+.tagline { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .28em; font-size: clamp(1rem, 2.4vw, 1.35rem); }
+.bio { max-width: 40ch; font-size: 1.1rem; font-weight: 700; }
+.socials { display: flex; flex-wrap: wrap; gap: 10px; }
+.social {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  font-weight: 900; font-size: .95rem; padding: 10px 16px; border-radius: 999px;
+  border: 3px solid var(--ink); box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s;
+}
+.social svg { width: 1.35em; height: 1.35em; }
+.social-hero { background: #FFFFFF; color: #2E2458; --icon-cut: #FFFFFF; }
+.brand-link { width: fit-content; color: #FFFFFF; font-weight: 800; font-size: .95rem; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; opacity: .92; }
+.brand-link:hover { opacity: 1; }
+.social-about { background: var(--card); color: var(--text); border-color: var(--line); }
+.social:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; cursor: pointer;
+  font-family: var(--f-body); font-weight: 900; font-size: 1rem;
+  padding: 12px 20px; border-radius: 14px; border: 3px solid var(--ink);
+  background: var(--pink); color: #FFFFFF; box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.btn-small { padding: 8px 14px; font-size: .92rem; border-radius: 12px; }
+.btn-big { font-size: 1.15rem; padding: 15px 26px; }
+.btn-glow { background: var(--glow); color: #170C3A; border-color: #05030C; box-shadow: 4px 4px 0 #05030C; }
+.btn-ghost { background: transparent; color: var(--night-text); border-color: var(--night-text); box-shadow: 4px 4px 0 #05030C; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn-row-center { justify-content: center; }
+.peek { display: inline-flex; align-items: center; gap: 8px; font-weight: 900; font-size: .9rem; text-decoration: none; color: var(--text); }
+.peek:hover span:last-child { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.peek-play { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--glow); flex: none; }
+.peek-play svg { width: 14px; height: 14px; }
+
+/* ---------- Quick links + search ---------- */
+.quick-wrap { margin-top: -44px; position: relative; display: grid; gap: 28px; }
+.quick-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.quick {
+  display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; column-gap: 10px; align-items: center;
+  text-decoration: none; background: var(--card); color: var(--text);
+  border: 3px solid var(--line); border-radius: 18px; padding: 16px 18px; box-shadow: var(--shadow);
+  transition: transform .12s, box-shadow .12s; min-width: 0;
+}
+.quick:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+.q-title { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.1; }
+.q-sub { grid-row: 2; font-size: .88rem; color: var(--muted); font-weight: 700; }
+.q-arrow { grid-row: 1 / 3; grid-column: 2; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: var(--pink); color: #FFFFFF; border: 2px solid var(--ink); }
+.quick:nth-child(2) .q-arrow { background: var(--violet); }
+.quick:nth-child(3) .q-arrow { background: var(--blue); }
+.quick:nth-child(4) .q-arrow { background: var(--sun); color: #2E2458; }
+
+.search { display: grid; justify-items: center; gap: 10px; text-align: center; }
+.search-label { font-family: var(--f-display); font-size: 1.5rem; }
+.search-box {
+  width: min(100%, 620px); display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 3px solid var(--line); border-radius: 999px; padding: 6px 8px 6px 20px; box-shadow: var(--shadow);
+  color: var(--muted);
+}
+.search-box svg { width: 22px; height: 22px; }
+.search-box input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--text); font: 800 1.05rem/1.2 var(--f-body); padding-block: 10px; }
+.search-box input::placeholder { color: var(--muted); font-weight: 700; }
+.search-box:focus-within { box-shadow: 5px 5px 0 var(--blue); }
+.search-clear { font: 900 .9rem var(--f-body); border: 2.5px solid var(--ink); border-radius: 999px; background: var(--sun); color: #2E2458; padding: 8px 14px; cursor: pointer; }
+.search-status { font-weight: 900; color: var(--muted); min-height: 1.4em; }
+.no-results { margin-top: 40px; text-align: center; font-size: 1.1rem; font-weight: 800; }
+
+/* ---------- Best seller ---------- */
+.best { margin-top: 36px; }
+.best-box {
+  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 40px; align-items: center;
+  background: var(--tint-violet); border: 3px solid var(--line); border-radius: 26px; padding: 36px; box-shadow: 8px 8px 0 var(--ink);
+}
+.best-cover { justify-self: center; display: block; max-width: 300px; width: 100%; transform: rotate(-3deg); transition: transform .15s; }
+.best-cover:hover { transform: rotate(-1deg) scale(1.02); }
+.best-cover img { display: block; width: 100%; height: auto; border-radius: 14px; border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+.best-copy { display: grid; gap: 16px; min-width: 0; }
+.best-title { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1; }
+.best-copy > p:not(.eyebrow) { font-size: 1.1rem; max-width: 52ch; }
+.stats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.stats li { font-weight: 900; padding: 8px 14px; border-radius: 12px; background: var(--card); border: 2.5px solid var(--line); box-shadow: 2px 2px 0 var(--ink); }
+.stats li:first-child { background: var(--sun); color: #2E2458; border-color: var(--ink); }
+
+/* ---------- Spotlight (blacklight) ---------- */
+.spotlight {
+  margin-top: 64px; padding-block: 60px;
+  background: radial-gradient(120% 70% at 50% 0%, #3B1C7A 0%, rgba(59, 28, 122, 0) 65%), var(--night);
+  color: var(--night-text); border-block: 4px solid #05030C;
+}
+.spot-head { display: grid; gap: 16px; justify-items: center; text-align: center; margin-bottom: 40px; }
+.eyebrow { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .22em; font-size: .85rem; color: var(--violet); }
+.eyebrow-glow { color: var(--glow); }
+.glow-title {
+  font-family: var(--f-display); font-weight: 400; font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.02; text-transform: uppercase;
+  color: var(--glow); text-shadow: 0 0 16px rgba(228, 255, 79, .45);
+}
+.spot-body { max-width: 56ch; font-size: 1.1rem; color: #DCD4FF; }
+.reel {
+  display: grid; justify-items: center; align-content: center; gap: 12px; text-align: center; position: relative;
+  grid-row: span 2; min-height: 360px;
+  text-decoration: none; color: var(--night-text); border-radius: 20px; border: 3px solid var(--glow);
+  background:
+    repeating-linear-gradient(-12deg, rgba(228, 255, 79, .08) 0 14px, transparent 14px 34px),
+    linear-gradient(160deg, #2A1366 0%, #12072E 100%);
+  box-shadow: 0 0 26px rgba(228, 255, 79, .3), 6px 6px 0 #05030C;
+  padding: 56px 24px 28px; transition: transform .15s;
+}
+.reel:hover { transform: translate(-2px, -2px) rotate(-.5deg); }
+.reel-label { position: absolute; top: 16px; left: 16px; font-weight: 900; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; background: var(--pink); color: #FFFFFF; padding: 6px 10px; border-radius: 999px; border: 2px solid #05030C; }
+.reel-play { display: grid; place-items: center; width: 88px; height: 88px; border-radius: 50%; background: var(--glow); color: #170C3A; border: 3px solid #05030C; box-shadow: 0 0 26px rgba(228, 255, 79, .65); }
+.reel-play svg { width: 42px; height: 42px; margin-left: 4px; }
+.reel-title { font-family: var(--f-display); font-size: 1.8rem; line-height: 1.05; text-transform: uppercase; }
+.reel-sub { font-weight: 800; font-size: .92rem; color: #CFC4FF; }
+
+/* ---------- Cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 22px; }
+.card {
+  display: flex; flex-direction: column; min-width: 0;
+  background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 18px;
+  box-shadow: var(--shadow); overflow: hidden;
+}
+.cover { aspect-ratio: 4 / 3; background: var(--card-tint, var(--tint-violet)); border-bottom: 3px solid var(--line); display: grid; place-items: center; padding: 12px; overflow: hidden; }
+.cover img { max-height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: 6px; box-shadow: 3px 3px 0 rgba(46, 36, 88, .35); }
+.cover-text span {
+  font-family: var(--f-display); font-size: clamp(1.6rem, 3.4vw, 2.2rem); line-height: 1; text-transform: uppercase; text-align: center;
+  color: var(--card-accent, var(--violet)); padding: 10px 14px; border: 3px dashed currentColor; border-radius: 14px; transform: rotate(-2deg);
+}
+.card-body { display: flex; flex-direction: column; gap: 9px; padding: 16px 18px 18px; flex: 1; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.card-tags:empty { display: none; }
+.card h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.28rem; line-height: 1.12; }
+.card p { color: var(--muted); font-size: .96rem; flex: 1; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 4px; }
+.card-pink { --card-accent: var(--pink); --card-tint: var(--tint-pink); }
+.card-blue { --card-accent: var(--blue); --card-tint: var(--tint-blue); }
+.card-violet { --card-accent: var(--violet); --card-tint: var(--tint-violet); }
+.card-sun { --card-accent: #C98A0E; --card-tint: var(--tint-sun); }
+.card-free { --card-accent: var(--free); --card-tint: var(--tint-free); }
+.card-sun .btn { background: var(--sun); color: #2E2458; }
+.card-blue .btn { background: var(--blue); }
+.card-violet .btn { background: var(--violet); }
+.card-free .btn { background: var(--free); color: #FFFFFF; }
+.tag { font-size: .74rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; padding: 3px 9px; border-radius: 999px; border: 2px solid var(--line); background: var(--tint-blue); color: var(--text); }
+.tag-free { background: var(--glow); color: #170C3A; border-color: #05030C; }
+.tag-best { background: var(--sun); color: #2E2458; border-color: #05030C; }
+
+.grid-night .card { background: var(--night-2); color: var(--night-text); border-color: #6C4FD6; box-shadow: 5px 5px 0 #05030C; --card-accent: var(--glow); --card-tint: #2E1A6B; }
+.grid-night .cover { border-color: #6C4FD6; }
+.grid-night .card p { color: #CFC4FF; }
+.grid-night .card .btn { background: var(--glow); color: #170C3A; border-color: #05030C; box-shadow: 3px 3px 0 #05030C; }
+.grid-night .peek { color: var(--night-text); }
+.grid-night .peek-play { background: var(--glow); color: #170C3A; }
+.grid-night .tag { background: var(--glow); color: #170C3A; border-color: #05030C; }
+
+/* ---------- Fan favorite ---------- */
+.fan { margin-top: 64px; }
+.fan-box {
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; align-items: center;
+  background: var(--tint-sun); border: 3px solid var(--line); border-radius: 24px; padding: 28px 32px; box-shadow: var(--shadow);
+}
+.fan-cover { width: 100%; height: auto; border-radius: 12px; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); transform: rotate(2deg); }
+.fan-copy { display: grid; gap: 12px; min-width: 0; }
+.fan-copy h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.05; }
+.fan-copy p:not(.eyebrow) { max-width: 58ch; }
+.fan .eyebrow { color: #B07400; }
+.fan .btn { background: var(--sun); color: #2E2458; }
+
+/* ---------- Sections ---------- */
+.block { margin-top: 80px; display: grid; gap: 30px; }
+.block-head { display: grid; gap: 12px; justify-items: center; text-align: center; }
+.section-title { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1; color: var(--text); }
+.block-sub { color: var(--muted); max-width: 58ch; font-size: 1.08rem; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 6px; }
+.chip { text-decoration: none; font-weight: 900; font-size: .95rem; padding: 8px 16px; border-radius: 999px; border: 2.5px solid var(--line); background: var(--card); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s, box-shadow .12s; }
+.chip:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+.chip-pink { background: var(--tint-pink); } .chip-blue { background: var(--tint-blue); } .chip-violet { background: var(--tint-violet); } .chip-sun { background: var(--tint-sun); }
+.group { display: grid; gap: 18px; scroll-margin-top: 20px; }
+.group + .group { margin-top: 22px; }
+.group-title { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.dot { width: 18px; height: 18px; border-radius: 6px; border: 2.5px solid var(--line); flex: none; }
+.dot-pink { background: var(--pink); } .dot-blue { background: var(--blue); } .dot-violet { background: var(--violet); } .dot-sun { background: var(--sun); }
+
+/* ---------- About ---------- */
+.about { margin-top: 88px; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 34px; align-items: center; }
+.about-logo { width: 200px; height: auto; }
+.about-copy { display: grid; gap: 12px; background: var(--tint-violet); border: 3px solid var(--line); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); }
+.about-copy p { max-width: 62ch; font-size: 1.06rem; }
+.about-copy .socials { margin-top: 6px; }
+
+/* ---------- Footer ---------- */
+.foot { margin-top: 80px; background: var(--ink); color: #F3EEFF; padding-block: 40px; border-top: 4px solid var(--violet); }
+.foot-inner { display: grid; gap: 18px; justify-items: center; text-align: center; }
+.foot-name { font-family: var(--f-display); font-size: 1.8rem; text-transform: uppercase; }
+.foot-name span { display: block; font-family: var(--f-spaced); font-size: .9rem; letter-spacing: .25em; color: #CFC4FF; }
+.foot .socials { justify-content: center; }
+.social-foot { background: transparent; color: #FFFFFF; border-color: #FFFFFF; box-shadow: 3px 3px 0 var(--violet); --icon-cut: #2E2458; }
+.foot-small { font-size: .88rem; color: #B9AEE0; }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 860px) {
+  .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .best-box { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; padding: 28px 22px; }
+  .best-copy { justify-items: center; }
+  .stats, .best-copy .btn-row { justify-content: center; }
+  .reel { grid-row: auto; min-height: 300px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding-inline: 16px; }
+  .hero { padding-block: 28px 66px; }
+  .hero-inner { flex-direction: column; text-align: center; gap: 18px; }
+  .hero-copy { justify-items: center; }
+  .socials { justify-content: center; }
+  .quick-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .fan-box { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; padding: 24px 20px; }
+  .fan-cover { width: 160px; }
+  .fan-copy .btn-row { justify-content: center; }
+  .about { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+  .about-logo { width: 150px; }
+  .about-copy .socials { justify-content: center; }
+}
+
+/* ---------- Drive window previews ---------- */
+.best-inside { grid-column: 1 / -1; display: grid; gap: 12px; justify-items: center; }
+.inside-label { font-family: var(--f-display); font-size: 1.4rem; }
+.drive { width: min(100%, 760px); background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); text-align: left; }
+.drive-bar { display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: var(--tint-blue); border-bottom: 3px solid var(--line); }
+.drive-bar span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--line); background: var(--pink); }
+.drive-bar span:nth-child(2) { background: var(--sun); }
+.drive-bar span:nth-child(3) { background: var(--free); }
+.drive-bar b { margin-left: 8px; font-weight: 900; font-size: .92rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.drive ul { list-style: none; margin: 0; padding: 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 6px; }
+.drive li { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; background: var(--paper); font-weight: 800; font-size: .93rem; line-height: 1.25; min-width: 0; }
+.drive li svg { color: var(--violet); width: 1.3em; height: 1.3em; }
+.drive-small { box-shadow: none; border-width: 2px; margin-top: 10px; }
+.drive-small ul { grid-template-columns: minmax(0, 1fr); padding: 6px; gap: 4px; }
+.drive-small li { padding: 7px 10px; font-size: .86rem; }
+.inside summary { cursor: pointer; font-weight: 900; font-size: .9rem; color: var(--text); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; margin-top: 4px; }
+
+/* ---------- Live Instagram embed (site only) ---------- */
+.reel-embed { padding: 48px 12px 12px; align-content: start; }
+.reel-embed .instagram-media { margin: 0 auto !important; min-width: 0 !important; width: 100% !important; max-width: 400px !important; border-radius: 14px !important; background: transparent !important; border: 0 !important; }
+.reel-fallback { display: grid; justify-items: center; gap: 12px; padding: 40px 12px; text-decoration: none; color: var(--night-text); }
+
+/* ---------- Quick links moved to bottom ---------- */
+.quick-wrap { margin-top: 36px; }
+.hero { padding-block: 40px 48px; }
+@media (max-width: 640px) { .hero { padding-block: 28px 40px; } }
+
+/* ---------- Back to School Drive callout ---------- */
+.cta-box { display: grid; gap: 14px; justify-items: center; max-width: 680px; margin-top: 8px; padding: 20px 24px; background: var(--tint-sun); border: 3px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
+.cta-box p { font-size: 1.05rem; }
+.cta-box .btn { background: var(--sun); color: #2E2458; }
+.cta-box { grid-template-columns: 150px minmax(0, 1fr); align-items: center; justify-items: start; text-align: left; max-width: 760px; gap: 22px; }
+.cta-cover { display: block; transform: rotate(-3deg); }
+.cta-cover img { display: block; width: 100%; height: auto; border-radius: 10px; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.cta-copy { display: grid; gap: 14px; justify-items: start; min-width: 0; }
+@media (max-width: 640px) {
+  .cta-box { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+  .cta-cover { width: 140px; }
+  .cta-copy { justify-items: center; }
+}
+
+/* ---------- Claude for Teachers callout ---------- */
+.cta-claude { grid-template-columns: minmax(0, 1fr); background: var(--tint-violet); max-width: 760px; width: 100%; }
+.cta-claude .cta-copy { justify-items: center; text-align: center; }
+.cta-claude .btn { background: var(--violet); color: #FFFFFF; }
+.cta-title { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.6rem, 4vw, 2.1rem); line-height: 1.05; text-transform: uppercase; }
+.cta-box + .cta-box { margin-top: 18px; }
+.more .quick-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
+
+/* ---------- Spooky decorations + Poe gallery ---------- */
+.spotlight { position: relative; overflow: hidden; }
+.spotlight > .wrap { position: relative; }
+.moon { position: absolute; top: 34px; right: 6%; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle at 38% 38%, #FFFBE0 0%, #F3EBB0 55%, #D9CC86 100%); box-shadow: 0 0 60px 18px rgba(243, 235, 176, .25); opacity: .9; }
+.bat { position: absolute; color: #05030C; opacity: .85; }
+.bat svg { width: 100%; height: auto; }
+.bat-1 { top: 40px; left: 6%; width: 64px; transform: rotate(-10deg); }
+.bat-2 { top: 120px; left: 15%; width: 38px; transform: rotate(8deg); }
+.bat-3 { top: 70px; right: 18%; width: 46px; transform: rotate(-6deg); }
+.bat-4 { top: 150px; right: 4%; width: 30px; transform: rotate(12deg); }
+.bat-5 { top: 18px; left: 40%; width: 28px; transform: rotate(-4deg); opacity: .6; }
+@media (prefers-reduced-motion: no-preference) {
+  .bat { animation: flap 3.2s ease-in-out infinite alternate; }
+  .bat-2, .bat-4 { animation-duration: 2.4s; }
+  @keyframes flap { from { translate: 0 0; } to { translate: 0 -10px; } }
+}
+.poe-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin: 0 auto 40px; max-width: 980px; }
+.poe-frame { margin: 0; width: clamp(110px, 17vw, 170px); background: #F3EEFF; padding: 8px 8px 22px; border-radius: 4px; box-shadow: 0 0 22px rgba(228, 255, 79, .18), 6px 6px 0 #05030C; transform: rotate(-3deg); transition: transform .2s; }
+.poe-frame:nth-child(2n) { transform: rotate(3deg) translateY(10px); }
+.poe-frame:nth-child(3) { transform: rotate(-1deg) translateY(-6px); }
+.poe-frame:hover { transform: rotate(0) scale(1.04); }
+.poe-frame img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; filter: grayscale(.2) contrast(1.05); }
+.poe-credit { flex-basis: 100%; text-align: center; font-size: .78rem; color: #A99FD6; margin-top: 6px; }
+@media (max-width: 640px) {
+  .moon { width: 70px; height: 70px; top: 18px; right: 4%; }
+  .bat-2, .bat-5 { display: none; }
+  .poe-frame { width: calc(33% - 14px); padding: 5px 5px 14px; }
+  .poe-frame:nth-child(n+4) { display: none; }
+}
+.reel-label { white-space: nowrap; }
+.reel-embed { padding-top: 58px; }
+
+/* ---------- Spotlight feature row: reel beside the Poe gallery ---------- */
+.spot-feature { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 36px; align-items: center; margin-bottom: 44px; }
+.spot-reel .reel { grid-row: auto; min-height: 0; width: 100%; }
+.spot-reel .reel-embed { padding: 54px 10px 10px; }
+.spot-feature .poe-gallery { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; max-width: none; }
+.spot-feature .poe-frame { width: auto; }
+.spot-feature .poe-credit { grid-column: 1 / -1; }
+@media (max-width: 860px) {
+  .spot-feature { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .spot-reel { width: min(100%, 360px); }
+  .spot-feature .poe-gallery { width: 100%; }
+}
+@media (max-width: 640px) {
+  .spot-feature .poe-frame { width: auto; padding: 5px 5px 14px; }
+}
+
+/* ---------- Top navigation ---------- */
+.topnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--ink); color: #FFFFFF; border-bottom: 3px solid var(--violet); }
+.topnav-inner { display: flex; align-items: center; gap: 18px; padding-block: 10px; }
+.topnav-name { font-family: var(--f-display); font-size: 1.25rem; text-transform: uppercase; color: #FFFFFF; text-decoration: none; white-space: nowrap; }
+.topnav-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-left: auto; }
+@media (max-width: 1180px) { .topnav-links a { font-size: .88rem; } }
+.topnav-links a { white-space: nowrap; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: .95rem; padding: 4px 2px; border-bottom: 2px solid transparent; }
+.topnav-links a:hover { border-bottom-color: var(--glow); }
+.topnav-menu { position: relative; }
+.topnav-menu summary { list-style: none; cursor: pointer; font-weight: 900; font-size: .95rem; padding: 7px 14px; border-radius: 999px; white-space: nowrap; background: var(--pink); color: #FFFFFF; border: 2px solid #FFFFFF; user-select: none; }
+.topnav-menu summary::-webkit-details-marker { display: none; }
+.menu-panel { position: absolute; right: 0; top: calc(100% + 10px); width: 250px; max-height: 70vh; overflow-y: auto; background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 8px; display: grid; }
+.menu-panel a { text-decoration: none; padding: 9px 12px; border-radius: 10px; font-weight: 800; color: var(--text); }
+.menu-panel a:hover { background: var(--tint-violet); }
+.menu-panel .menu-sub { padding-left: 28px; font-weight: 700; font-size: .92rem; color: var(--muted); }
+[id] { scroll-margin-top: 76px; }
+@media (max-width: 860px) {
+  .topnav-links { display: none; }
+  .topnav-menu { margin-left: auto; }
+}
+
+/* ---------- PBL best seller: plain bullets + doc link ---------- */
+.best-list { margin: 0; padding-left: 1.3em; display: grid; gap: 4px; font-weight: 800; font-size: 1.05rem; text-align: left; }
+.best-list li::marker { color: var(--pink); }
+.inside-link { font-weight: 900; color: var(--text); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.inside-link:hover { color: var(--pink); }
+.inside-row { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+@media (max-width: 860px) { .inside-row { justify-content: center; } .best-list { justify-self: center; } }
+.card-inside { justify-content: flex-start !important; margin-top: 2px; }
+.card-inside .inside-link { font-size: .9rem; }
+
+/* ---------- PBL box v3: links under the cover, huge button ---------- */
+.best-side { display: grid; gap: 22px; justify-items: center; min-width: 0; }
+.best-side .inside-row { display: grid; gap: 12px; justify-items: start; }
+.best-copy > .peek { justify-self: start; }
+.btn-huge { font-size: 1.4rem; padding: 18px 34px; border-radius: 16px; justify-content: center; width: min(100%, 380px); box-shadow: 5px 5px 0 var(--ink); }
+.btn-huge svg { width: 1.4em; height: 1.4em; }
+@media (max-width: 860px) {
+  .best-side .inside-row { justify-items: center; }
+  .best-copy > .peek { justify-self: center; }
+  .btn-huge { width: 100%; }
+}
+
+/* ---------- Spotlight v3: reels first, Poe art as a quiet tiled strip ---------- */
+.spot-feature { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; justify-items: center; margin-bottom: 44px; }
+.spot-reels { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; width: 100%; }
+.spot-reels .spot-reel { width: min(100%, 360px); }
+.spot-feature .poe-gallery { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; width: min(100%, 620px); margin: 0; opacity: .7; }
+.spot-feature .poe-frame, .spot-feature .poe-frame:nth-child(2n), .spot-feature .poe-frame:nth-child(3) { width: auto; padding: 0; transform: none; box-shadow: none; border-radius: 6px; overflow: hidden; background: none; }
+.spot-feature .poe-frame:hover { transform: none; }
+.spot-feature .poe-frame img { aspect-ratio: 1 / 1; filter: grayscale(1) contrast(1.1); }
+.spot-feature .poe-credit { grid-column: 1 / -1; font-size: .72rem; }
+@media (max-width: 640px) {
+  .spot-feature .poe-frame:nth-child(n+4) { display: block; }
+  .spot-feature .poe-gallery { gap: 4px; }
+}
+
+/* ---------- One glowing frame around all spotlight reels ---------- */
+.reels-frame { position: relative; width: fit-content; max-width: 100%; border: 3px solid var(--glow); border-radius: 26px; padding: 44px 22px 22px; box-shadow: 0 0 30px rgba(228, 255, 79, .3), 8px 8px 0 #05030C; background: repeating-linear-gradient(-12deg, rgba(228, 255, 79, .06) 0 14px, transparent 14px 34px), linear-gradient(160deg, #2A1366 0%, #12072E 100%); }
+.reels-label { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-weight: 900; font-size: .9rem; text-transform: uppercase; letter-spacing: .12em; background: var(--pink); color: #FFFFFF; padding: 8px 18px; border-radius: 999px; border: 2px solid #05030C; }
+.reels-frame .reel { border: 0; box-shadow: none; background: none; padding: 0; min-height: 0; }
+.reels-frame .reel:hover { transform: none; }
+.reels-frame .reel-embed { padding: 0; }
+.reels-frame .spot-reels { gap: 22px; }
+.reels-frame .spot-reel { width: min(100%, 340px); }
+@media (max-width: 640px) {
+  .reels-frame { padding: 36px 10px 12px; width: 100%; }
+  .reels-label { font-size: .8rem; padding: 7px 14px; }
+}
+.reels-frame { width: min(100%, 790px); }
+.reels-frame .spot-reels { flex-wrap: nowrap; }
+.reels-frame .spot-reel { flex: 1 1 0; min-width: 0; }
+@media (max-width: 760px) { .reels-frame .spot-reels { flex-wrap: wrap; } .reels-frame .spot-reel { flex: 1 1 100%; } }
+.audio-credit { flex-basis: 100%; font-size: .74rem; font-weight: 700; color: var(--muted); margin-top: -6px; }
+.grid-night .audio-credit { color: #A99FD6; }
+
+/* ---------- Free Claude Guide page ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide-hero .hero-copy { justify-items: start; }
+.guide-hero h1 { font-size: clamp(2.5rem, 7.4vw, 4.8rem); }
+.guide-hero .logo { width: clamp(160px, 24vw, 250px); }
+@media (max-width: 860px) { .hero-inner { flex-direction: column; text-align: center; gap: 22px; } .guide-hero .hero-copy { justify-items: center; } .socials { justify-content: center; } }
+.start-grid { margin-top: -44px; position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.start { background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 18px; padding: 18px 20px; box-shadow: var(--shadow); display: grid; gap: 6px; align-content: start; }
+.start-n { font-family: var(--f-display); font-size: 1.4rem; line-height: 1.1; }
+.start p { color: var(--muted); font-weight: 700; font-size: .95rem; }
+.start a { color: var(--text); font-weight: 900; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+@media (max-width: 760px) { .start-grid { grid-template-columns: minmax(0, 1fr); } }
+.intro { max-width: 760px; margin: 34px auto 0; text-align: center; font-size: 1.08rem; }
+.block { margin-top: 64px; }
+.block-head { display: grid; gap: 12px; justify-items: center; text-align: center; margin-bottom: 30px; }
+.block-sub { max-width: 60ch; color: var(--muted); font-size: 1.05rem; }
+.light-frame { background: repeating-linear-gradient(-12deg, rgba(143, 111, 224, .08) 0 14px, transparent 14px 34px), var(--tint-violet); border-color: var(--line); box-shadow: var(--shadow); margin-inline: auto; }
+.light-frame .reels-label { border-color: var(--ink); }
+.light-frame .reel { color: var(--text); }
+.light-frame .reel-sub { color: var(--muted); }
+.light-frame .reel-play { box-shadow: none; }
+.more-reels { margin-top: 34px; }
+.hl-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+.hl { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 999px; padding: 8px 18px 8px 8px; box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s; }
+.hl:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.hl b { font-family: var(--f-display); font-weight: 400; font-size: 1.1rem; }
+.hl small { display: block; color: var(--muted); font-weight: 700; font-size: .8rem; }
+.ways { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 20px; }
+.way { background: var(--card); border: 3px solid var(--line); border-top: 12px solid var(--card-accent); border-radius: 18px; box-shadow: var(--shadow); padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; }
+.way-n { font-family: var(--f-display); color: var(--card-accent); font-size: 1rem; }
+.way h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.28rem; line-height: 1.12; }
+.way p { color: var(--muted); font-size: .96rem; flex: 1; }
+.way .card-actions { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-top: 4px; }
+.way .btn { background: var(--card-accent); }
+.card-sun.way .btn, .card-sun .btn-copy { color: #2E2458; }
+.level-banner { margin-top: 72px; border: 4px solid var(--ink); border-radius: 26px; padding: 30px 28px; color: #FFFFFF; text-align: center; display: grid; gap: 10px; justify-items: center; box-shadow: 6px 6px 0 var(--ink); background: linear-gradient(135deg, #D86CDB 0%, #9A79E2 48%, #5E83E8 100%); }
+.level-banner.adv { background: linear-gradient(135deg, #5E83E8 0%, #8F6FE0 50%, #D86CDB 100%); }
+.level-tag { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .22em; font-size: .85rem; background: rgba(255,255,255,.22); border: 2px solid #FFFFFF; padding: 5px 14px; border-radius: 999px; }
+.level-banner h2 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1; text-shadow: 2px 3px 0 rgba(46, 36, 88, .5); }
+.level-banner p { max-width: 58ch; font-weight: 700; font-size: 1.08rem; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 22px; }
+.pcard { background: var(--card); border: 3px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; border-left: 12px solid var(--card-accent); }
+.pcard h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.4rem; line-height: 1.1; }
+.pcard .use, .pcard .why { color: var(--muted); font-weight: 700; }
+.pcard .why b { color: var(--text); }
+.setup-label { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--card-accent); }
+.promptbox { white-space: pre-wrap; background: var(--card-tint, var(--tint-violet)); border: 2px dashed var(--card-accent, var(--violet)); border-radius: 12px; padding: 14px 15px; font-size: .95rem; font-weight: 700; line-height: 1.5; color: var(--text); }
+.pcard-actions { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-top: 2px; }
+.pcard .btn, .btn-copy { background: var(--card-accent, var(--pink)); }
+.btn-soft { background: var(--card) !important; color: var(--text) !important; }
+.btn-copy.copied { background: var(--free) !important; color: #FFFFFF !important; }
+.note { font-size: .88rem; color: var(--muted); font-style: italic; font-weight: 700; }
+.bts-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 28px; padding: 14px 20px; background: var(--tint-sun); border: 3px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm); }
+.bts-strip .btn { background: var(--sun); color: #2E2458; }
+.featnote { max-width: 760px; margin: 0 auto 26px; background: var(--tint-blue); border: 3px solid var(--line); border-radius: 16px; padding: 14px 18px; box-shadow: var(--shadow-sm); font-weight: 700; }
+.part-badge { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .2em; font-size: .85rem; color: var(--violet); }
+.showcase { margin-top: 40px; display: grid; gap: 14px; justify-items: start; background: var(--tint-sun); border: 3px solid var(--line); border-radius: 24px; padding: 26px 28px; box-shadow: var(--shadow); }
+.showcase h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.05; }
+.showcase .btn { background: var(--sun); color: #2E2458; }
+.showcase details { width: 100%; }
+.showcase summary { cursor: pointer; font-weight: 900; }
+.showcase .promptbox { margin-top: 12px; --card-tint: var(--card); --card-accent: #C98A0E; }
+.showcase .pcard-actions { margin-top: 12px; }
+.waitlist { max-width: 760px; margin: 56px auto 0; display: grid; gap: 12px; justify-items: center; text-align: center; background: var(--tint-pink); border: 3px solid var(--line); border-radius: 24px; padding: 28px 26px; box-shadow: var(--shadow); }
+.waitlist .eyebrow { color: #B0389F; }
+.wl-form { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; max-width: 520px; }
+.wl-form input { flex: 1 1 230px; min-width: 0; font: inherit; font-weight: 800; padding: 12px 16px; border-radius: 14px; border: 3px solid var(--ink); background: var(--card); color: var(--text); }
+.wl-perks { list-style: none; padding: 0; margin: 2px 0 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.wl-perks li { font-size: .8rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; border: 2px solid var(--line); background: var(--card); }
+.wl-done { font-weight: 900; color: var(--free); }
+.qrrow { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin-top: 8px; }
+.qrcard { background: #FFFFFF; color: #2E2458; border: 3px solid var(--ink); border-radius: 18px; padding: 14px 14px 12px; width: 180px; box-shadow: var(--shadow-sm); text-align: center; }
+.qrcard img { width: 136px; height: 136px; display: block; margin: 6px auto 8px; }
+.qrcard b { font-family: var(--f-display); font-weight: 400; font-size: 1.2rem; display: block; }
+.qrcard small { font-weight: 700; font-size: .8rem; color: #564D7C; }
+.qr-scan { font-family: var(--f-spaced); font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; color: #5E83E8; }
+.webinar { max-width: 760px; margin: 40px auto 0; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; background: var(--tint-blue); border: 3px solid var(--line); border-radius: 20px; padding: 20px 24px; box-shadow: var(--shadow); }
+.webinar h3 { font-family: var(--f-display); font-weight: 400; font-size: 1.4rem; line-height: 1.1; }
+.webinar p { color: var(--muted); font-weight: 700; }
+.webinar .btn { background: var(--blue); }
+.topnav-links a.on { border-bottom-color: var(--glow); }
+/* video pop-out */
+.vmodal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; background: rgba(23, 12, 58, .75); }
+.vmodal.open { display: flex; }
+.vmodal-box { background: var(--card); border: 3px solid var(--ink); border-radius: 22px; width: 100%; max-width: 420px; max-height: calc(100vh - 32px); overflow: auto; position: relative; padding: 50px 12px 14px; box-shadow: 6px 6px 0 var(--ink); }
+.vmodal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border-radius: 50%; border: 3px solid var(--ink); background: var(--pink); color: #FFFFFF; font-size: 1.3rem; line-height: 1; cursor: pointer; font-weight: 900; }
+.vmodal-body .instagram-media { margin: 0 auto !important; min-width: 0 !important; width: 100% !important; }
+.vmodal-alt { display: block; text-align: center; margin-top: 10px; font-weight: 900; color: var(--text); }
+body.no-scroll { overflow: hidden; }
+
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="Site sections">
+  <div class="wrap topnav-inner">
+    <a class="topnav-name" href="/">Michaela Arabia</a>
+    <div class="topnav-links"><a href="/#best-seller">PBL Drive</a><a href="/#shop">Shop the Classroom</a><a href="/#teacher">Teacher Guides</a><a href="/#free">Free Resources</a><a href="/free-claude-guide/" class="on">Free Claude Guide</a></div>
+    <details class="topnav-menu" id="topnav-menu">
+      <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
+      <div class="menu-panel"><a class="menu-main" href="/#best-seller">PBL Drive</a><a class="menu-main" href="/#spotlight">Spooky Season</a><a class="menu-main" href="/#shop">Shop the Classroom</a><a class="menu-main" href="/#teacher">Teacher Guides</a><a class="menu-main" href="/#free">Free Resources</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a><a class="menu-sub" href="#watch">Watch me use Claude</a><a class="menu-sub" href="#ways">Ways I use Claude</a><a class="menu-sub" href="#level-1">Beginner prompts</a><a class="menu-sub" href="#guides">My Claude guides</a><a class="menu-sub" href="#level-2">Advanced</a><a class="menu-sub" href="#follow">Follow + waitlist</a></div>
+    </details>
+  </div>
+</nav>
+
+<header class="hero guide-hero" id="top">
+  <div class="wrap hero-inner">
+    <img class="logo" src="../logo.webp" alt="Michaela, The Balanced Teach, @Middle_Teacher_Syndrome" width="560" height="561">
+    <div class="hero-copy">
+      <h1><span>Free Claude</span> <span>Guide</span></h1>
+      <p class="tagline">For Teachers</p>
+      <p class="bio">The exact prompts and moves I use to plan faster, differentiate without losing my mind, and get my evenings back. Copy, paste, done.</p>
+      <nav class="socials" aria-label="Follow me"><a class="social social-hero" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-hero" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-hero" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-hero" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="wrap start-grid" aria-label="How this page works">
+  <div class="start"><span class="start-n">1. Grab it free</span><p>Verified K-12 US teachers get premium Claude free for a year. <a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">Click here</a>, then hit "Get Verified." Once you're in, come back.</p></div>
+  <div class="start"><span class="start-n">2. Copy a prompt</span><p>Hit copy on any prompt below. Paste it into Claude. Swap the [brackets] for your stuff.</p></div>
+  <div class="start"><span class="start-n">3. Watch me do it</span><p>Every section links to a real demo from my classroom so you can see it in action.</p></div>
+</section>
+<p class="wrap intro">You do not need to be techy. Just Claude open in one tab and about ten minutes. <b>Start at the top</b> with the beginner moves, copy-paste prompts you can use today. Keep scrolling and it levels up to the <b>advanced stuff at the bottom</b>: Projects, Skills, and Cowork. I've linked a guide at almost every step if you want the done-for-you version, and every one of them lives in my Back to School Google Drive.</p>
+<div class="waitlist ">
+  <p class="eyebrow">Join the Claude waitlist</p>
+  <h3 class="cta-title">Get Claude updates in your inbox</h3>
+  <p class="block-sub">Be the first to know when my next Claude guide or lesson drops, get Claude tips for teachers in your inbox, and get subscriber-only discounts.</p>
+  <form class="wl-form" action="#" data-email="mrsarabiarocks@gmail.com">
+    <label class="sr-only" for="wl-0">Your email</label>
+    <input id="wl-0" type="email" name="email" placeholder="Your email" required autocomplete="email">
+    <button class="btn" type="submit">Count me in<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </form>
+  <ul class="wl-perks"><li>Claude waitlist</li><li>Claude updates</li><li>Discounts on my Claude guides and lessons</li></ul>
+  <p class="wl-done" hidden>You're on the list! Watch your inbox.</p>
+</div>
+<section class="wrap block" id="watch" aria-labelledby="watch-h">
+  <div class="block-head"><h2 id="watch-h" class="section-title">Watch Me Use Claude</h2><p class="block-sub">Short, no-fluff demos straight from my classroom. Tap play, then come back and copy the matching prompt.</p></div>
+  <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbBoju3veLA/?utm_source=ig_embed" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude + Canva: a year of slides</span><span class="reel-sub">Watch on Instagram</span></a>
+      </blockquote>
+    </div></div><div class="spot-reel"><div class="reel reel-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DaGJH9sk1Qn/?utm_source=ig_embed" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/DaGJH9sk1Qn/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Lots of ways I use Claude</span><span class="reel-sub">Watch on Instagram</span></a>
+      </blockquote>
+    </div></div><div class="spot-reel"><div class="reel reel-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZdWKfXh55X/?utm_source=ig_embed" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Backwards planning with Claude</span><span class="reel-sub">Watch on Instagram</span></a>
+      </blockquote>
+    </div></div></div></div>
+  <div class="reels-frame light-frame more-reels"><span class="reels-label">More Claude demos</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DazQIb2zTvd/?utm_source=ig_embed" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/DazQIb2zTvd/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Cowork builds my Canva</span><span class="reel-sub">Watch on Instagram</span></a>
+      </blockquote>
+    </div></div><div class="spot-reel"><div class="reel reel-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DYD6ujaTbQF/?utm_source=ig_embed" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Annotation packets with AI</span><span class="reel-sub">Watch on Instagram</span></a>
+      </blockquote>
+    </div></div><div class="spot-reel"><div class="reel reel-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dd-vBqSTP80/?utm_source=ig_embed" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude runs my teacher business</span><span class="reel-sub">Watch on Instagram</span></a>
+      </blockquote>
+    </div></div></div></div>
+  <div class="hl-row"><a class="hl" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Claude Tips</b><small>Lots of ways I use it</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>AI in the Classroom</b><small>Real examples</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>PBL</b><small>Project ideas</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17844653230766602/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Poe Projects</b><small>Balance in action</small></span></a></div>
+</section>
+<section class="wrap block" id="ways" aria-labelledby="ways-h">
+  <div class="block-head"><p class="eyebrow">Straight from my classroom</p><h2 id="ways-h" class="section-title">Ways I&#x27;ve Used Claude in My Classroom</h2><p class="block-sub">The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it.</p></div>
+  <div class="ways"><article class="way card-pink"><span class="way-n">#1</span><h4>Backwards-planned my PBL units</h4><p>I start with the final project and Claude maps the daily lessons backward from it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get the guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-blue"><span class="way-n">#2</span><h4>Made 180 days of agenda slides</h4><p>Claude fills the table, Canva Bulk Create spins up the whole year in one go.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Agenda Slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-violet"><span class="way-n">#3</span><h4>Built annotation packets for ANY text</h4><p>Numbered paragraphs, margin prompts, vocab, and a teacher key in about 10 minutes.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><span class="way-n">#4</span><h4>A study tool for my real students</h4><p>A student-facing Outsiders coach for theme, motif, conflict, plot, and symbolism. It refuses anything off-topic.</p><div class="card-actions"><a class="btn btn-small" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="way card-pink"><span class="way-n">#5</span><h4>Interactive notebook pages</h4><p>Glue-in pages, launch plans, and grading for my comp notebooks.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Notebooks Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-blue"><span class="way-n">#6</span><h4>History graphic organizers</h4><p>Cause and Effect, Primary Source Analysis, SOAPSTONE, and notes organizers for 8th grade American History.</p><div class="card-actions"></div></article><article class="way card-violet"><span class="way-n">#7</span><h4>Poe month projects</h4><p>Like the House of Usher real estate brochure: students annotate the house, then SELL it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Usher mini unit<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><span class="way-n">#8</span><h4>Three readiness levels of one text</h4><p>Same ideas, same thinking, three different reading loads. Saves my prep period.</p><div class="card-actions"></div></article><article class="way card-pink"><span class="way-n">#9</span><h4>Parent emails and newsletters</h4><p>The email I&#x27;ve been avoiding since Tuesday, drafted in my voice in 30 seconds.</p><div class="card-actions"></div></article><article class="way card-blue"><span class="way-n">#10</span><h4>Organized my whole PBL Drive</h4><p>Claude audited every folder, flagged duplicates, and suggested a cleaner setup before moving a thing.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="way card-violet"><span class="way-n">#11</span><h4>Field trip and event logistics</h4><p>Roommate lists, buddy schedules, and graduation programs without the spreadsheet headache.</p><div class="card-actions"></div></article><article class="way card-sun"><span class="way-n">#12</span><h4>My whole classroom website</h4><p>This site! Claude built it from my product list and keeps it up to date.</p><div class="card-actions"><a class="btn btn-small" href="/">See the homepage<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article></div>
+</section>
+<div class="wrap" id="level-1"><div class="level-banner"><span class="level-tag">Level 1: Start here</span><h2>Claude for Beginners</h2><p>Open one tab, copy a prompt, get your night back. These are the things I tell every teacher to try first. No setup, no learning curve.</p></div></div>
+<section class="wrap block" aria-labelledby="p0-h"><div class="block-head"><p class="eyebrow">Prompt 01</p><h2 id="p0-h" class="section-title">Lesson and unit planning</h2><p class="block-sub">Start from the end and work backward. Claude drafts the plan, you keep the judgment. Build faster so you can teach better.</p></div><div class="pgrid"><article class="pcard card-pink">
+  <h4>Backwards-design a unit</h4>
+  <p class="use">When you have a text or topic and a blank calendar staring at you.</p>
+  
+  <div class="promptbox">You are helping me plan a unit using backwards design. I teach [grade] [subject]. The unit is on [text or topic] and I have [number] class periods of [length] minutes.
+
+Start with the end: give me 3 possible summative assessments students could do to show mastery. For each, tell me what standard or skill it proves.
+
+Then, once I pick one, we will map the daily lessons backward from it. Ask me which assessment I want before you build the calendar.
+
+Keep it real for middle schoolers. No busywork.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get my step-by-step guide here!<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: Backwards planning with Claude</span></a></div>
+  
+</article><article class="pcard card-blue">
+  <h4>Turn a standard into a lesson</h4>
+  <p class="use">When you know the standard but not the lesson.</p>
+  
+  <div class="promptbox">I teach [grade] [subject]. Build me a single [length]-minute lesson that hits this standard: [paste standard].
+
+Give me: a hook that takes 5 minutes or less, the main activity, one check for understanding, and an exit ticket. Tell me exactly what I say and what students do.
+
+Assume I have zero prep time and a class that talks a lot.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">See how I plan with PBL<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>AI in the classroom</span></a></div>
+  <p class="note">Want to see how I plan lessons using project-based learning? Peek inside my Project Based Learning Google Drive to see what&#x27;s inside.</p>
+</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="p1-h"><div class="block-head"><p class="eyebrow">Prompt 02</p><h2 id="p1-h" class="section-title">Differentiation</h2><p class="block-sub">One lesson, three readiness levels, five minutes. This is the one that saves your prep period.</p></div><div class="pgrid"><article class="pcard card-blue">
+  <h4>Scaffolds for the kids who need them</h4>
+  <p class="use">When you have IEPs, ELLs, and everyone in between.</p>
+  
+  <div class="promptbox">I am teaching this assignment to [grade]: [paste assignment].
+
+Give me a support version for: (1) students who need reading support, (2) English language learners, and (3) students who finish early and need a challenge.
+
+For each, give me the actual modified directions and any sentence stems or word banks. Keep the learning goal identical for all of them.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>See it in action</span></a></div>
+  
+</article><article class="pcard card-violet">
+  <h4>Three readiness levels of the same text</h4>
+  <p class="use">When one reading is too hard for half the room and too easy for the other half.</p>
+  
+  <div class="promptbox">Here is a reading passage for my [grade] [subject] class: [paste passage].
+
+Rewrite it at 3 readiness levels while keeping the same key ideas and vocabulary goals:
+1. Below grade level (shorter sentences, more scaffolding)
+2. On grade level
+3. Above grade level (more complex text, a stretch question)
+
+For each version, add 2 comprehension questions and 1 discussion question. Do not water down the thinking, just the reading load.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
+  
+</article></div></section><section class="wrap block" aria-labelledby="p2-h"><div class="block-head"><p class="eyebrow">Prompt 03</p><h2 id="p2-h" class="section-title">Parent and admin emails</h2><p class="block-sub">The email you have been avoiding since Tuesday. Draft it in your voice, kind but firm, in 30 seconds.</p></div><div class="pgrid"><article class="pcard card-violet">
+  <h4>The tricky parent email</h4>
+  <p class="use">When you need to be honest without starting a war.</p>
+  
+  <div class="promptbox">Help me write an email to a parent. Here is the situation: [describe what happened, plain and honest].
+
+Tone: warm, professional, and clear. I am not apologizing for holding a standard, but I want the parent on my team. Keep it short. Lead with something positive about their kid if there is one. End with a specific next step.
+
+Give me two versions: one softer, one more direct.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
+  
+</article><article class="pcard card-sun">
+  <h4>Newsletter or admin update in your voice</h4>
+  <p class="use">When you have to write it and would rather do literally anything else.</p>
+  
+  <div class="promptbox">Write a [class newsletter / update to my admin] covering these points: [dump your bullet points here, messy is fine].
+
+My voice: real, warm, a little dry, no corporate buzzwords, no exclamation-point overload. Short paragraphs. Make it skimmable. Then give me a subject line that people will actually open.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>AI in the classroom</span></a></div>
+  
+</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="p3-h"><div class="block-head"><p class="eyebrow">Prompt 04</p><h2 id="p3-h" class="section-title">PBL and creative projects</h2><p class="block-sub">This is my whole thing. Take any text or topic and turn it into a project kids actually want to do.</p></div><div class="pgrid"><article class="pcard card-sun">
+  <h4>Remix a lesson into a pop-culture project</h4>
+  <p class="use">Shark Tank, Mythbusters, a newscast, a meme. Same standards, way more buy-in.</p>
+  
+  <div class="promptbox">I teach [grade] [subject]. We are studying [text or topic]. I want to turn it into a project modeled on [Shark Tank / Mythbusters / a news broadcast / a social media takeover / your idea].
+
+Give me: the project pitch in kid-friendly language, the steps students follow, what they produce, and a simple rubric tied to [standard or skill]. Keep it doable in [number] class periods.
+
+Make it fun but rigorous. I do not do busywork projects.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pblpromptguide/" target="_blank" rel="noopener">Grab my FREE PBL Prompt Guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>PBL demos</span></a></div>
+  
+</article><article class="pcard card-pink">
+  <h4>Build an annotation set from any text</h4>
+  <p class="use">Speeches, primary sources, song lyrics, a chapter. Close reading with a purpose.</p>
+  
+  <div class="promptbox">Here is a text I want my [grade] students to annotate closely: [paste text or name it].
+
+Give me 6 to 8 annotation prompts that push real thinking (tone, word choice, author&#x27;s purpose, connections to now). Write them as questions students answer in the margins.
+
+Then give me one short project they do after annotating to show they got it. Balance matters to me, so make at least part of this something they do on paper, by hand.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked: build packets with Claude<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/annotations-guide-for-grades-5-12/" target="_blank" rel="noopener">Free Annotations Guide (5 to 12)<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: how I annotate</span></a></div>
+  
+</article></div></section><section class="wrap block" aria-labelledby="p4-h"><div class="block-head"><p class="eyebrow">Prompt 05</p><h2 id="p4-h" class="section-title">Mastering Claude and Bulk Create</h2><p class="block-sub">The move that made me go viral: build the content once with Claude, then let Canva&#x27;s Bulk Create spin up a whole year of slides in one go. This is how you make 180 things without making 180 things.</p></div><div class="pgrid"><article class="pcard card-pink">
+  <h4>Fill a Canva Bulk Create template</h4>
+  <p class="use">Agenda slides, vocab cards, bell ringers, task cards. Anything you&#x27;d make one at a time.</p>
+  
+  <div class="promptbox">I want to mass-produce [180 daily agenda slides / vocab cards / bell ringers] in Canva using Bulk Create. First ask me what fields my template has (like Date, Day, Objective, Agenda, Homework).
+
+Then generate a clean table I can paste straight into Canva Bulk Create: one row per slide, columns matching my fields exactly. Fill it with [my topics and pacing], keep it [grade] appropriate, and do not skip days.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/guide-bulk-creation-for-teachers/" target="_blank" rel="noopener">Hot Takes: my Bulk Create guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Whole-Year Agenda Slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: Claude + Canva</span></a></div>
+  
+</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+<section class="wrap block" id="guides" aria-labelledby="guides-h">
+  <div class="block-head"><p class="eyebrow">Want it done for you?</p><h2 id="guides-h" class="section-title">My Claude Guides</h2><p class="block-sub">The prompts on this page are free and yours to keep. When you want the finished, classroom-ready versions, already built and already pretty, here they are.</p><div class="cta-box">
+      <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="../covers/bts.webp" alt="Back to School Growing Google Drive" loading="lazy"></a>
+      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> My Back to School GROWING Drive is my whole library in one link: AI and Canva prompt guides, a full year of agenda slides, annotation templates, projects, decor, sub plans, and more. Always growing, lifetime access.</p>
+      <div class="btn-row"><a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the whole bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-soft" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Get the PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    </div></div>
+  <div class="grid"><article class="card card-pink" data-search="pbl backwards planning with claude start with the final project and let claude help you plan backwards. ai pbl claude ">
+  <div class="cover"><img src="../covers/pblclaude.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>PBL Backwards Planning with Claude</h4>
+    <p>Start with the final project and let Claude help you plan backwards.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="annotation unlocked build annotation packets for any text, any grade, in about 10 minutes with ai. ai annotation ">
+  <div class="cover"><img src="../covers/annotunlock.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Annotation Unlocked</h4>
+    <p>Build annotation packets for ANY text, any grade, in about 10 minutes with AI.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="hot takes: ai and canva magic my beginner&#x27;s guide to bulk create. make a year of slides while your coffee is still hot. canva bulk create ai ">
+  <div class="cover"><img src="../covers/hottakes.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Hot Takes: AI and Canva Magic</h4>
+    <p>My beginner&#x27;s guide to Bulk Create. Make a year of slides while your coffee is still hot.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/guide-bulk-creation-for-teachers/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbYdTMAE6j0/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-sun" data-search="interactive notebooks unlocked how to launch, grade, and create interactive notebooks with ai tools. ai inb interactive notebook ">
+  <div class="cover"><img src="../covers/inb.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Interactive Notebooks Unlocked</h4>
+    <p>How to launch, grade, and create interactive notebooks with AI tools.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-pink" data-search="how i use claude to run my teacher business for my fellow teacher creators: how i use claude behind the scenes. ai claude creator business ">
+  <div class="cover"><img src="../covers/claudebiz.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>How I Use Claude to Run My Teacher Business</h4>
+    <p>For my fellow teacher creators: how I use Claude behind the scenes.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/using-claude-to-run-a-teacher-business/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article></div>
+  <h3 class="group-title" style="margin-top:40px">Start free</h3>
+  <div class="grid" style="margin-top:18px"><article class="card card-free" data-search="pbl prompt guide ai prompts to plan project based learning fast. ai pbl free">
+  <div class="cover"><img src="../covers/pblprompt.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>PBL Prompt Guide</h4>
+    <p>AI prompts to plan project based learning fast.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pblpromptguide/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="free annotations guide, grades 5 to 12 exactly how i teach annotating, step by step. perfect before blacklight week! annotation free free">
+  <div class="cover cover-text"><span>Annotate!</span></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Free Annotations Guide, Grades 5 to 12</h4>
+    <p>Exactly how I teach annotating, step by step. Perfect before blacklight week!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotations-guide-for-grades-5-12/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-free" data-search="teacher tools cheat sheet the ai tools i tell every teacher to try. ai tools free">
+  <div class="cover"><img src="../covers/cheat.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Teacher Tools Cheat Sheet</h4>
+    <p>The AI tools I tell EVERY teacher to try.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/aitoolscheatsheet/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DWecIERE0nd/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article></div>
+</section>
+<div class="wrap" id="level-2"><div class="level-banner adv"><span class="level-tag">Level 2: Challenge yourself</span><h2>Claude Advanced</h2><p>Ready to stop copying prompts one at a time? This is where Claude goes from a helper to a system that knows your classroom. Three features, three unfair advantages: Projects, Skills, and Cowork.</p></div></div>
+<section class="wrap">
+  <div class="showcase">
+    <p class="eyebrow" style="color:#B07400">See one I actually built</p>
+    <h3>The Outsiders study tool, for my real students</h3>
+    <p>I had Claude build a student-facing website for our Outsiders unit. It coaches kids through <b>theme, motif, conflict, plot diagram, and symbolism</b>, giving sentence stems and fill-in-the-blanks, then rewriting their attempts when they are close. I uploaded our actual class materials and gave it rules for how to talk to them, so they are not pulling random stuff off the internet. It refuses anything off-topic, and yes, it has a 1960s vibe.</p>
+    <a class="btn" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <details><summary>See the exact prompt I gave Claude (swap in your own novel)</summary>
+      <div class="promptbox">Build me an AI study tool for my students for the novel [The Outsiders]. Cover five sections: theme, motif, conflict, plot diagram, and symbolism.
+
+Students are middle school (6th to 8th grade). Give partial answers with sentence stems and blanks to fill in, and offer a rewrite when they are a little off. Every section requires students to include a quote as support, then write their own analysis, symbolism, or conflict statement.
+
+THEME: Guide them to a universal, non-cliche theme statement (no character names, no plot summary) using the &quot;the author wants us to know...&quot; frame, landing on the big lesson. Focus the theme on being true to yourself and knowing your true identity, inspired by Johnny&#x27;s line &quot;stay gold.&quot; Model statement: The innocence of youth is something we should cherish because nothing stays gold forever, and staying true to yourself as you grow and change helps guide your identity and choices.
+
+MOTIF: Focus on the motif of literature and how it recurs to build the identity theme, using three moments: the poem &quot;Nothing Gold Can Stay,&quot; Johnny and Ponyboy reading Gone with the Wind in the church, and the reveal that Ponyboy is the author. Model statement: The motif of literature is present when Ponyboy recites Robert Frost&#x27;s &quot;Nothing Gold Can Stay,&quot; when Ponyboy and Johnny read Gone with the Wind together in the church, and when Ponyboy reveals he is the author telling the story. These moments remind me that embracing your true identity instead of the labels society gives you helps guide your choices and lets you stay true to yourself.
+
+CONFLICT: Main conflict should be person vs. self or person vs. society.
+
+RULES: Refuse to answer anything not related to The Outsiders. Fun, engaging, student-friendly design with a 1960s Outsiders vibe.</div>
+      <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt" style="background:var(--sun);color:#2E2458">Copy prompt</button></div>
+    </details>
+  </div>
+</section>
+<section class="wrap block" aria-labelledby="a0-h"><div class="block-head"><p class="eyebrow">Advanced 01: Projects</p><h2 id="a0-h" class="section-title">Build a Claude that already knows your classroom</h2></div><div class="featnote"><b>New to Projects?</b> A Project is a saved workspace where you upload your files and set your instructions <em>once</em>. Everything you do inside it remembers your grade, your standards, and your voice. Set it up on a Sunday, save hours every week after.</div><div class="pgrid"><article class="pcard card-blue">
+  <h4>Your &quot;Classroom HQ&quot; project</h4>
+  <p class="why"><b>Why it's powerful:</b> Stop re-typing your grade, standards, and style every single time. Set it once and every lesson comes out aligned and sounding like you.</p>
+  <p class="setup-label">Starter setup</p>
+  <div class="promptbox">Create a new Project called &quot;Classroom HQ.&quot; Upload your pacing guide, your standards, one rubric, and one lesson that sounds like you. Then paste this into the project&#x27;s custom instructions:
+
+You are my teaching assistant for [grade] [subject]. Everything you make should align to the standards and pacing guide I uploaded and match the voice in my sample lesson: real, clear, a little dry, no busywork. Default to middle school reading levels. When I ask for a lesson or activity, tie it to a standard and keep prep low. Ask me the topic and how many days I have, then build.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy setup">Copy setup</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
+  
+</article><article class="pcard card-violet">
+  <h4>A project per novel or unit</h4>
+  <p class="why"><b>Why it's powerful:</b> Reuse everything you built for The Outsiders, Poe, or Night without rebuilding it. The project becomes your unit&#x27;s memory.</p>
+  <p class="setup-label">Starter setup</p>
+  <div class="promptbox">Make a Project named for the text (e.g. &quot;The Outsiders Unit&quot;). Upload the reading, your annotation sets, and past projects. Paste into custom instructions:
+
+This project holds everything for my [text] unit with [grade]. Treat the uploaded reading, annotations, and projects as the source of truth. When I ask for something new (a quiz, a bell ringer, a differentiated version, a project), match the style and rigor of what&#x27;s already here and keep it aligned to [standard].
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy setup">Copy setup</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">PBL Project Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">Poe: Tell-Tale Heart<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Poe: House of Usher<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">Poe: The Raven<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>See my live Outsiders example</span></a></div>
+  <p class="note">Need completed novel or short-story projects? Grab mine above.</p>
+</article><article class="pcard card-sun">
+  <h4>Your grading and feedback partner</h4>
+  <p class="why"><b>Why it's powerful:</b> Feedback that matches your rubric and still sounds like you, in a fraction of the time. You stay the teacher, it drafts the words.</p>
+  <p class="setup-label">Starter setup</p>
+  <div class="promptbox">Create a Project called &quot;Feedback.&quot; Upload your rubric and 2 to 3 samples of feedback you have written. Paste into custom instructions:
+
+You help me draft feedback on student work for [grade] [subject]. Always score against the uploaded rubric and explain it in kid-friendly language. Match the tone of my samples: warm, specific, honest, growth-focused. Give 2 glows and 1 grow. Never rewrite the student&#x27;s work for them.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy setup">Copy setup</button></div>
+  <p class="note">Keep it FERPA-safe: strip student names or use initials before you paste any work.</p>
+</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="a1-h"><div class="block-head"><p class="eyebrow">Advanced 02: Skills</p><h2 id="a1-h" class="section-title">Teach Claude your signature moves</h2></div><div class="featnote"><b>New to Skills?</b> A Skill is a set of instructions you save once and trigger by name. It is how you teach Claude a move you make all the time, so you never re-type the directions again. Build the skill once, call it forever.</div><div class="pgrid"><article class="pcard card-violet">
+  <h4>The PBL Remix Machine</h4>
+  <p class="why"><b>Why it's powerful:</b> Turn any text or topic into a project kids beg to do, on command. This is my whole brand in one saved skill.</p>
+  <p class="setup-label">Skill instructions to save</p>
+  <div class="promptbox">When I give you a text or topic and a format (Shark Tank, Mythbusters, a newscast, a social media takeover, a meme), turn it into a student project. Always output: a kid-friendly pitch, numbered student steps, what they turn in, and a simple 4-row rubric tied to the standard I name. Middle school level. Fun but rigorous. No busywork. If I do not give a format, suggest three.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy skill">Copy skill</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pblpromptguide/" target="_blank" rel="noopener">Grab my FREE PBL Prompt Guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>PBL demos</span></a></div>
+  
+</article><article class="pcard card-sun">
+  <h4>The Annotation-Set Generator</h4>
+  <p class="why"><b>Why it's powerful:</b> Your exact annotation format from any text in seconds, every time, without re-explaining it.</p>
+  <p class="setup-label">Skill instructions to save</p>
+  <div class="promptbox">When I give you a text, create an annotation set in my format: 6 to 8 numbered margin questions that push thinking about tone, word choice, author&#x27;s purpose, and connections to today. Then add one short after-reading task, and make at least part of it something students do on paper by hand. Keep it [grade] level.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy skill">Copy skill</button><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked: teach Claude to build your packets<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-small btn-soft" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Ready-to-go sets (5 to 10 ELA)<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/stories/highlights/17844653230766602/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Poe demo</span></a></div>
+  
+</article><article class="pcard card-pink">
+  <h4>The 3-Level Differentiator</h4>
+  <p class="why"><b>Why it's powerful:</b> One passage, three readiness levels, same thinking, on demand. The skill that quietly saves your prep period.</p>
+  <p class="setup-label">Skill instructions to save</p>
+  <div class="promptbox">When I paste a passage, rewrite it at 3 readiness levels (below, on, and above grade level) while keeping the same key ideas and vocabulary goals. For each level add 2 comprehension questions and 1 discussion question. Water down the reading load, never the thinking. Label each level clearly.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy skill">Copy skill</button></div>
+  
+</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section><section class="wrap block" aria-labelledby="a2-h"><div class="block-head"><p class="eyebrow">Advanced 03: Cowork</p><h2 id="a2-h" class="section-title">Put Claude to work on your actual desktop</h2></div><div class="featnote"><b>New to Cowork?</b> Cowork is Claude on your computer. It can open your files, organize folders, build things, and even run tasks on a schedule. This is where Claude stops giving advice and starts doing the work.</div><div class="pgrid"><article class="pcard card-sun">
+  <h4>Clean up my Drive</h4>
+  <p class="why"><b>Why it's powerful:</b> Turn a chaotic resource folder into something you can actually find things in. I did exactly this with my whole PBL Drive.</p>
+  <p class="setup-label">Say this in Cowork</p>
+  <div class="promptbox">Connect to my Google Drive and audit my [folder name] folder. Give me a full inventory organized by subfolder, flag duplicates and misfiled items, and suggest a cleaner structure. Do not move anything until I approve it.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy task">Copy task</button><a class="peek" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>AI in the classroom</span></a></div>
+  
+</article><article class="pcard card-pink">
+  <h4>Build me a classroom tool</h4>
+  <p class="why"><b>Why it's powerful:</b> Interactive resources built for you, not bought. This whole hub was made with Claude.</p>
+  <p class="setup-label">Say this in Cowork</p>
+  <div class="promptbox">Build me an interactive [choice board / review game / student hub] for [grade] on [topic]. Make it a single web page, mobile-friendly, in my brand colors. Include [what you want on it]. Then give me the file so I can share or host it.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy task">Copy task</button><a class="peek" href="https://www.instagram.com/reel/DazQIb2zTvd/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch: Cowork builds my Canva while I relax</span></a></div>
+  
+</article><article class="pcard card-blue">
+  <h4>My Monday &quot;week ahead&quot;</h4>
+  <p class="why"><b>Why it's powerful:</b> Start the week already organized without lifting a finger. Set it once and it runs itself.</p>
+  <p class="setup-label">Say this in Cowork</p>
+  <div class="promptbox">Every Monday at 6am, pull my calendar for the week and my to-do list, and send me a short &quot;week ahead&quot; brief: what is coming, what I need to prep, and the top 3 things to knock out first. Keep it skimmable.
+
+Ask me some questions to make sure I get the best output possible.</div>
+  <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy task">Copy task</button></div>
+  <p class="note">This one runs as a scheduled task, so it keeps working every week on its own.</p>
+</article></div><div class="bts-strip"><p><strong>All my guides and activities to set up in your classroom, in one place.</strong></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+<section class="wrap block" id="follow" aria-labelledby="follow-h">
+  <div class="block-head"><h2 id="follow-h" class="section-title">This Is Just the Start</h2><p class="block-sub">I post new prompts, demos, and classroom moves every week. Scan to follow, then come hang out. That is where all the good stuff lives.</p></div>
+  <div class="qrrow"><a class="qrcard" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-instagram.png" alt="Instagram QR code" loading="lazy"><b>Instagram</b><small>@Middle_Teacher_Syndrome</small></a><a class="qrcard" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-tiktok.png" alt="TikTok QR code" loading="lazy"><b>TikTok</b><small>@middle_teacher_syndrome</small></a><a class="qrcard" href="https://www.facebook.com/middle_teacher_syndrome" target="_blank" rel="noopener"><span class="qr-scan">Scan to follow</span><img src="img/qr-facebook.png" alt="Facebook QR code" loading="lazy"><b>Facebook</b><small>Middle Teacher Syndrome</small></a></div>
+  <div class="webinar"><div><p class="eyebrow">Webinar handout</p><h3>How to build a novel study with Claude for Education</h3><p>The step-by-step one-pager from the session.</p></div><a class="btn" href="https://docs.google.com/document/d/1_ckXddI9U60CeVE8PTRJhXCbMaMNyUsG/edit?usp=sharing" target="_blank" rel="noopener">Open the one-pager<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  <div class="waitlist waitlist-compact">
+  <p class="eyebrow">Join the Claude waitlist</p>
+  <h3 class="cta-title">Get Claude updates in your inbox</h3>
+  
+  <form class="wl-form" action="#" data-email="mrsarabiarocks@gmail.com">
+    <label class="sr-only" for="wl-1">Your email</label>
+    <input id="wl-1" type="email" name="email" placeholder="Your email" required autocomplete="email">
+    <button class="btn" type="submit">Count me in<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </form>
+  <ul class="wl-perks"><li>Claude waitlist</li><li>Claude updates</li><li>Discounts on my Claude guides and lessons</li></ul>
+  <p class="wl-done" hidden>You're on the list! Watch your inbox.</p>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p class="foot-name">Michaela Arabia <span>The Balanced Teach</span></p>
+    <nav class="socials" aria-label="Follow me"><a class="social social-foot" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-foot" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-foot" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-foot" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
+    <p class="foot-small"><a href="/" style="color:inherit">Back to MrsArabiaRocks.com</a> &middot; @middle_teacher_syndrome &middot; &copy; 2026 Michaela Arabia</p>
+  </div>
+</footer>
+
+<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="vmodal-box">
+    <button class="vmodal-close" type="button" aria-label="Close video">&times;</button>
+    <div class="vmodal-body" id="vmodal-body"></div>
+    <a class="vmodal-alt" id="vmodal-alt" href="#" target="_blank" rel="noopener">Open on Instagram</a>
+  </div>
+</div>
+<script>
+
+document.querySelectorAll('.btn-copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var box = btn.closest('.pcard, .showcase').querySelector('.promptbox');
+    var text = box.innerText;
+    function done() { btn.textContent = 'Copied!'; btn.classList.add('copied'); setTimeout(function () { btn.textContent = btn.dataset.label; btn.classList.remove('copied'); }, 1800); }
+    if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done, fallback); } else { fallback(); }
+    function fallback() { var r = document.createRange(); r.selectNode(box); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); try { document.execCommand('copy'); done(); } catch (e) {} s.removeAllRanges(); }
+  });
+});
+document.querySelectorAll('.wl-form').forEach(function (f) {
+  f.addEventListener('submit', function (ev) {
+    if (f.getAttribute('action') && f.getAttribute('action') !== '#') return;
+    ev.preventDefault();
+    var email = f.querySelector('input').value.trim();
+    var body = 'Please add me to the Claude waitlist (updates and discounts on Claude guides and lessons).%0D%0A%0D%0AMy email: ' + encodeURIComponent(email);
+    window.location.href = 'mailto:' + f.dataset.email + '?subject=' + encodeURIComponent('Add me to the Claude waitlist') + '&body=' + body;
+    var w = f.closest('.waitlist'); w.querySelector('.wl-done').hidden = false;
+  });
+});
+(function () {
+  var modal = document.getElementById('vmodal'), body = document.getElementById('vmodal-body'), alt = document.getElementById('vmodal-alt');
+  function openReel(id) {
+    var url = 'https://www.instagram.com/reel/' + id + '/';
+    body.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="' + url + '?utm_source=ig_embed" data-instgrm-version="14"><a href="' + url + '" target="_blank" rel="noopener">Watch on Instagram</a></blockquote>';
+    alt.href = url; modal.classList.add('open'); document.body.classList.add('no-scroll');
+    if (window.instgrm) window.instgrm.Embeds.process();
+  }
+  function close() { modal.classList.remove('open'); document.body.classList.remove('no-scroll'); body.innerHTML = ''; }
+  document.addEventListener('click', function (ev) {
+    var link = ev.target.closest('a[href*="instagram.com/reel/"]');
+    if (!link || link.closest('.instagram-media') || modal.contains(link)) return;
+    if (ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+    var m = link.href.match(/instagram\.com\/reel\/([A-Za-z0-9_-]+)/); if (!m) return;
+    ev.preventDefault(); openReel(m[1]);
+  });
+  modal.addEventListener('click', function (ev) { if (ev.target === modal) close(); });
+  modal.querySelector('.vmodal-close').addEventListener('click', close);
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') close(); });
+})();
+
+</script>
+<script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
