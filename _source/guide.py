@@ -217,7 +217,7 @@ def reel(url, title):
     </div></div>'''
 
 
-def waitlist(compact=False):
+def waitlist(compact=False):  # not on the page right now; add {waitlist()} back into build_page() to show it
     action = f'action="{e(WAITLIST_URL)}"' if WAITLIST_URL else 'action="#"'
     sub = "" if compact else '<p class="block-sub">Be the first to know when my next Claude guide or lesson drops, get Claude tips for teachers in your inbox, and get subscriber-only discounts.</p>'
     return f'''<div class="waitlist {'waitlist-compact' if compact else ''}">
@@ -445,13 +445,12 @@ def build_page():
   {B.head("This Is Just the Start", "I post new prompts, demos, and classroom moves every week. Scan to follow, then come hang out. That is where all the good stuff lives.", "follow-h")}
   <div class="qrrow">{qr}</div>
   <div class="webinar"><div><p class="eyebrow">Webinar handout</p><h3>How to build a novel study with Claude for Education</h3><p>The step-by-step one-pager from the session.</p></div>{B.a("https://docs.google.com/document/d/1_ckXddI9U60CeVE8PTRJhXCbMaMNyUsG/edit?usp=sharing", "Open the one-pager" + B.ARROW, "btn")}</div>
-  {waitlist(compact=True)}
 </section>'''
 
     nav = [("/#best-seller", "PBL Drive"), ("/#spotlight", "Spooky Season"), ("/#shop", "Shop the Classroom"), ("/#teacher", "Teacher Guides"), ("/#free", "Free Resources"), ("/free-claude-guide/", "Free Claude Guide")]
     nav_inline = "".join(f'<a href="{h}"{" class=\"on\"" if "claude" in h else ""}>{e(n)}</a>' for h, n in nav if "spotlight" not in h)
     nav_menu = "".join(f'<a class="menu-main" href="{h}">{e(n)}</a>' for h, n in nav) + \
-        "".join(f'<a class="menu-sub" href="#{i}">{e(n)}</a>' for i, n in [("watch", "Watch me use Claude"), ("ways", "Ways I use Claude"), ("level-1", "Beginner prompts"), ("guides", "My Claude guides"), ("level-2", "Advanced"), ("follow", "Follow + waitlist")])
+        "".join(f'<a class="menu-sub" href="#{i}">{e(n)}</a>' for i, n in [("watch", "Watch me use Claude"), ("ways", "Ways I use Claude"), ("level-1", "Beginner prompts"), ("guides", "My Claude guides"), ("level-2", "Advanced"), ("follow", "Follow me")])
 
     css = (HERE / "style.css").read_text() + EXTRA_CSS
     out = f'''<!doctype html>
@@ -500,7 +499,6 @@ def build_page():
 
 <main>
 {start}
-{waitlist()}
 {videos}
 {ways_sec}
 <div class="wrap" id="level-1"><div class="level-banner"><span class="level-tag">Level 1: Start here</span><h2>Claude for Beginners</h2><p>Open one tab, copy a prompt, get your night back. These are the things I tell every teacher to try first. No setup, no learning curve.</p></div></div>
