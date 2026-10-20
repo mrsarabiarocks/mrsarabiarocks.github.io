@@ -52,6 +52,7 @@ HIGHLIGHTS = [
 # ---------- Ways I've used Claude in my classroom ----------
 # (tone, title, what I did, [(button text, url), ...], reel url or "")
 WAYS = [
+    ("sun", "Reading workshop boards", "One screen for station rotations: color group schedule, station directions, a built-in timer, and a group points tracker. I made a Raven board and a Tell-Tale Heart board with an escape room station. Video coming soon!", [], ""),
     ("pink", "Backwards-planned my PBL units", "I start with the final project and Claude maps the daily lessons backward from it.", [("Get the guide", TC + "pbl-backwards-planning-with-claude/")], ig("DZdWKfXh55X")),
     ("blue", "Made 180 days of agenda slides", "Claude fills the table, Canva Bulk Create spins up the whole year in one go.", [("Agenda Slides + guide", TC + "180-daily-agenda-slides-canvabulkcreate/")], ig("DbBoju3veLA")),
     ("violet", "Built annotation packets for ANY text", "Numbered paragraphs, margin prompts, vocab, and a teacher key in about 10 minutes.", [("Annotation Unlocked", TC + "annotation-unlocked/")], ig("DYD6ujaTbQF")),
@@ -101,7 +102,12 @@ BEGINNER = [
          "Here is a text I want my [grade] students to annotate closely: [paste text or name it].\n\nGive me 6 to 8 annotation prompts that push real thinking (tone, word choice, author's purpose, connections to now). Write them as questions students answer in the margins.\n\nThen give me one short project they do after annotating to show they got it. Balance matters to me, so make at least part of this something they do on paper, by hand." + ASK,
          [("Annotation Unlocked: build packets with Claude", TC + "annotation-unlocked/", False), ("Free Annotations Guide (5 to 12)", TC + "annotations-guide-for-grades-5-12/", True)], ("Watch: how I annotate", ig("DX-s1VWzEqv")), ""),
     ]),
-    ("Prompt 05", "Mastering Claude and Bulk Create", "The move that made me go viral: build the content once with Claude, then let Canva's Bulk Create spin up a whole year of slides in one go. This is how you make 180 things without making 180 things.", [
+    ("Prompt 05", "Workshop and station boards", "Run stations without repeating directions 40 times. One board on the screen shows every group where to go, what to do, and how much time is left.", [
+        ("Build a reading workshop board", "When you have color groups rotating through stations and want everything on one screen.",
+         "Build me a reading workshop board for my [grade] class as a single web page I can put on my classroom screen. The text is [text or topic].\n\nMy groups are [Blue, Red, Orange, Green] and they rotate through [number] blocks. The stations are: [station 1 and where it is], [station 2 and where it is], [station 3 and where it is]. One station is a teacher meeting with me.\n\nInclude: a schedule tab showing which station each group is at during each block, a directions tab with numbered steps, an example, and a sentence starter for every station, what to bring, a big countdown timer I can start and reset, and a points tracker for each group.\n\nMake it look like [theme, like a spooky Poe vibe], easy to read from the back of the room, and fun." + ASK,
+         [], None, "Swap in your own stations. Mine have included an escape room, a choice board, and a teacher meeting."),
+    ]),
+    ("Prompt 06", "Mastering Claude and Bulk Create", "The move that made me go viral: build the content once with Claude, then let Canva's Bulk Create spin up a whole year of slides in one go. This is how you make 180 things without making 180 things.", [
         ("Fill a Canva Bulk Create template", "Agenda slides, vocab cards, bell ringers, task cards. Anything you'd make one at a time.",
          "I want to mass-produce [180 daily agenda slides / vocab cards / bell ringers] in Canva using Bulk Create. First ask me what fields my template has (like Date, Day, Objective, Agenda, Homework).\n\nThen generate a clean table I can paste straight into Canva Bulk Create: one row per slide, columns matching my fields exactly. Fill it with [my topics and pacing], keep it [grade] appropriate, and do not skip days." + ASK,
          [("Hot Takes: my Bulk Create guide", TC + "guide-bulk-creation-for-teachers/", False), ("Whole-Year Agenda Slides + guide", TC + "180-daily-agenda-slides-canvabulkcreate/", True)], ("Watch: Claude + Canva", ig("DbBoju3veLA")), ""),
@@ -402,7 +408,7 @@ def build_page():
     for n, (badge, title, sub, cards) in enumerate(BEGINNER):
         cs = "".join(prompt_card(c, TONES[(n + j) % 4], "Copy prompt") for j, c in enumerate(cards))
         beg += f'<section class="wrap block" aria-labelledby="p{n}-h">{B.head(title, sub, f"p{n}-h", eyebrow=badge)}<div class="pgrid">{cs}</div>'
-        beg += (bts_strip() if n in (0, 2, 4) else "") + "</section>"
+        beg += (bts_strip() if n in (0, 2, 5) else "") + "</section>"
 
     guides = "".join(B.card(by_title[t], TONES[i % 4]) for i, t in enumerate(GUIDE_PRODUCTS) if t in by_title)
     frees = "".join(B.card(by_title[t], "free") for t in FREE_PRODUCTS if t in by_title)
