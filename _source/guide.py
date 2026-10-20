@@ -32,6 +32,7 @@ PBL = TC + "pbl-growing-drive/"
 ASK = "\n\nAsk me some questions to make sure I get the best output possible."
 
 # ---------- Reels that play right on the page ----------
+LEAD_REEL = (ig("Desvw-WTv6l"), "Claude builds my workshop boards")  # newest video, shown big at the top
 TOP_REELS = [
     (ig("DbBoju3veLA"), "Claude + Canva: a year of slides"),
     (ig("DaGJH9sk1Qn"), "Lots of ways I use Claude"),
@@ -52,7 +53,7 @@ HIGHLIGHTS = [
 # ---------- Ways I've used Claude in my classroom ----------
 # (tone, title, what I did, [(button text, url), ...], reel url or "")
 WAYS = [
-    ("sun", "Reading workshop boards", "One screen for station rotations: color group schedule, station directions, a built-in timer, and a group points tracker. I made a Raven board and a Tell-Tale Heart board with an escape room station. Video coming soon!", [], ""),
+    ("sun", "Reading workshop boards", "One screen for station rotations: color group schedule, station directions, a built-in timer, and a group points tracker. I made a Raven board and a Tell-Tale Heart board with an escape room station.", [], ig("Desvw-WTv6l")),
     ("pink", "Backwards-planned my PBL units", "I start with the final project and Claude maps the daily lessons backward from it.", [("Get the guide", TC + "pbl-backwards-planning-with-claude/")], ig("DZdWKfXh55X")),
     ("blue", "Made 180 days of agenda slides", "Claude fills the table, Canva Bulk Create spins up the whole year in one go.", [("Agenda Slides + guide", TC + "180-daily-agenda-slides-canvabulkcreate/")], ig("DbBoju3veLA")),
     ("violet", "Built annotation packets for ANY text", "Numbered paragraphs, margin prompts, vocab, and a teacher key in about 10 minutes.", [("Annotation Unlocked", TC + "annotation-unlocked/")], ig("DYD6ujaTbQF")),
@@ -263,6 +264,16 @@ EXTRA_CSS = """
 .light-frame .reel-sub { color: var(--muted); }
 .light-frame .reel-play { box-shadow: none; }
 .more-reels { margin-top: 34px; }
+.light-frame { width: min(100%, 1100px); }
+.light-frame .spot-reels { flex-wrap: wrap; justify-content: center; }
+.light-frame .spot-reel { flex: 0 1 330px; min-width: 0; }
+.lead-reel { display: flex; flex-wrap: wrap; gap: 28px 40px; align-items: center; justify-content: center; margin-bottom: 44px; }
+.lead-frame { width: min(100%, 400px); margin: 0; }
+.lead-frame .spot-reel { flex: 1 1 100%; }
+.lead-copy { max-width: 36ch; font-size: 1.15rem; font-weight: 700; }
+.lead-copy b { font-family: var(--f-display); font-weight: 400; font-size: 1.6rem; line-height: 1.1; display: block; margin-bottom: 8px; }
+.lead-copy a { font-weight: 900; color: var(--text); }
+@media (max-width: 860px) { .lead-copy { text-align: center; } }
 .hl-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
 .hl { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; background: var(--card); color: var(--text); border: 3px solid var(--line); border-radius: 999px; padding: 8px 18px 8px 8px; box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s; }
 .hl:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
@@ -390,6 +401,7 @@ def build_page():
     hl = "".join(B.a(u, f'<span class="peek-play">{B.PLAY}</span><span><b>{e(t)}</b><small>{e(s)}</small></span>', "hl") for u, t, s in HIGHLIGHTS)
     videos = f'''<section class="wrap block" id="watch" aria-labelledby="watch-h">
   {B.head("Watch Me Use Claude", "Short, no-fluff demos straight from my classroom. Tap play, then come back and copy the matching prompt.", "watch-h")}
+  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New: Claude builds my workshop boards</span><div class="spot-reels">{reel(*LEAD_REEL)}</div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. Then grab the exact prompt in <a href="#p4-h">Prompt 05</a>.</p></div>
   <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels">{"".join(reel(u, t) for u, t in TOP_REELS)}</div></div>
   <div class="reels-frame light-frame more-reels"><span class="reels-label">More Claude demos</span><div class="spot-reels">{"".join(reel(u, t) for u, t in MORE_REELS)}</div></div>
   <div class="hl-row">{hl}</div>
