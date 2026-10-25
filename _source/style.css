@@ -468,3 +468,25 @@ p { margin: 0; }
 /* ---------- Free Claude Guide button in the hero ---------- */
 .hero-claude { width: fit-content; background: var(--sun); color: #2E2458; font-size: 1.05rem; }
 @media (max-width: 860px) { .hero-claude { justify-self: center; } }
+
+/* ---------- October freebie ---------- */
+.octfree { margin-top: 40px; }
+.oct-box {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: center;
+  background: radial-gradient(120% 90% at 0% 0%, #3B1C7A 0%, rgba(59, 28, 122, 0) 60%), var(--night);
+  color: var(--night-text); border: 3px solid #05030C; border-radius: 24px; padding: 28px 32px; box-shadow: 6px 6px 0 #05030C;
+}
+.oct-photo { display: block; transform: rotate(-1.5deg); transition: transform .2s ease; }
+.oct-photo img { display: block; width: 100%; height: auto; border-radius: 14px; border: 3px solid var(--glow); box-shadow: 6px 6px 0 #05030C; }
+.oct-copy { display: grid; gap: 12px; min-width: 0; justify-items: start; }
+.oct-copy h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.8rem, 4.2vw, 2.6rem); line-height: 1.05; color: var(--glow); }
+.oct-copy p:not(.eyebrow) { max-width: 52ch; }
+.oct-copy .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.oct-copy .peek { color: var(--night-text); }
+.oct-copy .peek-play { background: var(--glow); color: var(--night); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .oct-photo:hover { transform: rotate(0deg) scale(1.02); } }
+@media (max-width: 760px) {
+  .oct-box { grid-template-columns: minmax(0, 1fr); padding: 22px 18px; text-align: center; }
+  .oct-copy { justify-items: center; }
+  .oct-copy .btn-row { justify-content: center; }
+}

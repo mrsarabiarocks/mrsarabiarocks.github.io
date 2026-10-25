@@ -60,6 +60,16 @@ SPOTLIGHT = {
     ],
 }
 
+OCT_FREE = {
+    "eyebrow": "Free for October",
+    "headline": "My spooky October slides, FREE",
+    "body": "This is what my students walk into every morning in October. Grab the template in Canva or ClassroomScreen, swap in your own agenda, and you're set for spooky season!",
+    "img": "octslides",
+    "canva": "https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view",
+    "cs": "https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0",
+    "reel": ig("De7jZ6qyjQk"),
+}
+
 FAN_FAVORITE = {
     "eyebrow": "Fan favorite",
     "headline": "A WHOLE YEAR of agenda slides in minutes",
@@ -80,7 +90,7 @@ PRODUCTS = [
     dict(s="spooky", t="Free Annotations Guide, Grades 5 to 12", d="Exactly how I teach annotating, step by step. Perfect before blacklight week!", u=TC + "annotations-guide-for-grades-5-12/", r=ig("DX-s1VWzEqv"), free=True, cv="Annotate!", kw="annotation free"),
 
     dict(s="spooky", t="FREE Poe Unit: 4 Weeks of Ideas", d="My whole month of Poe lesson ideas and plans, totally free. Start here!", u=T+"FREE-Edgar-Allan-Poe-Unit-4-Weeks-of-IDEAS-Lesson-Plans-10254735", tpt=True, free=True, img="tpt10254735", kw="poe halloween october free"),
-    dict(s="spooky", t="FREE October Slides Template", d="My spooky season slide templates, totally free. Grab the Canva version or the ClassroomScreen version and make them yours!", u="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view", r=ig("De7jZ6qyjQk"), alt=("https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0", "Or grab the ClassroomScreen version"), free=True, cv="October Slides", kw="october fall halloween slides canva classroomscreen free spooky"),
+    dict(s="spooky", t="FREE October Slides Template", d="My spooky season slide templates, totally free. Grab the Canva version or the ClassroomScreen version and make them yours!", u="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view", r=ig("De7jZ6qyjQk"), alt=("https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0", "Or grab the ClassroomScreen version"), free=True, img="octslides", kw="october fall halloween slides canva classroomscreen free spooky"),
 
     # ELA
     dict(s="ela", t="Edgar Allan Poe: 4-Week Bundle", d="ALL my Poe units in one bundle. A whole month of creepy, fully editable lessons.", u=TC + "edgar-allan-poe-4-week-bundle/", img="poebundle", kw="poe halloween october bundle"),
@@ -138,7 +148,7 @@ PRODUCTS = [
     dict(s="free", t="Shark Tank Project", d="Students invent a product and pitch it to the sharks.", u=TC + "free-shark-tank/", cv="Shark Tank", kw="pbl project"),
     dict(s="free", t="Lesson Plan and Sub Plan Template", d="Google Docs. Make a copy and go!", u="https://docs.google.com/document/d/13rkhzs4WCBjGETf5Nv78dnA3HotOSnOS/copy", img="subplan", kw="sub plans lesson plan"),
     dict(s="free", t="AI Prompt-Writing Guide", d="How to write prompts that actually get you what you want.", u="https://drive.google.com/file/d/1CODjXRAXyXIi6JX2XMr4RQbC8eN5IM1Y/view", cv="Prompt Guide", kw="ai prompts"),
-    dict(s="free", t="October Slides Template", d="My spooky season slide templates in Canva or ClassroomScreen. Make a copy and make them yours!", u="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view", r=ig("De7jZ6qyjQk"), alt=("https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0", "Or grab the ClassroomScreen version"), cv="October Slides", kw="october fall halloween slides canva classroomscreen spooky"),
+    dict(s="free", t="October Slides Template", d="My spooky season slide templates in Canva or ClassroomScreen. Make a copy and make them yours!", u="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view", r=ig("De7jZ6qyjQk"), alt=("https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0", "Or grab the ClassroomScreen version"), img="octslides", kw="october fall halloween slides canva classroomscreen spooky"),
     dict(s="free", t="Daily Agenda Slides Template", d="Canva and Google Slides versions.", u="https://www.canva.com/design/DAGJc8K9FtU/rATziqhGmq4r6ZImHRCEsQ/view", img="agendafree", kw="agenda slides canva"),
     dict(s="free", t="Yearly Scope and Sequence Template", d="Map out your whole year in Google Slides.", u="https://docs.google.com/presentation/d/1XFMfXqxMUnQBuGOmCGB_qu6waSAjQ1uWiGI1whN5YqQ/edit", img="scope", kw="planning year"),
     dict(s="free", t="Socratic Seminar Guide", d="My rules and setup for discussions students actually lead.", u="https://drive.google.com/file/d/1-BM_l4P1ayUyQhdX1724t49aSVDyhk2C/view", img="socratic", kw="discussion"),

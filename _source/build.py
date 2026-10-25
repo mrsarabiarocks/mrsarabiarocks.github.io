@@ -186,6 +186,7 @@ def build():
         for i, n, subs in NAV)
 
     ff = C.FAN_FAVORITE
+    of = C.OCT_FREE
     shop_nav = "".join(f'<a class="chip chip-{tones[k]}" href="#{k}">{e(n)}</a>' for k, n in C.SHOP_GROUPS)
     shop = "".join(
         f'<div class="group" id="{k}"><h3 class="group-title"><span class="dot dot-{tones[k]}"></span>{e(n)}</h3>'
@@ -244,6 +245,19 @@ def build():
       </div>
       <p class="search-status" id="q-status" aria-live="polite"></p>
     </form>
+  </section>
+
+  <section class="wrap octfree hide-on-search" id="october-freebie" aria-labelledby="oct-h">
+    <div class="oct-box">
+      <a class="oct-photo" href="{e(of["canva"])}" target="_blank" rel="noopener"><img src="{img_src(of["img"])}" alt="My October agenda slides on the classroom TV, with Poe and a spider" loading="lazy"></a>
+      <div class="oct-copy">
+        <p class="eyebrow eyebrow-glow">{e(of["eyebrow"])}</p>
+        <h2 id="oct-h">{e(of["headline"])}</h2>
+        <p>{e(of["body"])}</p>
+        <div class="btn-row">{a(of["canva"], "Get the Canva version" + ARROW, "btn btn-glow")}{a(of["cs"], "Get the ClassroomScreen version" + ARROW, "btn btn-ghost")}</div>
+        {peek(of["reel"])}
+      </div>
+    </div>
   </section>
 
   <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">

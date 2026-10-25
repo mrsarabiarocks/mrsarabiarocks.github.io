@@ -481,6 +481,28 @@ p { margin: 0; }
 .hero-claude { width: fit-content; background: var(--sun); color: #2E2458; font-size: 1.05rem; }
 @media (max-width: 860px) { .hero-claude { justify-self: center; } }
 
+/* ---------- October freebie ---------- */
+.octfree { margin-top: 40px; }
+.oct-box {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: center;
+  background: radial-gradient(120% 90% at 0% 0%, #3B1C7A 0%, rgba(59, 28, 122, 0) 60%), var(--night);
+  color: var(--night-text); border: 3px solid #05030C; border-radius: 24px; padding: 28px 32px; box-shadow: 6px 6px 0 #05030C;
+}
+.oct-photo { display: block; transform: rotate(-1.5deg); transition: transform .2s ease; }
+.oct-photo img { display: block; width: 100%; height: auto; border-radius: 14px; border: 3px solid var(--glow); box-shadow: 6px 6px 0 #05030C; }
+.oct-copy { display: grid; gap: 12px; min-width: 0; justify-items: start; }
+.oct-copy h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.8rem, 4.2vw, 2.6rem); line-height: 1.05; color: var(--glow); }
+.oct-copy p:not(.eyebrow) { max-width: 52ch; }
+.oct-copy .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.oct-copy .peek { color: var(--night-text); }
+.oct-copy .peek-play { background: var(--glow); color: var(--night); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .oct-photo:hover { transform: rotate(0deg) scale(1.02); } }
+@media (max-width: 760px) {
+  .oct-box { grid-template-columns: minmax(0, 1fr); padding: 22px 18px; text-align: center; }
+  .oct-copy { justify-items: center; }
+  .oct-copy .btn-row { justify-content: center; }
+}
+
 </style>
 
 <nav class="topnav" aria-label="Site sections">
@@ -521,6 +543,19 @@ p { margin: 0; }
       </div>
       <p class="search-status" id="q-status" aria-live="polite"></p>
     </form>
+  </section>
+
+  <section class="wrap octfree hide-on-search" id="october-freebie" aria-labelledby="oct-h">
+    <div class="oct-box">
+      <a class="oct-photo" href="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view" target="_blank" rel="noopener"><img src="covers/octslides.webp" alt="My October agenda slides on the classroom TV, with Poe and a spider" loading="lazy"></a>
+      <div class="oct-copy">
+        <p class="eyebrow eyebrow-glow">Free for October</p>
+        <h2 id="oct-h">My spooky October slides, FREE</h2>
+        <p>This is what my students walk into every morning in October. Grab the template in Canva or ClassroomScreen, swap in your own agenda, and you&#x27;re set for spooky season!</p>
+        <div class="btn-row"><a class="btn btn-glow" href="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view" target="_blank" rel="noopener">Get the Canva version<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost" href="https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0" target="_blank" rel="noopener">Get the ClassroomScreen version<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <a class="peek" href="https://www.instagram.com/reel/De7jZ6qyjQk/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a>
+      </div>
+    </div>
   </section>
 
   <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">
@@ -638,7 +673,7 @@ p { margin: 0; }
     
   </div>
 </article><article class="card card-night" data-search="free october slides template my spooky season slide templates, totally free. grab the canva version or the classroomscreen version and make them yours! october fall halloween slides canva classroomscreen free spooky free">
-  <div class="cover cover-text"><span>October Slides</span></div>
+  <div class="cover"><img src="covers/octslides.webp" alt="" loading="lazy"></div>
   <div class="card-body">
     <div class="card-tags"><span class="tag tag-free">Free</span></div>
     <h4>FREE October Slides Template</h4>
@@ -1052,7 +1087,7 @@ p { margin: 0; }
     
   </div>
 </article><article class="card card-free" data-search="october slides template my spooky season slide templates in canva or classroomscreen. make a copy and make them yours! october fall halloween slides canva classroomscreen spooky free">
-  <div class="cover cover-text"><span>October Slides</span></div>
+  <div class="cover"><img src="covers/octslides.webp" alt="" loading="lazy"></div>
   <div class="card-body">
     <div class="card-tags"><span class="tag tag-free">Free</span></div>
     <h4>October Slides Template</h4>
