@@ -72,6 +72,8 @@ def card(p, tone):
     if p.get("audio"):
         reel += a(p["audio"], f'<span class="peek-play">{HEADPHONES}</span><span>Listen free: the audio I play in class</span>', "peek")
         reel += f'<span class="audio-credit">{e(p.get("audio_credit", ""))}</span>' 
+    if p.get("alt"):
+        reel += a(p["alt"][0], f'<span class="peek-play">{ARROW}</span><span>{e(p["alt"][1])}</span>', "peek")
     inside = ""
     if p.get("tour") or p.get("doc"):
         bits = []
