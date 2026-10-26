@@ -68,7 +68,7 @@ def card(p, tone):
     if p.get("audio"):
         tags.append('<span class="tag tag-free">Free audio</span>')
     cta = "Get it free" if (p.get("free") or p["s"] == "free") else "Shop now"
-    reel = peek(p["r"]) if p.get("r") else ""
+    reel = (peek(p["r"], p["rl"]) if p.get("rl") else peek(p["r"])) if p.get("r") else ""
     if p.get("audio"):
         reel += a(p["audio"], f'<span class="peek-play">{HEADPHONES}</span><span>Listen free: the audio I play in class</span>', "peek")
         reel += f'<span class="audio-credit">{e(p.get("audio_credit", ""))}</span>' 
