@@ -175,6 +175,7 @@ def build():
         ("shop", "Shop the Classroom", [(k, n) for k, n in C.SHOP_GROUPS]),
         ("teacher", "Teacher Guides", []),
         ("free", "Free Resources", []),
+        ("reviews", "Reviews", []),
         ("find-me", "Find Me Everywhere", []),
         ("about", "About", []),
         ("/free-claude-guide/", "Free Claude Guide", []),
@@ -185,6 +186,16 @@ def build():
         f'<a class="menu-main" href="{href(i)}">{e(n)}</a>' + "".join(f'<a class="menu-sub" href="#{si}">{e(sn)}</a>' for si, sn in subs)
         for i, n, subs in NAV)
 
+    def rev_url(u):
+        if u.startswith("@"):
+            return next(p["u"] for p in C.PRODUCTS if p["t"] == u[1:])
+        return u
+    reviews = "".join(
+        f'<figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'
+        f'<blockquote>{e(q)}</blockquote><figcaption><b>{e(n)}</b><span>'
+        + (a(rev_url(u), e(prod), "review-prod") if u else f'<span class="review-prod">{e(prod)}</span>')
+        + '</span></figcaption></figure>'
+        for q, n, prod, u in C.REVIEWS)
     ff = C.FAN_FAVORITE
     of = C.OCT_FREE
     shop_nav = "".join(f'<a class="chip chip-{tones[k]}" href="#{k}">{e(n)}</a>' for k, n in C.SHOP_GROUPS)
@@ -309,6 +320,11 @@ def build():
         <div class="btn-row">{a(ff["url"], "Shop now" + ARROW, "btn")}{peek(ff["reel"])}</div>
       </div>
     </div>
+  </section>
+
+  <section class="wrap reviews-wrap hide-on-search" id="reviews" aria-labelledby="rev-h">
+    <div class="block-head"><p class="eyebrow">Real 5-star reviews</p><h2 id="rev-h" class="section-title">What teachers are saying</h2><p class="block-sub">Straight from my Teachers Pay Teachers reviews.</p></div>
+    <div class="reviews">{reviews}</div>
   </section>
 
   <section class="wrap block search-zone" id="shop" aria-labelledby="shop-h">

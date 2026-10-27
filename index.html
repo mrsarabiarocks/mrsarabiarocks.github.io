@@ -503,6 +503,33 @@ p { margin: 0; }
   .oct-copy .btn-row { justify-content: center; }
 }
 
+/* ---------- Reviews ---------- */
+.reviews-wrap { margin-top: 64px; }
+.reviews { columns: 3 280px; column-gap: 20px; }
+.review {
+  break-inside: avoid; margin: 0 0 20px; background: var(--card); border: 3px solid var(--line); border-radius: 20px;
+  padding: 20px 22px; box-shadow: var(--shadow); display: grid; gap: 10px;
+}
+.review:nth-child(3n+1) { background: var(--tint-violet); }
+.review:nth-child(3n+2) { background: var(--tint-sun); }
+.review:nth-child(3n) { background: var(--tint-pink); }
+.review .stars { color: var(--sun); font-size: 1.25rem; letter-spacing: 2px; -webkit-text-stroke: 1px var(--ink); }
+.review blockquote { margin: 0; font-weight: 700; line-height: 1.5; color: var(--text); }
+.review figcaption { display: grid; gap: 2px; font-size: .92rem; }
+.review figcaption b { font-family: var(--f-display); font-weight: 400; font-size: 1.05rem; color: var(--ink); }
+.review-prod { color: var(--muted); font-weight: 800; }
+a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .review figcaption b { color: var(--text); } }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .review { transition: transform .18s ease, box-shadow .18s ease; }
+  .review:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }
+}
+@media (max-width: 760px) {
+  .reviews { columns: auto; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 16px 18px; margin-inline: -16px; -webkit-overflow-scrolling: touch; }
+  .review { flex: 0 0 82%; margin: 0; scroll-snap-align: center; align-content: start; }
+  .reviews-wrap .block-sub::after { content: " Swipe for more."; }
+}
+
 </style>
 
 <nav class="topnav" aria-label="Site sections">
@@ -511,7 +538,7 @@ p { margin: 0; }
     <div class="topnav-links"><a href="#best-seller">PBL Drive</a><a href="#shop">Shop the Classroom</a><a href="#teacher">Teacher Guides</a><a href="#free">Free Resources</a><a href="/free-claude-guide/">Free Claude Guide</a></div>
     <details class="topnav-menu" id="topnav-menu">
       <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
-      <div class="menu-panel"><a class="menu-main" href="#best-seller">PBL Drive</a><a class="menu-main" href="#spotlight">Spooky Season</a><a class="menu-main" href="#shop">Shop the Classroom</a><a class="menu-sub" href="#ela">ELA Units</a><a class="menu-sub" href="#history">History Mini Units</a><a class="menu-sub" href="#projects">Projects</a><a class="menu-sub" href="#setup">Classroom Setup</a><a class="menu-main" href="#teacher">Teacher Guides</a><a class="menu-main" href="#free">Free Resources</a><a class="menu-main" href="#find-me">Find Me Everywhere</a><a class="menu-main" href="#about">About</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a></div>
+      <div class="menu-panel"><a class="menu-main" href="#best-seller">PBL Drive</a><a class="menu-main" href="#spotlight">Spooky Season</a><a class="menu-main" href="#shop">Shop the Classroom</a><a class="menu-sub" href="#ela">ELA Units</a><a class="menu-sub" href="#history">History Mini Units</a><a class="menu-sub" href="#projects">Projects</a><a class="menu-sub" href="#setup">Classroom Setup</a><a class="menu-main" href="#teacher">Teacher Guides</a><a class="menu-main" href="#free">Free Resources</a><a class="menu-main" href="#reviews">Reviews</a><a class="menu-main" href="#find-me">Find Me Everywhere</a><a class="menu-main" href="#about">About</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a></div>
     </details>
   </div>
 </nav>
@@ -696,6 +723,11 @@ p { margin: 0; }
         <div class="btn-row"><a class="btn" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
       </div>
     </div>
+  </section>
+
+  <section class="wrap reviews-wrap hide-on-search" id="reviews" aria-labelledby="rev-h">
+    <div class="block-head"><p class="eyebrow">Real 5-star reviews</p><h2 id="rev-h" class="section-title">What teachers are saying</h2><p class="block-sub">Straight from my Teachers Pay Teachers reviews.</p></div>
+    <div class="reviews"><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I purchased this Google Drive last week. I am a 5-6 GT teacher. I started the multiple intelligences with my 5th graders and the There Will Come Soft Rains with my 6th graders... these resources are AMAZING. The annotation pages and prompts are truly exactly what I need. Best money I have ever spent on TPT... thank you! Can&#x27;t wait to explore more!</blockquote><figcaption><b>Emma B.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Growing PBL Google Drive</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>A perfect mini-unit when I needed it in a pinch. Kids were engaged and I loved it too.</blockquote><figcaption><b>Sandy H.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">The Raven Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I will use this every year from now on! My students love getting the chance to be creative and this was the perfect way to end our year!</blockquote><figcaption><b>McKenzie S.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/novel-choice-project-1-pager--character-feature/" target="_blank" rel="noopener">Novel Choice Project</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This resource was easy to use and well-organized. My students were engaged and clearly understood the lesson objectives. It saved me a lot of prep time and aligned well with what I needed to teach. I would definitely recommend this to other teachers!</blockquote><figcaption><b>Schooling with a side of Sarcasm</b><span><span class="review-prod">Tell-Tale Heart Movie Premiere Poster</span></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This is everything you need and more to model and teach effective poem analysis.</blockquote><figcaption><b>Samantha N.</b><span><a class="review-prod" href="https://www.teacherspayteachers.com/Product/Langston-Hughes-Mini-Unit-Project-Based-Learning-in-Poetry-Dreams-Harlem-11022227" target="_blank" rel="noopener">Langston Hughes Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>A great resource to engage students. They learned about Kobe and how he pushed himself to be better. Thank you.</blockquote><figcaption><b>Denise P.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/kobe-mini-unit/" target="_blank" rel="noopener">KOBE Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This resource is well-designed, easy to use, and a valuable addition to any teacher&#x27;s toolkit.</blockquote><figcaption><b>Kim D.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Growing Drive</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This is an amazing idea! Many things on drive that are useful.</blockquote><figcaption><b>Alva M.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Growing PBL Google Drive</a></span></figcaption></figure></div>
   </section>
 
   <section class="wrap block search-zone" id="shop" aria-labelledby="shop-h">

@@ -167,6 +167,17 @@ PRODUCTS = [
     dict(s="free", t="Step Up to Writing Organizer", d="An 8 to 11 sentence paragraph organizer and rubric.", u=T+"Step-Up-To-Writing-8-11-Sentence-Graphic-Organizer-Rubric-4068940", tpt=True, img="tpt4068940", kw="writing paragraph organizer"),
 ]
 
+REVIEWS = [
+    ("I purchased this Google Drive last week. I am a 5-6 GT teacher. I started the multiple intelligences with my 5th graders and the There Will Come Soft Rains with my 6th graders... these resources are AMAZING. The annotation pages and prompts are truly exactly what I need. Best money I have ever spent on TPT... thank you! Can't wait to explore more!", "Emma B.", "Growing PBL Google Drive", TC + "pbl-growing-drive/"),
+    ("A perfect mini-unit when I needed it in a pinch. Kids were engaged and I loved it too.", "Sandy H.", "The Raven Mini Unit", "@Poe: The Raven Mini Unit"),
+    ("I will use this every year from now on! My students love getting the chance to be creative and this was the perfect way to end our year!", "McKenzie S.", "Novel Choice Project", "@Novel Choice Project"),
+    ("This resource was easy to use and well-organized. My students were engaged and clearly understood the lesson objectives. It saved me a lot of prep time and aligned well with what I needed to teach. I would definitely recommend this to other teachers!", "Schooling with a side of Sarcasm", "Tell-Tale Heart Movie Premiere Poster", ""),
+    ("This is everything you need and more to model and teach effective poem analysis.", "Samantha N.", "Langston Hughes Mini Unit", "@Langston Hughes Mini Unit"),
+    ("A great resource to engage students. They learned about Kobe and how he pushed himself to be better. Thank you.", "Denise P.", "KOBE Mini Unit", "@KOBE Mini Unit"),
+    ("This resource is well-designed, easy to use, and a valuable addition to any teacher's toolkit.", "Kim D.", "Back to School Growing Drive", "@Back to School Growing Drive"),
+    ("This is an amazing idea! Many things on drive that are useful.", "Alva M.", "Growing PBL Google Drive", TC + "pbl-growing-drive/"),
+]
+
 SHOP_GROUPS = [
     ("ela", "ELA Units"),
     ("history", "History Mini Units"),
