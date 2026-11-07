@@ -517,3 +517,23 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
   .review { flex: 0 0 82%; margin: 0; scroll-snap-align: center; align-content: start; }
   .reviews-wrap .block-sub::after { content: " Swipe for more."; }
 }
+
+/* ---------- Nov 2026: Claude + Toolkit features, favorite videos ---------- */
+.best + .best { margin-top: 44px; }
+.feature-claude .best-box { background: var(--tint-blue); }
+.feature-claude .best-cover img { aspect-ratio: auto; }
+.feature-toolkit .best-box { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); background: var(--tint-pink, var(--tint-violet)); }
+.feature-toolkit .best-side { order: 2; }
+.feature-toolkit .best-cover { transform: rotate(3deg); }
+.free-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 900; color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.free-link svg { width: 18px; height: 18px; }
+.popular { margin-top: 64px; }
+.pop-reels { gap: 24px; }
+.pop-reels .spot-reel { width: min(100%, 340px); }
+.pop-reels .reel { position: relative; display: grid; place-items: center; gap: 10px; text-align: center; text-decoration: none; min-height: 300px; padding: 24px; border-radius: 22px; border: 3px solid var(--line); box-shadow: var(--shadow); background: linear-gradient(160deg, #2A1366 0%, #12072E 100%); color: #FFFFFF; }
+.pop-reels .reel-embed { background: var(--card); padding: 10px; min-height: 0; }
+@media (max-width: 860px) {
+  .feature-toolkit .best-box { grid-template-columns: minmax(0, 1fr); }
+  .feature-toolkit .best-side { order: 0; }
+  .best-copy .free-link { justify-self: center; }
+}

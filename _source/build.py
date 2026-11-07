@@ -153,15 +153,25 @@ def build():
     reels = sp.get("reels") or [(sp["reel"], sp["reel_title"])]
     reel_block = "".join(f'<div class="spot-reel">{one_reel(u, t)}</div>' for u, t in reels)
 
+    def site_img(path):
+        if MODE == "preview":
+            return "data:image/jpeg;base64," + base64.b64encode((pathlib.Path(__file__).parent.parent / path).read_bytes()).decode()
+        return path
+    cf = C.CLAUDE_FEATURE
+    cf_stats = "".join(f"<li>{e(x)}</li>" for x in cf["stats"])
+    tk = C.TOOLKIT
+    tk_list = "".join(f"<li>{e(x)}</li>" for x in C.BTS_INSIDE if x != "1. Start Here")
+    pop_block = "".join(f'<div class="spot-reel">{one_reel(u, t)}</div>' for u, t in C.POPULAR_REELS)
+
     cs = C.CLAUDE_SITE
     claude_cta = f'''<div class="cta-box cta-claude">
       <div class="cta-copy"><p class="eyebrow">{e(cs["eyebrow"])}</p><h3 class="cta-title">{e(cs["headline"])}</h3><p>{e(cs["body"])}</p>
       {a(cs["url"], "Open my Free Claude Guide" + ARROW, "btn")}</div>
     </div>'''
     bts_cta = f'''<div class="cta-box">
-      <a class="cta-cover" href="{e(C.TC + "back-to-school-growing-drive/")}" target="_blank" rel="noopener"><img src="{img_src("bts")}" alt="Back to School Growing Google Drive" loading="lazy"></a>
-      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
-      {a(C.TC + "back-to-school-growing-drive/", "Get the Back to School Drive" + ARROW, "btn")}</div>
+      <a class="cta-cover" href="{e(C.TC + "back-to-school-growing-drive/")}" target="_blank" rel="noopener"><img src="{img_src("bts")}" alt="{e(C.TOOLKIT_NAME)}" loading="lazy"></a>
+      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my {e(C.TOOLKIT_NAME)}. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
+      {a(C.TC + "back-to-school-growing-drive/", "Get the Toolkit Drive" + ARROW, "btn")}</div>
     </div>'''
 
     gallery = "".join(f'<figure class="poe-frame"><img src="{img_src(k)}" alt="{e(alt)}" loading="lazy"></figure>' for k, alt in sp.get("gallery", []))
@@ -171,17 +181,20 @@ def build():
 
     NAV = [
         ("best-seller", "PBL Drive", []),
-        ("spotlight", "Spooky Season", []),
+        ("claude", "Claude", []),
+        ("toolkit", "Toolkit Drive", []),
+        ("popular", "Favorite Videos", []),
         ("shop", "Shop the Classroom", [(k, n) for k, n in C.SHOP_GROUPS]),
         ("teacher", "Teacher Guides", []),
         ("free", "Free Resources", []),
+        ("spotlight", "The Poe Corner", []),
         ("reviews", "Reviews", []),
         ("find-me", "Find Me Everywhere", []),
         ("about", "About", []),
         ("/free-claude-guide/", "Free Claude Guide", []),
     ]
     href = lambda i: i if i.startswith("/") else "#" + i
-    nav_inline = "".join(f'<a href="{href(i)}">{e(n)}</a>' for i, n, _ in NAV if i in ("best-seller", "shop", "teacher", "free", "/free-claude-guide/"))
+    nav_inline = "".join(f'<a href="{href(i)}">{e(n)}</a>' for i, n, _ in NAV if i in ("best-seller", "claude", "toolkit", "shop", "free"))
     nav_menu = "".join(
         f'<a class="menu-main" href="{href(i)}">{e(n)}</a>' + "".join(f'<a class="menu-sub" href="#{si}">{e(sn)}</a>' for si, sn in subs)
         for i, n, subs in NAV)
@@ -197,7 +210,6 @@ def build():
         + '</span></figcaption></figure>'
         for q, n, prod, u in C.REVIEWS)
     ff = C.FAN_FAVORITE
-    of = C.OCT_FREE
     shop_nav = "".join(f'<a class="chip chip-{tones[k]}" href="#{k}">{e(n)}</a>' for k, n in C.SHOP_GROUPS)
     shop = "".join(
         f'<div class="group" id="{k}"><h3 class="group-title"><span class="dot dot-{tones[k]}"></span>{e(n)}</h3>'
@@ -251,25 +263,13 @@ def build():
       <label for="q" class="search-label">Looking for something?</label>
       <div class="search-box">
         {SEARCH}
-        <input id="q" type="search" placeholder="Try Poe, PBL, free, AI, back to school" autocomplete="off">
+        <input id="q" type="search" placeholder="Try PBL, Claude, Poe, free, agenda slides" autocomplete="off">
         <button type="button" id="q-clear" class="search-clear" hidden>Clear</button>
       </div>
       <p class="search-status" id="q-status" aria-live="polite"></p>
     </form>
   </section>
 
-  <section class="wrap octfree hide-on-search" id="october-freebie" aria-labelledby="oct-h">
-    <div class="oct-box">
-      <a class="oct-photo" href="{e(of["canva"])}" target="_blank" rel="noopener"><img src="{img_src(of["img"])}" alt="My October agenda slides on the classroom TV, with Poe and a spider" loading="lazy"></a>
-      <div class="oct-copy">
-        <p class="eyebrow eyebrow-glow">{e(of["eyebrow"])}</p>
-        <h2 id="oct-h">{e(of["headline"])}</h2>
-        <p>{e(of["body"])}</p>
-        <div class="btn-row">{a(of["canva"], "Get the Canva version" + ARROW, "btn btn-glow")}{a(of["cs"], "Get the ClassroomScreen version" + ARROW, "btn btn-ghost")}</div>
-        {peek(of["reel"])}
-      </div>
-    </div>
-  </section>
 
   <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">
     <div class="best-box">
@@ -288,26 +288,44 @@ def build():
     </div>
   </section>
 
-  <section class="spotlight search-zone" id="spotlight" aria-labelledby="spot-h">
-    <div class="moon" aria-hidden="true"></div>{bats}
-    <div class="wrap">
-      <div class="spot-head hide-on-search">
-        <p class="eyebrow eyebrow-glow">{e(sp["eyebrow"])}</p>
-        <h2 id="spot-h" class="glow-title">{e(sp["headline"])}</h2>
-        <p class="spot-body">{e(sp["body"])}</p>
-        <div class="btn-row btn-row-center">{sp_buttons}</div>
+
+  <section class="wrap best feature-claude hide-on-search" id="claude" aria-labelledby="claude-h">
+    <div class="best-box">
+      <div class="best-side">
+        <a class="best-cover" href="{e(cf["url"])}" target="_blank" rel="noopener"><img src="{site_img(cf["img"])}" alt="The Teacher Helper Project guide cover" loading="lazy"></a>
       </div>
-      <div class="spot-feature hide-on-search">
-        <div class="reels-frame">
-          <span class="reels-label">Peek inside my classroom</span>
-          <div class="spot-reels">{reel_block}</div>
-        </div>
-        <div class="poe-gallery" aria-label="Poe portrait and illustrations">{gallery}</div>
-      </div>
-      <div class="grid grid-night">
-        {spooky_cards}
+      <div class="best-copy">
+        <p class="eyebrow">{e(cf["eyebrow"])}</p>
+        <h2 id="claude-h" class="best-title">{e(cf["headline"])}</h2>
+        <p>{e(cf["body"])}</p>
+        <ul class="best-list">{cf_stats}</ul>
+        <div class="btn-row">{a(cf["url"], "Get The Teacher Helper Project" + ARROW, "btn btn-huge")}</div>
+        <a class="free-link" href="{e(cf["free"])}">New to Claude? Start with my FREE Claude Guide{ARROW}</a>
+        {peek(cf["reel"], "Watch Claude build my workshop board")}
       </div>
     </div>
+  </section>
+
+  <section class="wrap best feature-toolkit hide-on-search" id="toolkit" aria-labelledby="toolkit-h">
+    <div class="best-box">
+      <div class="best-side">
+        <a class="best-cover" href="{e(tk["url"])}" target="_blank" rel="noopener"><img src="{img_src(tk["img"])}" alt="{e(C.TOOLKIT_NAME)}" loading="lazy"></a>
+        <div class="inside-row">{a(tk["tour"], f'<span class="peek-play">{PLAY}</span><span>Watch a video tour of the Drive</span>', "peek")}</div>
+      </div>
+      <div class="best-copy">
+        <p class="eyebrow">{e(tk["eyebrow"])}</p>
+        <h2 id="toolkit-h" class="best-title">{e(tk["headline"])}</h2>
+        <p>{e(tk["body"])}</p>
+        <ul class="best-list">{tk_list}</ul>
+        {a(tk["url"], "Get the Toolkit Drive" + ARROW, "btn btn-huge")}
+        {peek(tk["reel"])}
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block popular hide-on-search" id="popular" aria-labelledby="pop-h">
+    {head("Teachers' Favorite Videos", "The ones you all keep saving and sharing.", "pop-h", eyebrow="Most loved")}
+    <div class="spot-reels pop-reels">{pop_block}</div>
   </section>
 
   <section class="wrap fan hide-on-search" id="fan-favorite" aria-labelledby="fan-h">
@@ -340,6 +358,28 @@ def build():
   <section class="wrap block search-zone" aria-labelledby="free-h" id="free">
     {head("Free Resources", "Totally free! Try these first and see if my style works for your kiddos.", "free-h")}
     <div class="grid">{free}</div>
+  </section>
+
+  <section class="spotlight search-zone" id="spotlight" aria-labelledby="spot-h">
+    <div class="moon" aria-hidden="true"></div>{bats}
+    <div class="wrap">
+      <div class="spot-head hide-on-search">
+        <p class="eyebrow eyebrow-glow">{e(sp["eyebrow"])}</p>
+        <h2 id="spot-h" class="glow-title">{e(sp["headline"])}</h2>
+        <p class="spot-body">{e(sp["body"])}</p>
+        <div class="btn-row btn-row-center">{sp_buttons}</div>
+      </div>
+      <div class="spot-feature hide-on-search">
+        <div class="reels-frame">
+          <span class="reels-label">Peek inside my classroom</span>
+          <div class="spot-reels">{reel_block}</div>
+        </div>
+        <div class="poe-gallery" aria-label="Poe portrait and illustrations">{gallery}</div>
+      </div>
+      <div class="grid grid-night">
+        {spooky_cards}
+      </div>
+    </div>
   </section>
 
   <p class="wrap no-results" id="no-results" hidden>Hmm, nothing matches that yet. Try another word, or check my <a href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener">TPT store</a>.</p>

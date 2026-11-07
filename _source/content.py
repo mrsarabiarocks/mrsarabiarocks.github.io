@@ -38,9 +38,9 @@ BEST_SELLER = {
 }
 
 SPOTLIGHT = {
-    "eyebrow": "Spooky Season Spotlight",
+    "eyebrow": "The Poe Corner",
     "headline": "Lights off, highlighters out.",
-    "body": "This is my FAVORITE MONTH of the whole year. We turn off the lights, pass out the blacklight highlighters, and annotate Poe. Here's what it looks like in my room, plus everything you need to do it in yours!",
+    "body": "Spooky season is my FAVORITE time of year. We turn off the lights, grab the blacklight highlighters, and annotate Poe. Save this for next October, or bring the spooky any time your kids need a jolt!",
     "reel": ig("DeJ8tEED88J"),
     "reel_title": "Blacklight Poe annotating",
     "reels": [
@@ -122,7 +122,7 @@ PRODUCTS = [
     dict(s="projects", t="Shark Tank Inventor Project", d="The editable version of my Shark Tank project. Students invent, pitch, and defend.", u=T+"Editable-SHARK-TANK-Inventor-Project-5381643", tpt=True, img="tpt5381643", kw="pbl shark tank invention"),
 
     # Classroom setup
-    dict(s="setup", t="Back to School Growing Drive", d="Everything I use to start the year, in one Google Drive that keeps growing.", u=TC + "back-to-school-growing-drive/", r=ig("DZsWa_uDBBw"), img="bts", tour="https://drive.google.com/file/d/1rEnuz_vUuhykzUCSE13qe1e6TwAFw3R3/view?usp=drive_link", kw="back to school first week"),
+    dict(s="setup", t="Teacher Toolkit Drive", d="Everything I use to run my classroom all year, in one Google Drive that keeps growing.", u=TC + "back-to-school-growing-drive/", r=ig("DZsWa_uDBBw"), img="bts", tour="https://drive.google.com/file/d/1rEnuz_vUuhykzUCSE13qe1e6TwAFw3R3/view?usp=drive_link", kw="back to school first week toolkit organization planning"),
     dict(s="setup", t="Back to School Syllabus", d="An editable syllabus that's ready for your first week.", u=TC + "back-to-school-syllabus/", img="syllabus", kw="back to school"),
     dict(s="setup", t="Back to School Brochure", d="A cute Canva brochure for meet the teacher and back to school night.", u=TC + "backtoschool-brochure/", img="brochure", kw="back to school parents canva"),
     dict(s="setup", t="Editable Upper Grade Classroom Decor", d="Decor made for middle and high school walls. No baby stuff!", u="https://www.teacherspayteachers.com/Product/EDITABLE-Upper-Grade-Classroom-Decor-Middle-Junior-High-High-School-9888991", tpt=True, img="decor", kw="decor posters"),
@@ -174,7 +174,7 @@ REVIEWS = [
     ("This resource was easy to use and well-organized. My students were engaged and clearly understood the lesson objectives. It saved me a lot of prep time and aligned well with what I needed to teach. I would definitely recommend this to other teachers!", "Schooling with a side of Sarcasm", "The Tell-Tale Heart Mini Unit", "@Poe: The Tell-Tale Heart Mini Unit"),
     ("This is everything you need and more to model and teach effective poem analysis.", "Samantha N.", "Langston Hughes Mini Unit", "@Langston Hughes Mini Unit"),
     ("A great resource to engage students. They learned about Kobe and how he pushed himself to be better. Thank you.", "Denise P.", "KOBE Mini Unit", "@KOBE Mini Unit"),
-    ("This resource is well-designed, easy to use, and a valuable addition to any teacher's toolkit.", "Kim D.", "Back to School Growing Drive", "@Back to School Growing Drive"),
+    ("This resource is well-designed, easy to use, and a valuable addition to any teacher's toolkit.", "Kim D.", "Teacher Toolkit Drive", "@Teacher Toolkit Drive"),
     ("This is an amazing idea! Many things on drive that are useful.", "Alva M.", "Growing PBL Google Drive", TC + "pbl-growing-drive/"),
 ]
 
@@ -219,3 +219,33 @@ CLAUDE_SITE = {
     "body": "My Free Claude Guide walks you through it step by step, with the exact prompts I use to plan faster, differentiate without losing my mind, and get my evenings back. Beginner friendly, with an advanced level when you're ready.",
     "url": "/free-claude-guide/",
 }
+
+# Name for the Back to School Growing Drive on the site (ThriveCart link stays the same)
+TOOLKIT_NAME = "Teacher Toolkit Drive"
+
+CLAUDE_FEATURE = {
+    "eyebrow": "My Claude teacher assistant",
+    "headline": "The Teacher Helper Project",
+    "body": "Drop this guide into Claude and it works the way I work. Just name a move, answer a few quick questions, and Claude builds it for YOUR class.",
+    "stats": ["41 ready-to-go moves", "Beginner to advanced, all in one PDF", "Your download link always has the newest version"],
+    "img": "free-claude-guide/img/teacher-helper-cover.jpg",
+    "url": TC + "claude-guide-the-teacher-helper-project/",
+    "free": "/free-claude-guide/",
+    "reel": ig("Desvw-WTv6l"),
+}
+
+TOOLKIT = {
+    "eyebrow": "Run your whole year",
+    "headline": "The " + TOOLKIT_NAME,
+    "body": "Agenda slides, planning templates, annotation guides, icebreakers, classroom setup, and all my AI guides in ONE Google Drive that keeps growing. It's how I stay in charge of my plans instead of the other way around.",
+    "img": "bts",
+    "url": TC + "back-to-school-growing-drive/",
+    "tour": "https://drive.google.com/file/d/1rEnuz_vUuhykzUCSE13qe1e6TwAFw3R3/view?usp=drive_link",
+    "reel": ig("DZsWa_uDBBw"),
+}
+
+POPULAR_REELS = [
+    (ig("DbBoju3veLA"), "A whole year of agenda slides"),
+    (ig("DX-s1VWzEqv"), "How I annotate"),
+    (ig("DbYdTMAE6j0"), "Hot Takes first day activity"),
+]

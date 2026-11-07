@@ -530,15 +530,35 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
   .reviews-wrap .block-sub::after { content: " Swipe for more."; }
 }
 
+/* ---------- Nov 2026: Claude + Toolkit features, favorite videos ---------- */
+.best + .best { margin-top: 44px; }
+.feature-claude .best-box { background: var(--tint-blue); }
+.feature-claude .best-cover img { aspect-ratio: auto; }
+.feature-toolkit .best-box { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); background: var(--tint-pink, var(--tint-violet)); }
+.feature-toolkit .best-side { order: 2; }
+.feature-toolkit .best-cover { transform: rotate(3deg); }
+.free-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 900; color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.free-link svg { width: 18px; height: 18px; }
+.popular { margin-top: 64px; }
+.pop-reels { gap: 24px; }
+.pop-reels .spot-reel { width: min(100%, 340px); }
+.pop-reels .reel { position: relative; display: grid; place-items: center; gap: 10px; text-align: center; text-decoration: none; min-height: 300px; padding: 24px; border-radius: 22px; border: 3px solid var(--line); box-shadow: var(--shadow); background: linear-gradient(160deg, #2A1366 0%, #12072E 100%); color: #FFFFFF; }
+.pop-reels .reel-embed { background: var(--card); padding: 10px; min-height: 0; }
+@media (max-width: 860px) {
+  .feature-toolkit .best-box { grid-template-columns: minmax(0, 1fr); }
+  .feature-toolkit .best-side { order: 0; }
+  .best-copy .free-link { justify-self: center; }
+}
+
 </style>
 
 <nav class="topnav" aria-label="Site sections">
   <div class="wrap topnav-inner">
     <a class="topnav-name" href="#top">Michaela Arabia</a>
-    <div class="topnav-links"><a href="#best-seller">PBL Drive</a><a href="#shop">Shop the Classroom</a><a href="#teacher">Teacher Guides</a><a href="#free">Free Resources</a><a href="/free-claude-guide/">Free Claude Guide</a></div>
+    <div class="topnav-links"><a href="#best-seller">PBL Drive</a><a href="#claude">Claude</a><a href="#toolkit">Toolkit Drive</a><a href="#shop">Shop the Classroom</a><a href="#free">Free Resources</a></div>
     <details class="topnav-menu" id="topnav-menu">
       <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
-      <div class="menu-panel"><a class="menu-main" href="#best-seller">PBL Drive</a><a class="menu-main" href="#spotlight">Spooky Season</a><a class="menu-main" href="#shop">Shop the Classroom</a><a class="menu-sub" href="#ela">ELA Units</a><a class="menu-sub" href="#history">History Mini Units</a><a class="menu-sub" href="#projects">Projects</a><a class="menu-sub" href="#setup">Classroom Setup</a><a class="menu-main" href="#teacher">Teacher Guides</a><a class="menu-main" href="#free">Free Resources</a><a class="menu-main" href="#reviews">Reviews</a><a class="menu-main" href="#find-me">Find Me Everywhere</a><a class="menu-main" href="#about">About</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a></div>
+      <div class="menu-panel"><a class="menu-main" href="#best-seller">PBL Drive</a><a class="menu-main" href="#claude">Claude</a><a class="menu-main" href="#toolkit">Toolkit Drive</a><a class="menu-main" href="#popular">Favorite Videos</a><a class="menu-main" href="#shop">Shop the Classroom</a><a class="menu-sub" href="#ela">ELA Units</a><a class="menu-sub" href="#history">History Mini Units</a><a class="menu-sub" href="#projects">Projects</a><a class="menu-sub" href="#setup">Classroom Setup</a><a class="menu-main" href="#teacher">Teacher Guides</a><a class="menu-main" href="#free">Free Resources</a><a class="menu-main" href="#spotlight">The Poe Corner</a><a class="menu-main" href="#reviews">Reviews</a><a class="menu-main" href="#find-me">Find Me Everywhere</a><a class="menu-main" href="#about">About</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a></div>
     </details>
   </div>
 </nav>
@@ -565,25 +585,13 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
       <label for="q" class="search-label">Looking for something?</label>
       <div class="search-box">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>
-        <input id="q" type="search" placeholder="Try Poe, PBL, free, AI, back to school" autocomplete="off">
+        <input id="q" type="search" placeholder="Try PBL, Claude, Poe, free, agenda slides" autocomplete="off">
         <button type="button" id="q-clear" class="search-clear" hidden>Clear</button>
       </div>
       <p class="search-status" id="q-status" aria-live="polite"></p>
     </form>
   </section>
 
-  <section class="wrap octfree hide-on-search" id="october-freebie" aria-labelledby="oct-h">
-    <div class="oct-box">
-      <a class="oct-photo" href="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view" target="_blank" rel="noopener"><img src="covers/octslides.webp" alt="My October agenda slides on the classroom TV, with Poe and a spider" loading="lazy"></a>
-      <div class="oct-copy">
-        <p class="eyebrow eyebrow-glow">Free for October</p>
-        <h2 id="oct-h">My spooky October slides, FREE</h2>
-        <p>This is what my students walk into every morning in October. Grab the template in Canva or ClassroomScreen, swap in your own agenda, and you&#x27;re set for spooky season!</p>
-        <div class="btn-row"><a class="btn btn-glow" href="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view" target="_blank" rel="noopener">Get the Canva version<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost" href="https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0" target="_blank" rel="noopener">Get the ClassroomScreen version<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        <a class="peek" href="https://www.instagram.com/reel/De7jZ6qyjQk/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a>
-      </div>
-    </div>
-  </section>
 
   <section class="wrap best hide-on-search" id="best-seller" aria-labelledby="best-h">
     <div class="best-box">
@@ -602,115 +610,56 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
     </div>
   </section>
 
-  <section class="spotlight search-zone" id="spotlight" aria-labelledby="spot-h">
-    <div class="moon" aria-hidden="true"></div><span class="bat bat-1"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-2"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-3"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-4"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-5"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span>
-    <div class="wrap">
-      <div class="spot-head hide-on-search">
-        <p class="eyebrow eyebrow-glow">Spooky Season Spotlight</p>
-        <h2 id="spot-h" class="glow-title">Lights off, highlighters out.</h2>
-        <p class="spot-body">This is my FAVORITE MONTH of the whole year. We turn off the lights, pass out the blacklight highlighters, and annotate Poe. Here&#x27;s what it looks like in my room, plus everything you need to do it in yours!</p>
-        <div class="btn-row btn-row-center"><a class="btn btn-glow" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-4-week-bundle/" target="_blank" rel="noopener">Get the Poe bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost" href="https://urlgeni.us/amazon/ZcwVyW" target="_blank" rel="noopener">Shop my blacklight supplies<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+
+  <section class="wrap best feature-claude hide-on-search" id="claude" aria-labelledby="claude-h">
+    <div class="best-box">
+      <div class="best-side">
+        <a class="best-cover" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener"><img src="free-claude-guide/img/teacher-helper-cover.jpg" alt="The Teacher Helper Project guide cover" loading="lazy"></a>
       </div>
-      <div class="spot-feature hide-on-search">
-        <div class="reels-frame">
-          <span class="reels-label">Peek inside my classroom</span>
-          <div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DeJ8tEED88J/?utm_source=ig_embed" data-instgrm-version="14">
-            <a href="https://www.instagram.com/reel/DeJ8tEED88J/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Blacklight Poe annotating</span><span class="reel-sub">Watch on Instagram</span></a>
-          </blockquote>
-        </div></div><div class="spot-reel"><div class="reel reel-embed">
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DePGTNdgsdF/?utm_source=ig_embed" data-instgrm-version="14">
-            <a href="https://www.instagram.com/reel/DePGTNdgsdF/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Teaching one of Poe&#x27;s hardest stories</span><span class="reel-sub">Watch on Instagram</span></a>
-          </blockquote>
-        </div></div></div>
-        </div>
-        <div class="poe-gallery" aria-label="Poe portrait and illustrations"><figure class="poe-frame"><img src="covers/spooky-poe1848.webp" alt="Edgar Allan Poe, 1848" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-dore19.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke6.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-pg33.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke4.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><p class="poe-credit">Portrait and illustrations: Edgar Allan Poe daguerreotype (1848), Gustave Dore's The Raven (1884), Harry Clarke (1919). Public domain.</p></div>
-      </div>
-      <div class="grid grid-night">
-        <article class="card card-night" data-search="poe: the raven mini unit a full week of raven plans, fully editable. moody, creepy, and so fun to teach. poe halloween october ">
-  <div class="cover"><img src="covers/raven.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"></div>
-    <h4>Poe: The Raven Mini Unit</h4>
-    <p>A full week of Raven plans, fully editable. Moody, creepy, and SO fun to teach.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddy_SyTgYP_/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="poe: the tell-tale heart mini unit a full week of tell-tale heart plans, fully editable. heart-pounding in the best way. poe halloween october audio free audio listen read aloud ">
-  <div class="cover"><img src="covers/telltale.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"><span class="tag tag-free">Free audio</span></div>
-    <h4>Poe: The Tell-Tale Heart Mini Unit</h4>
-    <p>A full week of Tell-Tale Heart plans, fully editable. Heart-pounding in the best way.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://youtu.be/KnHFMAxACnM" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="3" y="13" width="5" height="7" rx="2" fill="currentColor"/><rect x="16" y="13" width="5" height="7" rx="2" fill="currentColor"/></svg></span><span>Listen free: the audio I play in class</span></a><span class="audio-credit">Dramatic reading by G.M. Danielson, The Tale Master on YouTube</span></div>
-    
-  </div>
-</article><article class="card card-night" data-search="poe: the fall of the house of usher mini unit a full week of usher plans, fully editable. watch my kids try to sell the house! poe halloween october ">
-  <div class="cover"><img src="covers/usher.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"></div>
-    <h4>Poe: The Fall of the House of Usher Mini Unit</h4>
-    <p>A full week of Usher plans, fully editable. Watch my kids try to SELL the house!</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="poe: the cask of amontillado mini unit annotations, a plot diagram, and a project for poe&#x27;s sneakiest revenge story. poe halloween october amontillado ">
-  <div class="cover"><img src="covers/cask.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"><span class="tag">On TPT</span></div>
-    <h4>Poe: The Cask of Amontillado Mini Unit</h4>
-    <p>Annotations, a plot diagram, and a project for Poe&#x27;s sneakiest revenge story.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/The-Cask-of-Amontillado-Mini-Unit-Poe-Annotations-Plot-Diagram-PBL-Project-10262608" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="the monkey&#x27;s paw: 5-day foreshadowing unit five days of foreshadowing with a story that gives everyone chills. short story halloween october ">
-  <div class="cover"><img src="covers/monkey.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"></div>
-    <h4>The Monkey&#x27;s Paw: 5-Day Foreshadowing Unit</h4>
-    <p>Five days of foreshadowing with a story that gives EVERYONE chills.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/the-monkeys-paw-5-day-foreshadowing-unit/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddw6W2JyEWH/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="the lottery: meme and lesson activity a creepy classic plus a meme assessment your students will actually want to do. and it&#x27;s free! short story halloween meme free free">
-  <div class="cover"><img src="covers/lottery.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"><span class="tag tag-free">Free</span></div>
-    <h4>The Lottery: Meme and Lesson Activity</h4>
-    <p>A creepy classic plus a meme assessment your students will actually want to do. And it&#x27;s FREE!</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/the-lottery-meme--lesson-activity/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZk76x-vo-M/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="free annotations guide, grades 5 to 12 exactly how i teach annotating, step by step. perfect before blacklight week! annotation free free">
-  <div class="cover cover-text"><span>Annotate!</span></div>
-  <div class="card-body">
-    <div class="card-tags"><span class="tag tag-free">Free</span></div>
-    <h4>Free Annotations Guide, Grades 5 to 12</h4>
-    <p>Exactly how I teach annotating, step by step. Perfect before blacklight week!</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotations-guide-for-grades-5-12/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="free poe unit: 4 weeks of ideas my whole month of poe lesson ideas and plans, totally free. start here! poe halloween october free free">
-  <div class="cover"><img src="covers/tpt10254735.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
-    <h4>FREE Poe Unit: 4 Weeks of Ideas</h4>
-    <p>My whole month of Poe lesson ideas and plans, totally free. Start here!</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/FREE-Edgar-Allan-Poe-Unit-4-Weeks-of-IDEAS-Lesson-Plans-10254735" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    
-  </div>
-</article><article class="card card-night" data-search="free october slides template my spooky season slide templates, totally free. grab the canva version or the classroomscreen version and make them yours! october fall halloween slides canva classroomscreen free spooky free">
-  <div class="cover"><img src="covers/octslides.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"><span class="tag tag-free">Free</span></div>
-    <h4>FREE October Slides Template</h4>
-    <p>My spooky season slide templates, totally free. Grab the Canva version or the ClassroomScreen version and make them yours!</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/De7jZ6qyjQk/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a><a class="peek" href="https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Or grab the ClassroomScreen version</span></a></div>
-    
-  </div>
-</article>
+      <div class="best-copy">
+        <p class="eyebrow">My Claude teacher assistant</p>
+        <h2 id="claude-h" class="best-title">The Teacher Helper Project</h2>
+        <p>Drop this guide into Claude and it works the way I work. Just name a move, answer a few quick questions, and Claude builds it for YOUR class.</p>
+        <ul class="best-list"><li>41 ready-to-go moves</li><li>Beginner to advanced, all in one PDF</li><li>Your download link always has the newest version</li></ul>
+        <div class="btn-row"><a class="btn btn-huge" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <a class="free-link" href="/free-claude-guide/">New to Claude? Start with my FREE Claude Guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="peek" href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch Claude build my workshop board</span></a>
       </div>
     </div>
+  </section>
+
+  <section class="wrap best feature-toolkit hide-on-search" id="toolkit" aria-labelledby="toolkit-h">
+    <div class="best-box">
+      <div class="best-side">
+        <a class="best-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="covers/bts.webp" alt="Teacher Toolkit Drive" loading="lazy"></a>
+        <div class="inside-row"><a class="peek" href="https://drive.google.com/file/d/1rEnuz_vUuhykzUCSE13qe1e6TwAFw3R3/view?usp=drive_link" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch a video tour of the Drive</span></a></div>
+      </div>
+      <div class="best-copy">
+        <p class="eyebrow">Run your whole year</p>
+        <h2 id="toolkit-h" class="best-title">The Teacher Toolkit Drive</h2>
+        <p>Agenda slides, planning templates, annotation guides, icebreakers, classroom setup, and all my AI guides in ONE Google Drive that keeps growing. It&#x27;s how I stay in charge of my plans instead of the other way around.</p>
+        <ul class="best-list"><li>Agenda &amp; Daily Slides</li><li>Planning Templates</li><li>Reading &amp; Annotation</li><li>Ice Breakers &amp; Activities</li><li>Classroom Setup &amp; Decor</li><li>AI Tools &amp; Guides</li></ul>
+        <a class="btn btn-huge" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the Toolkit Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="peek" href="https://www.instagram.com/reel/DZsWa_uDBBw/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block popular hide-on-search" id="popular" aria-labelledby="pop-h">
+    <div class="block-head"><p class="eyebrow">Most loved</p><h2 id="pop-h" class="section-title">Teachers&#x27; Favorite Videos</h2><p class="block-sub">The ones you all keep saving and sharing.</p></div>
+    <div class="spot-reels pop-reels"><div class="spot-reel"><div class="reel reel-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbBoju3veLA/?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">A whole year of agenda slides</span><span class="reel-sub">Watch on Instagram</span></a>
+          </blockquote>
+        </div></div><div class="spot-reel"><div class="reel reel-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DX-s1VWzEqv/?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">How I annotate</span><span class="reel-sub">Watch on Instagram</span></a>
+          </blockquote>
+        </div></div><div class="spot-reel"><div class="reel reel-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbYdTMAE6j0/?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DbYdTMAE6j0/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Hot Takes first day activity</span><span class="reel-sub">Watch on Instagram</span></a>
+          </blockquote>
+        </div></div></div>
   </section>
 
   <section class="wrap fan hide-on-search" id="fan-favorite" aria-labelledby="fan-h">
@@ -727,7 +676,7 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
 
   <section class="wrap reviews-wrap hide-on-search" id="reviews" aria-labelledby="rev-h">
     <div class="block-head"><p class="eyebrow">Real 5-star reviews</p><h2 id="rev-h" class="section-title">What teachers are saying</h2><p class="block-sub">Straight from my Teachers Pay Teachers reviews.</p></div>
-    <div class="reviews"><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I purchased this Google Drive last week. I am a 5-6 GT teacher. I started the multiple intelligences with my 5th graders and the There Will Come Soft Rains with my 6th graders... these resources are AMAZING. The annotation pages and prompts are truly exactly what I need. Best money I have ever spent on TPT... thank you! Can&#x27;t wait to explore more!</blockquote><figcaption><b>Emma B.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Growing PBL Google Drive</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>A perfect mini-unit when I needed it in a pinch. Kids were engaged and I loved it too.</blockquote><figcaption><b>Sandy H.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">The Raven Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I will use this every year from now on! My students love getting the chance to be creative and this was the perfect way to end our year!</blockquote><figcaption><b>McKenzie S.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/novel-choice-project-1-pager--character-feature/" target="_blank" rel="noopener">Novel Choice Project</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This resource was easy to use and well-organized. My students were engaged and clearly understood the lesson objectives. It saved me a lot of prep time and aligned well with what I needed to teach. I would definitely recommend this to other teachers!</blockquote><figcaption><b>Schooling with a side of Sarcasm</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">The Tell-Tale Heart Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This is everything you need and more to model and teach effective poem analysis.</blockquote><figcaption><b>Samantha N.</b><span><a class="review-prod" href="https://www.teacherspayteachers.com/Product/Langston-Hughes-Mini-Unit-Project-Based-Learning-in-Poetry-Dreams-Harlem-11022227" target="_blank" rel="noopener">Langston Hughes Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>A great resource to engage students. They learned about Kobe and how he pushed himself to be better. Thank you.</blockquote><figcaption><b>Denise P.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/kobe-mini-unit/" target="_blank" rel="noopener">KOBE Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This resource is well-designed, easy to use, and a valuable addition to any teacher&#x27;s toolkit.</blockquote><figcaption><b>Kim D.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Back to School Growing Drive</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This is an amazing idea! Many things on drive that are useful.</blockquote><figcaption><b>Alva M.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Growing PBL Google Drive</a></span></figcaption></figure></div>
+    <div class="reviews"><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I purchased this Google Drive last week. I am a 5-6 GT teacher. I started the multiple intelligences with my 5th graders and the There Will Come Soft Rains with my 6th graders... these resources are AMAZING. The annotation pages and prompts are truly exactly what I need. Best money I have ever spent on TPT... thank you! Can&#x27;t wait to explore more!</blockquote><figcaption><b>Emma B.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Growing PBL Google Drive</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>A perfect mini-unit when I needed it in a pinch. Kids were engaged and I loved it too.</blockquote><figcaption><b>Sandy H.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">The Raven Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I will use this every year from now on! My students love getting the chance to be creative and this was the perfect way to end our year!</blockquote><figcaption><b>McKenzie S.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/novel-choice-project-1-pager--character-feature/" target="_blank" rel="noopener">Novel Choice Project</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This resource was easy to use and well-organized. My students were engaged and clearly understood the lesson objectives. It saved me a lot of prep time and aligned well with what I needed to teach. I would definitely recommend this to other teachers!</blockquote><figcaption><b>Schooling with a side of Sarcasm</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">The Tell-Tale Heart Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This is everything you need and more to model and teach effective poem analysis.</blockquote><figcaption><b>Samantha N.</b><span><a class="review-prod" href="https://www.teacherspayteachers.com/Product/Langston-Hughes-Mini-Unit-Project-Based-Learning-in-Poetry-Dreams-Harlem-11022227" target="_blank" rel="noopener">Langston Hughes Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>A great resource to engage students. They learned about Kobe and how he pushed himself to be better. Thank you.</blockquote><figcaption><b>Denise P.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/kobe-mini-unit/" target="_blank" rel="noopener">KOBE Mini Unit</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This resource is well-designed, easy to use, and a valuable addition to any teacher&#x27;s toolkit.</blockquote><figcaption><b>Kim D.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Teacher Toolkit Drive</a></span></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>This is an amazing idea! Many things on drive that are useful.</blockquote><figcaption><b>Alva M.</b><span><a class="review-prod" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Growing PBL Google Drive</a></span></figcaption></figure></div>
   </section>
 
   <section class="wrap block search-zone" id="shop" aria-labelledby="shop-h">
@@ -912,12 +861,12 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
     <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/Editable-SHARK-TANK-Inventor-Project-5381643" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     
   </div>
-</article></div></div><div class="group" id="setup"><h3 class="group-title"><span class="dot dot-sun"></span>Classroom Setup</h3><div class="grid"><article class="card card-sun" data-search="back to school growing drive everything i use to start the year, in one google drive that keeps growing. back to school first week ">
+</article></div></div><div class="group" id="setup"><h3 class="group-title"><span class="dot dot-sun"></span>Classroom Setup</h3><div class="grid"><article class="card card-sun" data-search="teacher toolkit drive everything i use to run my classroom all year, in one google drive that keeps growing. back to school first week toolkit organization planning ">
   <div class="cover"><img src="covers/bts.webp" alt="" loading="lazy"></div>
   <div class="card-body">
     <div class="card-tags"></div>
-    <h4>Back to School Growing Drive</h4>
-    <p>Everything I use to start the year, in one Google Drive that keeps growing.</p>
+    <h4>Teacher Toolkit Drive</h4>
+    <p>Everything I use to run my classroom all year, in one Google Drive that keeps growing.</p>
     <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZsWa_uDBBw/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
     <div class="inside-row card-inside"><a class="peek" href="https://drive.google.com/file/d/1rEnuz_vUuhykzUCSE13qe1e6TwAFw3R3/view?usp=drive_link" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Watch a video tour of the Drive</span></a></div>
   </div>
@@ -992,9 +941,9 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
       <div class="cta-copy"><p class="eyebrow">Free for teachers</p><h3 class="cta-title">New to Claude? Start here!</h3><p>My Free Claude Guide walks you through it step by step, with the exact prompts I use to plan faster, differentiate without losing my mind, and get my evenings back. Beginner friendly, with an advanced level when you&#x27;re ready.</p>
       <a class="btn" href="/free-claude-guide/">Open my Free Claude Guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div><div class="cta-box">
-      <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="covers/bts.webp" alt="Back to School Growing Google Drive" loading="lazy"></a>
-      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my Back to School Growing Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
-      <a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the Back to School Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="covers/bts.webp" alt="Teacher Toolkit Drive" loading="lazy"></a>
+      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> Grab my Teacher Toolkit Drive. It's packed with my AI tools and guides, plus everything you need to set up a smooth school year where YOU are in charge of your plans (not the other way around).</p>
+      <a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the Toolkit Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div></div>
     <div class="grid"><article class="card card-violet" data-search="annotation unlocked build annotation packets for any text, any grade, in about 10 minutes with ai. ai annotation ">
   <div class="cover"><img src="covers/annotunlock.webp" alt="" loading="lazy"></div>
@@ -1272,6 +1221,117 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
     
   </div>
 </article></div>
+  </section>
+
+  <section class="spotlight search-zone" id="spotlight" aria-labelledby="spot-h">
+    <div class="moon" aria-hidden="true"></div><span class="bat bat-1"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-2"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-3"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-4"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span><span class="bat bat-5"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M32 9c-1.6-3.4-3.6-4.6-5.6-4.6.9 1.7.9 3 .1 4.1C23.6 5.6 17.6 4.7 12.4 6.8c3.9 1.8 6.2 4.6 6.3 8.4-3.1-1.9-7-2-10.4-.2 5.8 1.1 9.8 4.2 11.9 9 2.3-3.7 5.9-5.6 9.2-5.6L32 22l2.6-3.6c3.3 0 6.9 1.9 9.2 5.6 2.1-4.8 6.1-7.9 11.9-9-3.4-1.8-7.3-1.7-10.4.2.1-3.8 2.4-6.6 6.3-8.4-5.2-2.1-11.2-1.2-14.1 1.7-.8-1.1-.8-2.4.1-4.1-2 0-4 1.2-5.6 4.6z" fill="currentColor"/></svg></span>
+    <div class="wrap">
+      <div class="spot-head hide-on-search">
+        <p class="eyebrow eyebrow-glow">The Poe Corner</p>
+        <h2 id="spot-h" class="glow-title">Lights off, highlighters out.</h2>
+        <p class="spot-body">Spooky season is my FAVORITE time of year. We turn off the lights, grab the blacklight highlighters, and annotate Poe. Save this for next October, or bring the spooky any time your kids need a jolt!</p>
+        <div class="btn-row btn-row-center"><a class="btn btn-glow" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-4-week-bundle/" target="_blank" rel="noopener">Get the Poe bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost" href="https://urlgeni.us/amazon/ZcwVyW" target="_blank" rel="noopener">Shop my blacklight supplies<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+      <div class="spot-feature hide-on-search">
+        <div class="reels-frame">
+          <span class="reels-label">Peek inside my classroom</span>
+          <div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DeJ8tEED88J/?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DeJ8tEED88J/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Blacklight Poe annotating</span><span class="reel-sub">Watch on Instagram</span></a>
+          </blockquote>
+        </div></div><div class="spot-reel"><div class="reel reel-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DePGTNdgsdF/?utm_source=ig_embed" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DePGTNdgsdF/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Teaching one of Poe&#x27;s hardest stories</span><span class="reel-sub">Watch on Instagram</span></a>
+          </blockquote>
+        </div></div></div>
+        </div>
+        <div class="poe-gallery" aria-label="Poe portrait and illustrations"><figure class="poe-frame"><img src="covers/spooky-poe1848.webp" alt="Edgar Allan Poe, 1848" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-dore19.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke6.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-pg33.webp" alt="The Raven, Gustave Dore, 1884" loading="lazy"></figure><figure class="poe-frame"><img src="covers/spooky-clarke4.webp" alt="Harry Clarke, 1919" loading="lazy"></figure><p class="poe-credit">Portrait and illustrations: Edgar Allan Poe daguerreotype (1848), Gustave Dore's The Raven (1884), Harry Clarke (1919). Public domain.</p></div>
+      </div>
+      <div class="grid grid-night">
+        <article class="card card-night" data-search="poe: the raven mini unit a full week of raven plans, fully editable. moody, creepy, and so fun to teach. poe halloween october ">
+  <div class="cover"><img src="covers/raven.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Poe: The Raven Mini Unit</h4>
+    <p>A full week of Raven plans, fully editable. Moody, creepy, and SO fun to teach.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/edgar-allan-poe-the-raven-mini-unit/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddy_SyTgYP_/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="poe: the tell-tale heart mini unit a full week of tell-tale heart plans, fully editable. heart-pounding in the best way. poe halloween october audio free audio listen read aloud ">
+  <div class="cover"><img src="covers/telltale.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free audio</span></div>
+    <h4>Poe: The Tell-Tale Heart Mini Unit</h4>
+    <p>A full week of Tell-Tale Heart plans, fully editable. Heart-pounding in the best way.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-tell-tale-heart/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://youtu.be/KnHFMAxACnM" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="3" y="13" width="5" height="7" rx="2" fill="currentColor"/><rect x="16" y="13" width="5" height="7" rx="2" fill="currentColor"/></svg></span><span>Listen free: the audio I play in class</span></a><span class="audio-credit">Dramatic reading by G.M. Danielson, The Tale Master on YouTube</span></div>
+    
+  </div>
+</article><article class="card card-night" data-search="poe: the fall of the house of usher mini unit a full week of usher plans, fully editable. watch my kids try to sell the house! poe halloween october ">
+  <div class="cover"><img src="covers/usher.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Poe: The Fall of the House of Usher Mini Unit</h4>
+    <p>A full week of Usher plans, fully editable. Watch my kids try to SELL the house!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="poe: the cask of amontillado mini unit annotations, a plot diagram, and a project for poe&#x27;s sneakiest revenge story. poe halloween october amontillado ">
+  <div class="cover"><img src="covers/cask.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag">On TPT</span></div>
+    <h4>Poe: The Cask of Amontillado Mini Unit</h4>
+    <p>Annotations, a plot diagram, and a project for Poe&#x27;s sneakiest revenge story.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/The-Cask-of-Amontillado-Mini-Unit-Poe-Annotations-Plot-Diagram-PBL-Project-10262608" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="the monkey&#x27;s paw: 5-day foreshadowing unit five days of foreshadowing with a story that gives everyone chills. short story halloween october ">
+  <div class="cover"><img src="covers/monkey.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>The Monkey&#x27;s Paw: 5-Day Foreshadowing Unit</h4>
+    <p>Five days of foreshadowing with a story that gives EVERYONE chills.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/the-monkeys-paw-5-day-foreshadowing-unit/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Ddw6W2JyEWH/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="the lottery: meme and lesson activity a creepy classic plus a meme assessment your students will actually want to do. and it&#x27;s free! short story halloween meme free free">
+  <div class="cover"><img src="covers/lottery.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>The Lottery: Meme and Lesson Activity</h4>
+    <p>A creepy classic plus a meme assessment your students will actually want to do. And it&#x27;s FREE!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/the-lottery-meme--lesson-activity/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZk76x-vo-M/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="free annotations guide, grades 5 to 12 exactly how i teach annotating, step by step. perfect before blacklight week! annotation free free">
+  <div class="cover cover-text"><span>Annotate!</span></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>Free Annotations Guide, Grades 5 to 12</h4>
+    <p>Exactly how I teach annotating, step by step. Perfect before blacklight week!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotations-guide-for-grades-5-12/" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DX-s1VWzEqv/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="free poe unit: 4 weeks of ideas my whole month of poe lesson ideas and plans, totally free. start here! poe halloween october free free">
+  <div class="cover"><img src="covers/tpt10254735.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span><span class="tag">On TPT</span></div>
+    <h4>FREE Poe Unit: 4 Weeks of Ideas</h4>
+    <p>My whole month of Poe lesson ideas and plans, totally free. Start here!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.teacherspayteachers.com/Product/FREE-Edgar-Allan-Poe-Unit-4-Weeks-of-IDEAS-Lesson-Plans-10254735" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    
+  </div>
+</article><article class="card card-night" data-search="free october slides template my spooky season slide templates, totally free. grab the canva version or the classroomscreen version and make them yours! october fall halloween slides canva classroomscreen free spooky free">
+  <div class="cover"><img src="covers/octslides.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"><span class="tag tag-free">Free</span></div>
+    <h4>FREE October Slides Template</h4>
+    <p>My spooky season slide templates, totally free. Grab the Canva version or the ClassroomScreen version and make them yours!</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://www.canva.com/design/DAHZDBcRBsw/M_XPlRH7-y8cnv_jcPf0xg/view" target="_blank" rel="noopener">Get it free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/De7jZ6qyjQk/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a><a class="peek" href="https://classroomscreen.com/app/p/2ebe788a-46ee-4408-b1d3-d8ddec46574d/0" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Or grab the ClassroomScreen version</span></a></div>
+    
+  </div>
+</article>
+      </div>
+    </div>
   </section>
 
   <p class="wrap no-results" id="no-results" hidden>Hmm, nothing matches that yet. Try another word, or check my <a href="https://www.teacherspayteachers.com/store/middle-teacher-syndrome" target="_blank" rel="noopener">TPT store</a>.</p>
