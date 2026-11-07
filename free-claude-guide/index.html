@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Free Claude Guide for Teachers | Michaela Arabia: The Balanced Teach</title>
+<title>Claude for Teachers | Michaela Arabia: The Balanced Teach</title>
 <meta name="description" content="How I use Claude in my middle school classroom: demo videos, free prompts, and The Teacher Helper Project, my Claude teacher assistant guide.">
 <link rel="canonical" href="https://mrsarabiarocks.com/free-claude-guide/">
 <meta property="og:title" content="Free Claude Guide for Teachers">
@@ -486,6 +486,100 @@ p { margin: 0; }
 .hero-claude { width: fit-content; background: var(--sun); color: #2E2458; font-size: 1.05rem; }
 @media (max-width: 860px) { .hero-claude { justify-self: center; } }
 
+/* ---------- October freebie ---------- */
+.octfree { margin-top: 40px; }
+.oct-box {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: center;
+  background: radial-gradient(120% 90% at 0% 0%, #3B1C7A 0%, rgba(59, 28, 122, 0) 60%), var(--night);
+  color: var(--night-text); border: 3px solid #05030C; border-radius: 24px; padding: 28px 32px; box-shadow: 6px 6px 0 #05030C;
+}
+.oct-photo { display: block; transform: rotate(-1.5deg); transition: transform .2s ease; }
+.oct-photo img { display: block; width: 100%; height: auto; border-radius: 14px; border: 3px solid var(--glow); box-shadow: 6px 6px 0 #05030C; }
+.oct-copy { display: grid; gap: 12px; min-width: 0; justify-items: start; }
+.oct-copy h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.8rem, 4.2vw, 2.6rem); line-height: 1.05; color: var(--glow); }
+.oct-copy p:not(.eyebrow) { max-width: 52ch; }
+.oct-copy .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.oct-copy .peek { color: var(--night-text); }
+.oct-copy .peek-play { background: var(--glow); color: var(--night); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .oct-photo:hover { transform: rotate(0deg) scale(1.02); } }
+@media (max-width: 760px) {
+  .oct-box { grid-template-columns: minmax(0, 1fr); padding: 22px 18px; text-align: center; }
+  .oct-copy { justify-items: center; }
+  .oct-copy .btn-row { justify-content: center; }
+}
+
+/* ---------- Reviews ---------- */
+.reviews-wrap { margin-top: 64px; }
+.reviews { columns: 3 280px; column-gap: 20px; }
+.review {
+  break-inside: avoid; margin: 0 0 20px; background: var(--card); border: 3px solid var(--line); border-radius: 20px;
+  padding: 20px 22px; box-shadow: var(--shadow); display: grid; gap: 10px;
+}
+.review:nth-child(3n+1) { background: var(--tint-violet); }
+.review:nth-child(3n+2) { background: var(--tint-sun); }
+.review:nth-child(3n) { background: var(--tint-pink); }
+.review .stars { color: var(--sun); font-size: 1.25rem; letter-spacing: 2px; -webkit-text-stroke: 1px var(--ink); }
+.review blockquote { margin: 0; font-weight: 700; line-height: 1.5; color: var(--text); }
+.review figcaption { display: grid; gap: 2px; font-size: .92rem; }
+.review figcaption b { font-family: var(--f-display); font-weight: 400; font-size: 1.05rem; color: var(--ink); }
+.review-prod { color: var(--muted); font-weight: 800; }
+a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .review figcaption b { color: var(--text); } }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .review { transition: transform .18s ease, box-shadow .18s ease; }
+  .review:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }
+}
+@media (max-width: 760px) {
+  .reviews { columns: auto; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 16px 18px; margin-inline: -16px; -webkit-overflow-scrolling: touch; }
+  .review { flex: 0 0 82%; margin: 0; scroll-snap-align: center; align-content: start; }
+  .reviews-wrap .block-sub::after { content: " Swipe for more."; }
+}
+
+/* ---------- Nov 2026: Claude + Toolkit features, favorite videos ---------- */
+.best + .best { margin-top: 44px; }
+.feature-claude .best-box { background: var(--tint-blue); }
+.feature-claude .best-cover img { aspect-ratio: auto; }
+.feature-toolkit .best-box { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); background: var(--tint-pink, var(--tint-violet)); }
+.feature-toolkit .best-side { order: 2; }
+.feature-toolkit .best-cover { transform: rotate(3deg); }
+.free-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 900; color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.free-link svg { width: 18px; height: 18px; }
+.popular { margin-top: 64px; }
+.pop-reels { gap: 24px; }
+.pop-reels .spot-reel { width: min(100%, 340px); }
+.pop-reels .reel { position: relative; display: grid; place-items: center; gap: 10px; text-align: center; text-decoration: none; min-height: 300px; padding: 24px; border-radius: 22px; border: 3px solid var(--line); box-shadow: var(--shadow); background: var(--tint-pink); color: var(--text); }
+.pop-reels .spot-reel:nth-child(2) .reel { background: var(--tint-blue); }
+.pop-reels .spot-reel:nth-child(3) .reel { background: var(--tint-sun); }
+.pop-reels .reel-play { background: var(--pink); color: #FFFFFF; border-color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.pop-reels .reel-sub, .pop-reels .reel-fallback { color: var(--muted); }
+.pop-reels .reel-fallback .reel-title { color: var(--text); }
+.pop-reels .reel-embed { background: var(--card); padding: 10px; min-height: 0; }
+@media (max-width: 860px) {
+  .feature-toolkit .best-box { grid-template-columns: minmax(0, 1fr); }
+  .feature-toolkit .best-side { order: 0; }
+  .best-copy .free-link { justify-self: center; }
+}
+
+/* ---------- Sales layout (Nov 2026) ---------- */
+.hero-btns { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
+.hero-watch { color: #FFFFFF; font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
+.demos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 18px; }
+.demo { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 14px; align-items: center; background: var(--card); border: 3px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm); padding: 14px 16px; }
+.demo-play { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 16px; background: linear-gradient(135deg, #F2A47D 0%, #D97757 52%, #B85A3A 100%); color: #FFFFFF; border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); transition: transform .12s; }
+.demo-play:hover { transform: translate(-2px, -2px) scale(1.04); }
+.demo-play svg { width: 34px; height: 34px; margin-left: 3px; }
+.demo-copy { display: grid; gap: 6px; justify-items: start; min-width: 0; }
+.demo h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.15rem; line-height: 1.1; }
+.demo p { font-size: .86rem; color: var(--muted); font-weight: 700; }
+.demo p b { color: var(--text); }
+.buybar { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 50; display: flex; align-items: center; gap: 12px; width: min(calc(100% - 24px), 560px); background: var(--card); color: var(--text); border: 3px solid var(--ink); border-radius: 18px; padding: 8px 10px 8px 12px; box-shadow: 5px 5px 0 var(--ink); }
+.buybar img { width: 40px; height: auto; border-radius: 6px; border: 2px solid var(--ink); flex: 0 0 auto; }
+.buybar p { flex: 1; min-width: 0; display: grid; line-height: 1.15; }
+.buybar b { font-family: var(--f-display); font-weight: 400; font-size: 1.05rem; }
+.buybar span { font-size: .8rem; color: var(--muted); font-weight: 700; }
+body.has-buybar { padding-bottom: 96px; }
+#teacher-helper { margin-top: 40px; }
+@media (max-width: 860px) { .hero-btns { justify-content: center; } }
 /* ---------- Free Claude Guide page ---------- */
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .guide-hero .hero-copy { justify-items: start; }
@@ -654,10 +748,10 @@ body.no-scroll { overflow: hidden; }
 <nav class="topnav" aria-label="Site sections">
   <div class="wrap topnav-inner">
     <a class="topnav-name home-link" href="/" title="Back to my home page"><span class="home-arrow" aria-hidden="true">&larr;</span>Michaela Arabia<span class="home-tag">Home</span></a>
-    <div class="topnav-links"><a href="/#best-seller">PBL Drive</a><a href="/#shop">Shop the Classroom</a><a href="/#teacher">Teacher Guides</a><a href="/#free">Free Resources</a><a href="/free-claude-guide/" class="on">Free Claude Guide</a></div>
+    <div class="topnav-links"><a href="/#best-seller">PBL Drive</a><a href="/#toolkit">Toolkit Drive</a><a href="/#shop">Shop the Classroom</a><a href="/#free">Free Resources</a><a href="/free-claude-guide/" class="on">Claude for Teachers</a></div>
     <details class="topnav-menu" id="topnav-menu">
       <summary>Menu <span aria-hidden="true">&#9662;</span></summary>
-      <div class="menu-panel"><a class="menu-main" href="/#best-seller">PBL Drive</a><a class="menu-main" href="/#spotlight">Spooky Season</a><a class="menu-main" href="/#shop">Shop the Classroom</a><a class="menu-main" href="/#teacher">Teacher Guides</a><a class="menu-main" href="/#free">Free Resources</a><a class="menu-main" href="/free-claude-guide/">Free Claude Guide</a><a class="menu-sub" href="#watch">Watch me use Claude</a><a class="menu-sub" href="#teacher-helper">The Teacher Helper Project</a><a class="menu-sub" href="#ways">Ways I use Claude</a><a class="menu-sub" href="#try">Try these free</a><a class="menu-sub" href="#inside">What&#x27;s inside</a><a class="menu-sub" href="#follow">Follow me</a></div>
+      <div class="menu-panel"><a class="menu-main" href="/#best-seller">PBL Drive</a><a class="menu-main" href="/#toolkit">Toolkit Drive</a><a class="menu-main" href="/#shop">Shop the Classroom</a><a class="menu-main" href="/#free">Free Resources</a><a class="menu-main" href="/free-claude-guide/">Claude for Teachers</a><a class="menu-sub" href="#teacher-helper">The Teacher Helper Project</a><a class="menu-sub" href="#watch">Watch it, then get it</a><a class="menu-sub" href="#shop-claude">More Claude guides</a><a class="menu-sub" href="#try">Try these free</a><a class="menu-sub" href="#inside">What&#x27;s inside</a><a class="menu-sub" href="#follow">Follow me</a></div>
     </details>
   </div>
 </nav>
@@ -666,56 +760,16 @@ body.no-scroll { overflow: hidden; }
   <div class="wrap hero-inner">
     <img class="logo" src="../logo-orange.webp" alt="Michaela, The Balanced Teach, @Middle_Teacher_Syndrome" width="560" height="561">
     <div class="hero-copy">
-      <h1><span>Free Claude</span> <span>Guide</span></h1>
-      <p class="tagline">For Teachers</p>
-      <p class="bio">See how I use Claude in my real classroom, grab a few free prompts, and meet my teacher assistant guide.</p>
+      <h1><span>Claude for</span> <span>Teachers</span></h1>
+      <p class="tagline">By Mrs. Arabia</p>
+      <p class="bio">Turn Claude into YOUR teacher assistant. 41 ready-to-run moves that plan, differentiate, and build things for your real class, tested in my own classroom first.</p>
+      <div class="hero-btns"><a class="btn hero-helper" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="hero-watch" href="#watch">Watch the demos first</a></div>
       <nav class="socials" aria-label="Follow me"><a class="social social-hero" href="https://www.instagram.com/middle_teacher_syndrome/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a><a class="social social-hero" href="https://www.tiktok.com/@middle_teacher_syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3h3c.3 2.2 1.7 3.6 3.8 3.9v3c-1.5 0-2.8-.4-3.9-1.1v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z" fill="currentColor"/></svg><span>TikTok</span></a><a class="social social-hero" href="https://www.linkedin.com/in/michaela-arabia-a662818b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="currentColor"/><rect x="6.3" y="10" width="2.6" height="7.6" fill="var(--icon-cut)"/><circle cx="7.6" cy="7.2" r="1.6" fill="var(--icon-cut)"/><path d="M10.9 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.3h-2.6v-3.9c0-1.1-.4-1.7-1.3-1.7s-1.6.6-1.6 1.8v3.8h-2.6z" fill="var(--icon-cut)"/></svg><span>LinkedIn</span></a><a class="social social-hero" href="https://www.pinterest.com/Middle_Teacher_Syndrome" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12.4 5.6c-3.7 0-5.6 2.6-5.6 4.8 0 1.3.5 2.5 1.6 2.9.2.1.3 0 .4-.2l.2-.6c0-.2 0-.3-.1-.4-.3-.4-.5-.9-.5-1.5 0-2 1.5-3.7 3.8-3.7 2.1 0 3.2 1.3 3.2 3 0 2.2-1 4.1-2.5 4.1-.8 0-1.4-.7-1.2-1.5.2-1 .7-2 .7-2.7 0-.6-.3-1.1-1-1.1-.8 0-1.4.8-1.4 1.9 0 .7.2 1.2.2 1.2l-1 4.1c-.2.9-.1 2.1 0 2.8h.6c.4-.6 1.1-1.9 1.3-2.7l.5-1.9c.3.5 1 .9 1.8.9 2.4 0 4-2.2 4-5.1 0-2.2-1.9-4.3-4.9-4.3z" fill="var(--icon-cut)"/></svg><span>Pinterest</span></a></nav>
-      <a class="btn hero-helper" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </header>
 
 <main>
-<section class="wrap start-grid" aria-label="How this page works">
-  <div class="start"><span class="start-n">1. Grab it free</span><p>Verified K-12 US teachers get premium Claude free for a year. <a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">Click here</a>, then hit "Get Verified."</p></div>
-  <div class="start"><span class="start-n">2. Watch and try</span><p>Watch my classroom demos, then copy a few of my favorite prompts below. Free, yours to keep.</p></div>
-  <div class="start"><span class="start-n">3. Get the whole system</span><p>Ready for Claude to work like your own teacher assistant? <a href="#teacher-helper">Meet The Teacher Helper Project</a>.</p></div>
-</section>
-<section class="wrap block" id="watch" aria-labelledby="watch-h">
-  <div class="block-head"><h2 id="watch-h" class="section-title">Watch Me Use Claude</h2><p class="block-sub">Short, no-fluff demos straight from my classroom. Tap play and see what Claude can do.</p></div>
-  <div class="lead-reel"><div class="reels-frame light-frame lead-frame"><span class="reels-label">New video</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Desvw-WTv6l/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude builds my workshop boards</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div></div></div><p class="lead-copy"><b>Station rotations on ONE screen.</b> Watch Claude build my reading workshop board: the group schedule, station directions, a timer, and points. The exact prompt is a move in <a href="#teacher-helper">The Teacher Helper Project</a>.</p></div>
-  <div class="reels-frame light-frame"><span class="reels-label">Peek inside my classroom</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbBoju3veLA/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude + Canva: a year of slides</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DaGJH9sk1Qn/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/DaGJH9sk1Qn/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Lots of ways I use Claude</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZdWKfXh55X/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Backwards planning with Claude</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div></div></div>
-  <div class="reels-frame light-frame more-reels"><span class="reels-label">More Claude demos</span><div class="spot-reels"><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DazQIb2zTvd/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/DazQIb2zTvd/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Cowork builds my Canva</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DYD6ujaTbQF/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Annotation packets with AI</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div><div class="spot-reel"><div class="reel reel-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dd-vBqSTP80/?utm_source=ig_embed" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener" class="reel-fallback"><span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span class="reel-title">Claude runs my teacher business</span><span class="reel-sub">Watch on Instagram</span></a>
-      </blockquote>
-    </div></div></div></div>
-  <div class="hl-row"><a class="hl" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Claude Tips</b><small>Lots of ways I use it</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>AI in the Classroom</b><small>Real examples</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>PBL</b><small>Project ideas</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17844653230766602/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Poe Projects</b><small>Balance in action</small></span></a></div>
-</section>
 <section class="wrap block" id="teacher-helper" aria-labelledby="helper-h">
   <div class="helper">
     <div class="helper-covers">
@@ -727,20 +781,53 @@ body.no-scroll { overflow: hidden; }
       <h2 id="helper-h" class="helper-title">The Teacher Helper Project</h2>
       <p class="helper-lead">Drop it into Claude and it works the way I work. Make a Project, add the guide, and just say <b>"Do the Workshop Board move for The Raven."</b> Claude asks a few questions, then builds it.</p>
       <ul class="helper-list">
-        <li><b>36 ready-to-run moves</b> for planning, differentiation, parent emails, PBL, annotation, and assessments</li>
+        <li><b>41 ready-to-run moves</b> for planning, differentiation, parent emails, PBL, annotation, and assessments</li>
         <li><b>Build It:</b> workshop boards, student study tools, review games, and Canva Bulk Create</li>
         <li><b>Claude Advanced:</b> Projects, Skills, and letting Claude do the work on your computer</li>
+        <li><b>Idea to Activity:</b> turn one rough idea into a one-pager, a full mini-unit, even a product you can sell</li>
         <li><b>Real screenshots</b> from my classroom, plus links to every demo video</li>
         <li><b>Always up to date:</b> one link that always has the newest version</li>
       </ul>
       <div class="btn-row"><a class="btn btn-big helper-btn" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      <p class="helper-small">A PDF for your personal classroom use. Works with Claude, including the free verified teacher account.</p>
+      <p class="helper-small">A PDF for your personal classroom use. Works with Claude, including the free account for verified K-12 teachers (<a href="https://claude.com/solutions/teachers" target="_blank" rel="noopener">check the teacher offer</a>).</p>
     </div>
   </div>
 </section>
-<section class="wrap block" id="ways" aria-labelledby="ways-h">
-  <div class="block-head"><p class="eyebrow">Straight from my classroom</p><h2 id="ways-h" class="section-title">Ways I&#x27;ve Used Claude in My Classroom</h2><p class="block-sub">The real stuff, from my own 7th and 8th grade ELA and history classes. Tap a video to watch me do it. Every one of these is a move in The Teacher Helper Project.</p></div>
-  <div class="ways"><article class="way card-sun"><h4>Reading workshop boards</h4><p>One screen for station rotations: color group schedule, station directions, a built-in timer, and a group points tracker. I made a Raven board and a Tell-Tale Heart board with an escape room station.</p><div class="card-actions"><a class="peek" href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-pink"><h4>Backwards-planned my PBL units</h4><p>I start with the final project and Claude maps the daily lessons backward from it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get the guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-blue"><h4>Made 180 days of agenda slides</h4><p>Claude fills the table, Canva Bulk Create spins up the whole year in one go.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Agenda Slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-violet"><h4>Built annotation packets for ANY text</h4><p>Numbered paragraphs, margin prompts, vocab, and a teacher key in about 10 minutes.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Annotation Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><h4>A study tool for my real students</h4><p>A student-facing Outsiders coach for theme, motif, conflict, plot, and symbolism. It refuses anything off-topic.</p><div class="card-actions"><a class="btn btn-small" href="https://claude.ai/public/artifacts/2df5f854-953e-4c0c-9c6c-d2101a53b97a" target="_blank" rel="noopener">Open the live tool<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="way card-pink"><h4>Interactive notebook pages</h4><p>Glue-in pages, launch plans, and grading for my comp notebooks.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Notebooks Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-violet"><h4>Poe month projects</h4><p>Like the House of Usher real estate brochure: students annotate the house, then SELL it.</p><div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/poe-usher-mini-unit-fully-editable/" target="_blank" rel="noopener">Usher mini unit<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DeE_B7VToyi/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div></article><article class="way card-sun"><h4>My whole classroom website</h4><p>This site! Claude built it from my product list and keeps it up to date.</p><div class="card-actions"><a class="btn btn-small" href="/">See the homepage<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article></div>
+<section class="wrap block" id="watch" aria-labelledby="watch-h">
+  <div class="block-head"><p class="eyebrow">Claude demos</p><h2 id="watch-h" class="section-title">Watch It, Then Get It</h2><p class="block-sub">Tap play to watch a quick demo from my classroom, then grab the guide that teaches you to do it.</p></div>
+  <div class="demos"><article class="demo"><a class="demo-play" href="https://www.instagram.com/reel/Desvw-WTv6l/" target="_blank" rel="noopener" aria-label="Watch: Claude builds my workshop boards"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a><div class="demo-copy"><h4>Claude builds my workshop boards</h4><p>Learn it in: <b>The Workshop Board move</b></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">Get The Teacher Helper Project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="demo"><a class="demo-play" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener" aria-label="Watch: Backwards planning my PBL units"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a><div class="demo-copy"><h4>Backwards planning my PBL units</h4><p>Learn it in: <b>PBL Backwards Planning with Claude</b></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Get the PBL planning guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="demo"><a class="demo-play" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener" aria-label="Watch: Annotation packets for any text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a><div class="demo-copy"><h4>Annotation packets for any text</h4><p>Learn it in: <b>Annotation Unlocked</b></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Get Annotation Unlocked<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="demo"><a class="demo-play" href="https://www.instagram.com/reel/DbBoju3veLA/" target="_blank" rel="noopener" aria-label="Watch: A whole year of agenda slides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a><div class="demo-copy"><h4>A whole year of agenda slides</h4><p>Learn it in: <b>Agenda Slides + Bulk Create guide</b></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/180-daily-agenda-slides-canvabulkcreate/" target="_blank" rel="noopener">Get the slides + guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="demo"><a class="demo-play" href="https://www.instagram.com/reel/DazQIb2zTvd/" target="_blank" rel="noopener" aria-label="Watch: Claude builds my Canva for me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a><div class="demo-copy"><h4>Claude builds my Canva for me</h4><p>Learn it in: <b>Hot Takes: AI and Canva Magic</b></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/guide-bulk-creation-for-teachers/" target="_blank" rel="noopener">Get the Canva guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article><article class="demo"><a class="demo-play" href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener" aria-label="Watch: Claude runs my teacher business"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a><div class="demo-copy"><h4>Claude runs my teacher business</h4><p>Learn it in: <b>How I Use Claude to Run My Teacher Business</b></p><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/using-claude-to-run-a-teacher-business/" target="_blank" rel="noopener">Get the business guide<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article></div>
+  <div class="hl-row"><a class="hl" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Claude Tips</b><small>Lots of ways I use it</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/18204095536248045/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>AI in the Classroom</b><small>Real examples</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17861632432758922/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>PBL</b><small>Project ideas</small></span></a><a class="hl" href="https://www.instagram.com/stories/highlights/17844653230766602/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><b>Poe Projects</b><small>Balance in action</small></span></a></div>
+</section>
+<section class="wrap block" id="shop-claude" aria-labelledby="shelf-h">
+  <div class="block-head"><p class="eyebrow">Shop my Claude guides</p><h2 id="shelf-h" class="section-title">More Claude Guides</h2><p class="block-sub">Want to go deep on one thing? These walk you through it step by step.</p></div>
+  <div class="grid"><article class="card card-pink" data-search="pbl backwards planning with claude start with the final project and let claude help you plan backwards. ai pbl claude ">
+  <div class="cover"><img src="../covers/pblclaude.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>PBL Backwards Planning with Claude</h4>
+    <p>Start with the final project and let Claude help you plan backwards.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-blue" data-search="annotation unlocked build annotation packets for any text, any grade, in about 10 minutes with ai. ai annotation ">
+  <div class="cover"><img src="../covers/annotunlock.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>Annotation Unlocked</h4>
+    <p>Build annotation packets for ANY text, any grade, in about 10 minutes with AI.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article><article class="card card-violet" data-search="how i use claude to run my teacher business for my fellow teacher creators: how i use claude behind the scenes. ai claude creator business ">
+  <div class="cover"><img src="../covers/claudebiz.webp" alt="" loading="lazy"></div>
+  <div class="card-body">
+    <div class="card-tags"></div>
+    <h4>How I Use Claude to Run My Teacher Business</h4>
+    <p>For my fellow teacher creators: how I use Claude behind the scenes.</p>
+    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/using-claude-to-run-a-teacher-business/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
+    
+  </div>
+</article></div>
 </section>
 <section class="wrap block" id="try" aria-labelledby="try-h">
   <div class="block-head"><p class="eyebrow">Copy, paste, done</p><h2 id="try-h" class="section-title">Try These Free</h2><p class="block-sub">Three of my favorite prompts, on the house. Copy one, paste it into Claude, and swap the [brackets] for your stuff.</p></div>
@@ -789,7 +876,7 @@ Ask me some questions to make sure I get the best output possible.</div>
   <div class="pcard-actions"><button class="btn btn-small btn-copy" type="button" data-label="Copy prompt">Copy prompt</button><a class="peek" href="https://www.instagram.com/stories/highlights/18121097227699014/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Claude tips</span></a></div>
   
 </article></div>
-  <div class="more-strip"><p><strong>That's 3 of my 36 moves.</strong> The other 33 (workshop boards, study tools, sub plans, rubrics, Projects, Skills, and more) are waiting in The Teacher Helper Project.</p><a class="btn" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">See what's inside<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  <div class="more-strip"><p><strong>That's 3 of my 41 moves.</strong> The other 38 (workshop boards, study tools, sub plans, rubrics, Projects, Skills, and more) are waiting in The Teacher Helper Project.</p><a class="btn" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">See what's inside<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 </section>
 <section class="wrap block" id="inside" aria-labelledby="inside-h">
   <div class="block-head"><p class="eyebrow">Sneak peek</p><h2 id="inside-h" class="section-title">What&#x27;s Inside</h2><p class="block-sub">Three levels, so you can start easy and grow into the advanced stuff.</p></div>
@@ -802,30 +889,12 @@ Ask me some questions to make sure I get the best output possible.</div>
   </div>
 </section>
 <section class="wrap block" id="guides" aria-labelledby="guides-h">
-  <div class="block-head"><p class="eyebrow">More done-for-you guides</p><h2 id="guides-h" class="section-title">More of My Guides</h2><p class="block-sub">Already built, already pretty, ready for your classroom.</p><div class="cta-box">
-      <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="../covers/bts.webp" alt="Back to School Growing Google Drive" loading="lazy"></a>
-      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> My Back to School GROWING Drive is my whole library in one link: AI and Canva prompt guides, a full year of agenda slides, annotation templates, projects, decor, sub plans, and more. Always growing, lifetime access.</p>
+  <div class="block-head"><p class="eyebrow">More done-for-you guides</p><h2 id="guides-h" class="section-title">Want It ALL?</h2><p class="block-sub">Already built, already pretty, ready for your classroom.</p><div class="cta-box">
+      <a class="cta-cover" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener"><img src="../covers/bts.webp" alt="The Teacher Toolkit Drive" loading="lazy"></a>
+      <div class="cta-copy"><p><strong>Want ALL my guides in one place?</strong> My Teacher Toolkit Drive is my whole library in one link: AI and Canva prompt guides, a full year of agenda slides, annotation templates, projects, decor, sub plans, and more. Always growing, lifetime access.</p>
       <div class="btn-row"><a class="btn" href="https://mrsarabiarocks.thrivecart.com/back-to-school-growing-drive/" target="_blank" rel="noopener">Get the whole bundle<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-soft" href="https://mrsarabiarocks.thrivecart.com/pbl-growing-drive/" target="_blank" rel="noopener">Get the PBL Drive<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
     </div></div>
-  <div class="grid"><article class="card card-pink" data-search="pbl backwards planning with claude start with the final project and let claude help you plan backwards. ai pbl claude ">
-  <div class="cover"><img src="../covers/pblclaude.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"></div>
-    <h4>PBL Backwards Planning with Claude</h4>
-    <p>Start with the final project and let Claude help you plan backwards.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/pbl-backwards-planning-with-claude/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DZdWKfXh55X/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-blue" data-search="annotation unlocked build annotation packets for any text, any grade, in about 10 minutes with ai. ai annotation ">
-  <div class="cover"><img src="../covers/annotunlock.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"></div>
-    <h4>Annotation Unlocked</h4>
-    <p>Build annotation packets for ANY text, any grade, in about 10 minutes with AI.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/annotation-unlocked/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DYD6ujaTbQF/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-violet" data-search="hot takes: ai and canva magic my beginner&#x27;s guide to bulk create. make a year of slides while your coffee is still hot. canva bulk create ai ">
+  <div class="grid"><article class="card card-pink" data-search="hot takes: ai and canva magic my beginner&#x27;s guide to bulk create. make a year of slides while your coffee is still hot. canva bulk create ai ">
   <div class="cover"><img src="../covers/hottakes.webp" alt="" loading="lazy"></div>
   <div class="card-body">
     <div class="card-tags"></div>
@@ -834,22 +903,13 @@ Ask me some questions to make sure I get the best output possible.</div>
     <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/guide-bulk-creation-for-teachers/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DbYdTMAE6j0/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
     
   </div>
-</article><article class="card card-sun" data-search="interactive notebooks unlocked how to launch, grade, and create interactive notebooks with ai tools. ai inb interactive notebook ">
+</article><article class="card card-blue" data-search="interactive notebooks unlocked how to launch, grade, and create interactive notebooks with ai tools. ai inb interactive notebook ">
   <div class="cover"><img src="../covers/inb.webp" alt="" loading="lazy"></div>
   <div class="card-body">
     <div class="card-tags"></div>
     <h4>Interactive Notebooks Unlocked</h4>
     <p>How to launch, grade, and create interactive notebooks with AI tools.</p>
     <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/interactive-notebooks-unlocked/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/DaQbqbBBCoc/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
-    
-  </div>
-</article><article class="card card-pink" data-search="how i use claude to run my teacher business for my fellow teacher creators: how i use claude behind the scenes. ai claude creator business ">
-  <div class="cover"><img src="../covers/claudebiz.webp" alt="" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-tags"></div>
-    <h4>How I Use Claude to Run My Teacher Business</h4>
-    <p>For my fellow teacher creators: how I use Claude behind the scenes.</p>
-    <div class="card-actions"><a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/using-claude-to-run-a-teacher-business/" target="_blank" rel="noopener">Shop now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="peek" href="https://www.instagram.com/reel/Dd-vBqSTP80/" target="_blank" rel="noopener"><span class="peek-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span>Peek inside my classroom</span></a></div>
     
   </div>
 </article></div>
@@ -889,6 +949,11 @@ Ask me some questions to make sure I get the best output possible.</div>
   <div class="webinar"><div><p class="eyebrow">Webinar handout</p><h3>How to build a novel study with Claude for Education</h3><p>The step-by-step one-pager from the session.</p></div><a class="btn" href="https://docs.google.com/document/d/1_ckXddI9U60CeVE8PTRJhXCbMaMNyUsG/edit?usp=sharing" target="_blank" rel="noopener">Open the one-pager<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 </section>
 </main>
+<div class="buybar" id="buybar" hidden>
+  <img src="img/teacher-helper-cover.jpg" alt="" width="40" height="52">
+  <p><b>The Teacher Helper Project</b><span>41 Claude moves for teachers</span></p>
+  <a class="btn btn-small" href="https://mrsarabiarocks.thrivecart.com/claude-guide-the-teacher-helper-project/" target="_blank" rel="noopener">Get it<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
 
 <footer class="foot">
   <div class="wrap foot-inner">
@@ -907,6 +972,14 @@ Ask me some questions to make sure I get the best output possible.</div>
 </div>
 <script>
 
+(function () {
+  var bar = document.getElementById('buybar'), hero = document.getElementById('top'), helper = document.getElementById('teacher-helper');
+  if (!bar || !('IntersectionObserver' in window)) return;
+  var heroOn = true, helperOn = false;
+  function update() { bar.hidden = heroOn || helperOn; document.body.classList.toggle('has-buybar', !bar.hidden); }
+  new IntersectionObserver(function (es) { heroOn = es[0].isIntersecting; update(); }).observe(hero);
+  new IntersectionObserver(function (es) { helperOn = es[0].isIntersecting; update(); }, { threshold: 0.25 }).observe(helper);
+})();
 document.querySelectorAll('.btn-copy').forEach(function (btn) {
   btn.addEventListener('click', function () {
     var box = btn.closest('.pcard, .showcase').querySelector('.promptbox');
