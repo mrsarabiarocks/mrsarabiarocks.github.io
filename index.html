@@ -542,7 +542,12 @@ a.review-prod { text-decoration: underline; text-underline-offset: 3px; }
 .popular { margin-top: 64px; }
 .pop-reels { gap: 24px; }
 .pop-reels .spot-reel { width: min(100%, 340px); }
-.pop-reels .reel { position: relative; display: grid; place-items: center; gap: 10px; text-align: center; text-decoration: none; min-height: 300px; padding: 24px; border-radius: 22px; border: 3px solid var(--line); box-shadow: var(--shadow); background: linear-gradient(160deg, #2A1366 0%, #12072E 100%); color: #FFFFFF; }
+.pop-reels .reel { position: relative; display: grid; place-items: center; gap: 10px; text-align: center; text-decoration: none; min-height: 300px; padding: 24px; border-radius: 22px; border: 3px solid var(--line); box-shadow: var(--shadow); background: var(--tint-pink); color: var(--text); }
+.pop-reels .spot-reel:nth-child(2) .reel { background: var(--tint-blue); }
+.pop-reels .spot-reel:nth-child(3) .reel { background: var(--tint-sun); }
+.pop-reels .reel-play { background: var(--pink); color: #FFFFFF; border-color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.pop-reels .reel-sub, .pop-reels .reel-fallback { color: var(--muted); }
+.pop-reels .reel-fallback .reel-title { color: var(--text); }
 .pop-reels .reel-embed { background: var(--card); padding: 10px; min-height: 0; }
 @media (max-width: 860px) {
   .feature-toolkit .best-box { grid-template-columns: minmax(0, 1fr); }
